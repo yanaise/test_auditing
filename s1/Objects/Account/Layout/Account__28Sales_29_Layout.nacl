@@ -52,6 +52,10 @@ s1.Layout Account_Account__28Sales_29_Layout@bspps {
               behavior = "Edit"
               field = s1.Account.field.test_field__c
             },
+            {
+              behavior = "Edit"
+              field = s1.Account.field.test_label__c
+            },
           ]
         },
         {

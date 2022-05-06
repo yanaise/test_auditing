@@ -48,6 +48,10 @@ s1.Layout Account_Account_Layout@bs {
               behavior = "Edit"
               field = s1.Account.field.test_field__c
             },
+            {
+              behavior = "Edit"
+              field = s1.Account.field.test_label__c
+            },
           ]
         },
         {

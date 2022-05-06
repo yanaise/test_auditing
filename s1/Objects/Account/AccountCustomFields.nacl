@@ -157,4 +157,16 @@ type s1.Account {
     externalId = false
     trackFeedHistory = false
   }
+  s1.Text test_label__c {
+    apiName = "Account.test_label__c"
+    label = "test label"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    externalId = false
+    trackFeedHistory = false
+  }
 }
