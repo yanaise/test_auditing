@@ -1,0 +1,586 @@
+type s1.ContentVersion {
+  serviceid Id {
+    apiName = "ContentVersion.Id"
+    label = "ContentVersion ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  s1.Lookup ContentDocumentId {
+    apiName = "ContentVersion.ContentDocumentId"
+    label = "ContentDocument ID"
+    _required = true
+    referenceTo = [
+      "ContentDocument",
+    ]
+    createable = true
+    updateable = false
+    relationshipName = "ContentDocument"
+    queryable = true
+  }
+  s1.Checkbox IsLatest {
+    apiName = "ContentVersion.IsLatest"
+    label = "Is Latest"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Url ContentUrl {
+    apiName = "ContentVersion.ContentUrl"
+    label = "Content URL"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Lookup ContentBodyId {
+    apiName = "ContentVersion.ContentBodyId"
+    label = "Content Body ID"
+    referenceTo = [
+      "ContentBody",
+    ]
+    createable = true
+    updateable = false
+    relationshipName = "ContentBody"
+    queryable = true
+  }
+  s1.Text VersionNumber {
+    apiName = "ContentVersion.VersionNumber"
+    label = "Version Number"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 20
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Text Title {
+    apiName = "ContentVersion.Title"
+    label = "Title"
+    _required = true
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  s1.LongTextArea Description {
+    apiName = "ContentVersion.Description"
+    label = "Description"
+    createable = true
+    updateable = true
+    length = 1000
+    queryable = true
+  }
+  s1.Text ReasonForChange {
+    apiName = "ContentVersion.ReasonForChange"
+    label = "Reason For Change"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 1000
+    queryable = true
+  }
+  s1.Picklist SharingOption {
+    apiName = "ContentVersion.SharingOption"
+    label = "Prevent others from sharing and unsharing"
+    _required = true
+    valueSet = [
+      {
+        fullName = "A"
+        default = true
+        label = "Freeze Sharing Off"
+        isActive = true
+      },
+      {
+        fullName = "R"
+        default = false
+        label = "Freeze Sharing On"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Picklist SharingPrivacy {
+    apiName = "ContentVersion.SharingPrivacy"
+    label = "File Privacy on Records"
+    _required = true
+    valueSet = [
+      {
+        fullName = "N"
+        default = true
+        label = "Visible to Anyone With Record Access"
+        isActive = true
+      },
+      {
+        fullName = "P"
+        default = false
+        label = "Private on Records"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Text PathOnClient {
+    apiName = "ContentVersion.PathOnClient"
+    label = "Path On Client"
+    createable = true
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 500
+    queryable = true
+  }
+  s1.Number RatingCount {
+    apiName = "ContentVersion.RatingCount"
+    label = "Rating Count"
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsDeleted {
+    apiName = "ContentVersion.IsDeleted"
+    label = "Is Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime ContentModifiedDate {
+    apiName = "ContentVersion.ContentModifiedDate"
+    label = "Content Modified Date"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  s1.Lookup ContentModifiedById {
+    apiName = "ContentVersion.ContentModifiedById"
+    label = "User ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "ContentModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Number PositiveRatingCount {
+    apiName = "ContentVersion.PositiveRatingCount"
+    label = "Positive Rating Count"
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Number NegativeRatingCount {
+    apiName = "ContentVersion.NegativeRatingCount"
+    label = "Negative Rating Count"
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Number FeaturedContentBoost {
+    apiName = "ContentVersion.FeaturedContentBoost"
+    label = "Featured Content Boost"
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Date FeaturedContentDate {
+    apiName = "ContentVersion.FeaturedContentDate"
+    label = "Featured Content Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup OwnerId {
+    apiName = "ContentVersion.OwnerId"
+    label = "Owner ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "Owner"
+    queryable = true
+    _hidden_value = true
+    trackHistory = false
+  }
+  s1.Lookup CreatedById {
+    apiName = "ContentVersion.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime CreatedDate {
+    apiName = "ContentVersion.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup LastModifiedById {
+    apiName = "ContentVersion.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime LastModifiedDate {
+    apiName = "ContentVersion.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime SystemModstamp {
+    apiName = "ContentVersion.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.LongTextArea TagCsv {
+    apiName = "ContentVersion.TagCsv"
+    label = "Tags"
+    createable = true
+    updateable = true
+    length = 2000
+    queryable = true
+  }
+  s1.Text FileType {
+    apiName = "ContentVersion.FileType"
+    label = "File Type"
+    _required = true
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 20
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Picklist PublishStatus {
+    apiName = "ContentVersion.PublishStatus"
+    label = "Publish Status"
+    _required = true
+    valueSet = [
+      {
+        fullName = "U"
+        default = true
+        label = "Upload Interrupted"
+        isActive = true
+      },
+      {
+        fullName = "P"
+        default = false
+        label = "Public"
+        isActive = true
+      },
+      {
+        fullName = "R"
+        default = false
+        label = "Private Library"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Text VersionData {
+    apiName = "ContentVersion.VersionData"
+    label = "Version Data"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 0
+    queryable = true
+  }
+  s1.Number ContentSize {
+    apiName = "ContentVersion.ContentSize"
+    label = "Size"
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Text FileExtension {
+    apiName = "ContentVersion.FileExtension"
+    label = "File Extension"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 40
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup FirstPublishLocationId {
+    apiName = "ContentVersion.FirstPublishLocationId"
+    label = "First Publish Location ID"
+    referenceTo = [
+      s1.Account,
+      s1.ApiAnomalyEventStore,
+      s1.Asset,
+      s1.AssetRelationship,
+      s1.AssignedResource,
+      s1.AuthorizationFormText,
+      s1.Campaign,
+      s1.Case,
+      s1.CollaborationGroup,
+      s1.CommSubscription,
+      s1.CommSubscriptionChannelType,
+      s1.CommSubscriptionConsent,
+      s1.CommSubscriptionTiming,
+      s1.ConsumptionSchedule,
+      s1.Contact,
+      "ContentWorkspace",
+      s1.Contract,
+      s1.ContractLineItem,
+      "ConversationEntry",
+      s1.CredentialStuffingEventStore,
+      s1.CreditMemo,
+      s1.CreditMemoLine,
+      "Dashboard",
+      "DashboardComponent",
+      s1.EmailMessage,
+      "EmailTemplate",
+      s1.EngagementChannelType,
+      "EnhancedLetterhead",
+      s1.Entitlement,
+      s1.EntityMilestone,
+      s1.Event,
+      s1.Image,
+      s1.Invoice,
+      s1.InvoiceLine,
+      s1.Lead,
+      s1.LegalEntity,
+      "ListEmail",
+      s1.Location,
+      s1.MessagingSession,
+      s1.OperatingHours,
+      s1.OperatingHoursHoliday,
+      s1.Opportunity,
+      s1.Order,
+      s1.OrderItem,
+      "Organization",
+      "OutgoingEmail",
+      s1.PartyConsent,
+      s1.Product2,
+      s1.Report,
+      s1.ReportAnomalyEventStore,
+      s1.ResourceAbsence,
+      s1.ResourcePreference,
+      s1.ReturnOrder,
+      s1.ReturnOrderLineItem,
+      s1.ServiceAppointment,
+      s1.ServiceContract,
+      s1.ServiceResource,
+      s1.ServiceResourceSkill,
+      s1.ServiceTerritory,
+      s1.ServiceTerritoryMember,
+      s1.ServiceTerritoryWorkType,
+      s1.SessionHijackingEventStore,
+      s1.Shift,
+      s1.Site,
+      s1.SkillRequirement,
+      s1.Solution,
+      s1.Task,
+      "ThreatDetectionFeedback",
+      s1.Topic,
+      s1.User,
+      s1.WorkOrder,
+      s1.WorkOrderLineItem,
+      s1.WorkPlan,
+      s1.WorkPlanTemplate,
+      s1.WorkPlanTemplateEntry,
+      s1.WorkStep,
+      s1.WorkStepTemplate,
+      s1.WorkType,
+      s1.WorkTypeGroup,
+      s1.WorkTypeGroupMember,
+    ]
+    createable = true
+    updateable = false
+    relationshipName = "FirstPublishLocation"
+    queryable = true
+  }
+  s1.Picklist Origin {
+    apiName = "ContentVersion.Origin"
+    label = "Content Origin"
+    _required = true
+    valueSet = [
+      {
+        fullName = "C"
+        default = true
+        label = "Content"
+        isActive = true
+      },
+      {
+        fullName = "H"
+        default = false
+        label = "Chatter"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  s1.Picklist ContentLocation {
+    apiName = "ContentVersion.ContentLocation"
+    label = "Content Location"
+    _required = true
+    valueSet = [
+      {
+        fullName = "S"
+        default = true
+        label = "Salesforce"
+        isActive = true
+      },
+      {
+        fullName = "E"
+        default = false
+        label = "External"
+        isActive = true
+      },
+      {
+        fullName = "L"
+        default = false
+        label = "Social Customer Service"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  s1.Text TextPreview {
+    apiName = "ContentVersion.TextPreview"
+    label = "Text Preview"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Text ExternalDocumentInfo1 {
+    apiName = "ContentVersion.ExternalDocumentInfo1"
+    label = "External Document Info1"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 1000
+    queryable = true
+  }
+  s1.Text ExternalDocumentInfo2 {
+    apiName = "ContentVersion.ExternalDocumentInfo2"
+    label = "External Document Info2"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 1000
+    queryable = true
+  }
+  s1.Lookup ExternalDataSourceId {
+    apiName = "ContentVersion.ExternalDataSourceId"
+    label = "External Data Source ID"
+    referenceTo = [
+      s1.ExternalDataSource,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "ExternalDataSource"
+    queryable = true
+  }
+  s1.Text Checksum {
+    apiName = "ContentVersion.Checksum"
+    label = "Checksum"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 50
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsMajorVersion {
+    apiName = "ContentVersion.IsMajorVersion"
+    label = "Major Version"
+    defaultValue = false
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  s1.Checkbox IsAssetEnabled {
+    apiName = "ContentVersion.IsAssetEnabled"
+    label = "Asset File Enabled"
+    defaultValue = false
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  s1.Unknown Language {
+    apiName = "ContentVersion.Language"
+    trackHistory = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+}

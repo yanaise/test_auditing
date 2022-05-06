@@ -1,0 +1,170 @@
+s1.Layout ServiceResource_Service_Resource_Layout@bss {
+  fullName = "ServiceResource-Service Resource Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.ServiceResource.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = s1.ServiceResource.field.RelatedRecordId
+            },
+            {
+              behavior = "Required"
+              field = s1.ServiceResource.field.ResourceType
+            },
+            {
+              behavior = "Edit"
+              field = s1.ServiceResource.field.Description
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.ServiceResource.field.IsActive
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.ServiceResource.field.CreatedById
+            },
+            {
+              behavior = "Edit"
+              field = s1.ServiceResource.field.OwnerId
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.ServiceResource.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      fields = [
+        "ServiceAppointment",
+      ]
+      relatedList = "ServiceAppointments"
+    },
+    {
+      fields = [
+        "SkillMasterLabel",
+        "SkillLevel",
+        "EffectiveStartDate",
+        "EffectiveEndDate",
+      ]
+      relatedList = "ServiceResourceSkills"
+    },
+    {
+      fields = [
+        "TASK.SUBJECT",
+        "TASK.WHO_NAME",
+        "ACTIVITY.TASK",
+        "TASK.DUE_DATE",
+        "TASK.STATUS",
+        "TASK.PRIORITY",
+        "CORE.USERS.FULL_NAME",
+      ]
+      relatedList = "RelatedActivityList"
+    },
+    {
+      fields = [
+        "TASK.SUBJECT",
+        "TASK.WHO_NAME",
+        "ACTIVITY.TASK",
+        "TASK.DUE_DATE",
+        "CORE.USERS.FULL_NAME",
+        "TASK.LAST_UPDATE",
+      ]
+      relatedList = "RelatedHistoryList"
+    },
+    {
+      fields = [
+        "Name",
+        "ServiceTerritory",
+        "TerritoryType",
+        "EffectiveStartDate",
+        "EffectiveEndDate",
+      ]
+      relatedList = "ServiceTerritoryRelatedList"
+    },
+    {
+      relatedList = "RelatedNoteList"
+    },
+    {
+      relatedList = "RelatedFileList"
+    },
+    {
+      relatedList = "RelatedEntityHistoryList"
+    },
+    {
+      fields = [
+        "Start",
+        "End",
+        "Type",
+      ]
+      relatedList = "ResourceAbsences"
+    },
+    {
+      fields = [
+        "CreatedDate",
+        "StepStatus",
+        "OriginalActor",
+        "Actor",
+        "Comments",
+      ]
+      relatedList = "RelatedProcessHistoryList"
+    },
+    {
+      fields = [
+        "Label",
+        "StartTime",
+        "EndTime",
+        "Status",
+      ]
+      relatedList = "ServiceResourceShifts"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.ServiceResource,
+  ]
+}

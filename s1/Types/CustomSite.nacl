@@ -1,0 +1,149 @@
+type s1.CustomSite {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  boolean active {
+  }
+  boolean allowHomePage {
+  }
+  boolean allowStandardAnswersPages {
+  }
+  boolean allowStandardIdeasPages {
+  }
+  boolean allowStandardLookups {
+  }
+  boolean allowStandardPortalPages {
+  }
+  boolean allowStandardSearch {
+  }
+  string analyticsTrackingCode {
+  }
+  string authorizationRequiredPage {
+  }
+  string bandwidthExceededPage {
+  }
+  boolean browserXssProtection {
+  }
+  string changePasswordPage {
+  }
+  string chatterAnswersForgotPasswordConfirmPage {
+  }
+  string chatterAnswersForgotPasswordPage {
+  }
+  string chatterAnswersHelpPage {
+  }
+  string chatterAnswersLoginPage {
+  }
+  string chatterAnswersRegistrationPage {
+  }
+  string clickjackProtectionLevel {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "AllowAllFraming",
+        "External",
+        "NoFraming",
+        "SameOriginOnly",
+      ]
+    }
+  }
+  boolean contentSniffingProtection {
+  }
+  boolean cspUpgradeInsecureRequests {
+  }
+  s1.SiteWebAddress customWebAddresses {
+  }
+  string description {
+  }
+  boolean enableAuraRequests {
+  }
+  string favoriteIcon {
+    foreignKeyDomain = [
+      s1.StaticResource,
+    ]
+  }
+  string fileNotFoundPage {
+  }
+  string forgotPasswordPage {
+  }
+  serviceid fullName {
+  }
+  string genericErrorPage {
+  }
+  string guestProfile {
+  }
+  string inMaintenancePage {
+  }
+  string inactiveIndexPage {
+  }
+  string indexPage {
+    foreignKeyDomain = [
+      s1.ApexPage,
+    ]
+  }
+  string masterLabel {
+  }
+  string myProfilePage {
+  }
+  string portal {
+    foreignKeyDomain = [
+      "Portal",
+    ]
+  }
+  boolean referrerPolicyOriginWhenCrossOrigin {
+  }
+  boolean requireHttps {
+  }
+  string robotsTxtPage {
+  }
+  string selfRegPage {
+  }
+  string serverIsDown {
+    foreignKeyDomain = [
+      s1.StaticResource,
+    ]
+  }
+  string siteAdmin {
+  }
+  string siteGuestRecordDefaultOwner {
+  }
+  s1.SiteIframeWhiteListUrl siteIframeWhiteListUrls {
+  }
+  s1.SiteRedirectMapping siteRedirectMappings {
+  }
+  string siteTemplate {
+  }
+  string siteType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "ChatterNetwork",
+        "ChatterNetworkPicasso",
+        "Siteforce",
+        "Visualforce",
+      ]
+    }
+  }
+  string subdomain {
+  }
+  string urlPathPrefix {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "site"
+  dirName = "sites"
+  metadataType = "CustomSite"
+}

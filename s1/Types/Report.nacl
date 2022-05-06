@@ -1,0 +1,116 @@
+type s1.Report {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  "List<s1.ReportAggregate>" aggregates {
+  }
+  "List<s1.Report>" block {
+  }
+  s1.ReportBlockInfo blockInfo {
+  }
+  "List<s1.ReportBucketField>" buckets {
+  }
+  s1.ReportChart chart {
+  }
+  s1.ReportColorRange colorRanges {
+  }
+  "List<s1.ReportColumn>" columns {
+  }
+  s1.ReportCrossFilter crossFilters {
+  }
+  string currency {
+  }
+  s1.ReportCustomDetailFormula customDetailFormulas {
+  }
+  s1.ReportDataCategoryFilter dataCategoryFilters {
+  }
+  string description {
+  }
+  string division {
+  }
+  s1.ReportFilter filter {
+  }
+  string folderName {
+  }
+  string format {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Matrix",
+        "MultiBlock",
+        "Summary",
+        "Tabular",
+      ]
+    }
+  }
+  s1.ReportFormattingRule formattingRules {
+  }
+  serviceid fullName {
+  }
+  "List<s1.ReportGrouping>" groupingsAcross {
+  }
+  "List<s1.ReportGrouping>" groupingsDown {
+  }
+  s1.ReportHistoricalSelector historicalSelector {
+  }
+  string name {
+  }
+  number numSubscriptions {
+  }
+  "List<s1.ReportParam>" params {
+  }
+  string reportType {
+  }
+  string reportTypeApiName {
+  }
+  string roleHierarchyFilter {
+  }
+  number rowLimit {
+  }
+  string scope {
+  }
+  boolean showCurrentDate {
+  }
+  boolean showDetails {
+  }
+  boolean showGrandTotal {
+  }
+  boolean showSubTotals {
+  }
+  string sortColumn {
+  }
+  string territoryHierarchyFilter {
+  }
+  s1.ReportTimeFrameFilter timeFrameFilter {
+  }
+  string userFilter {
+  }
+  string sortOrder {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Asc",
+        "Desc",
+      ]
+    }
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  folderType = "ReportFolder"
+  suffix = "report"
+  dirName = "reports"
+  metadataType = "Report"
+}

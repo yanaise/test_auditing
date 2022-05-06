@@ -1,0 +1,4 @@
+s1.StandardValueSet InvoiceStatus {
+  fullName = "InvoiceStatus"
+  sorted = false
+}

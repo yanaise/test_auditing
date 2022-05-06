@@ -1,0 +1,161 @@
+s1.Layout PaymentLineInvoice_Payment_Line_Invoice_Layout@bsss {
+  fullName = "PaymentLineInvoice-Payment Line Invoice Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.PaymentLineInvoice.field.PaymentLineInvoiceNumber
+            },
+            {
+              behavior = "Required"
+              field = s1.PaymentLineInvoice.field.PaymentId
+            },
+            {
+              behavior = "Required"
+              field = s1.PaymentLineInvoice.field.HasBeenUnapplied
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.PaymentLineInvoice.field.Type
+            },
+            {
+              behavior = "Required"
+              field = s1.PaymentLineInvoice.field.InvoiceId
+            },
+            {
+              behavior = "Edit"
+              field = s1.PaymentLineInvoice.field.Comments
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Balances"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.PaymentLineInvoice.field.Amount
+            },
+            {
+              behavior = "Readonly"
+              field = s1.PaymentLineInvoice.field.ImpactAmount
+            },
+            {
+              behavior = "Readonly"
+              field = s1.PaymentLineInvoice.field.PaymentBalance
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.PaymentLineInvoice.field.EffectiveImpactAmount
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "AdditionalInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.PaymentLineInvoice.field.AssociatedAccountId
+            },
+            {
+              behavior = "Edit"
+              field = s1.PaymentLineInvoice.field.Date
+            },
+            {
+              behavior = "Edit"
+              field = s1.PaymentLineInvoice.field.UnappliedDate
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.PaymentLineInvoice.field.AssociatedPaymentLineId
+            },
+            {
+              behavior = "Edit"
+              field = s1.PaymentLineInvoice.field.AppliedDate
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "SystemInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.PaymentLineInvoice.field.CreatedById
+            },
+            {
+              behavior = "Readonly"
+              field = s1.PaymentLineInvoice.field.CreatedDate
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.PaymentLineInvoice.field.LastModifiedById
+            },
+            {
+              behavior = "Readonly"
+              field = s1.PaymentLineInvoice.field.LastModifiedDate
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.PaymentLineInvoice,
+  ]
+}

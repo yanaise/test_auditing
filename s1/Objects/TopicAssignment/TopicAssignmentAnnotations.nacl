@@ -1,0 +1,62 @@
+type s1.TopicAssignment {
+  annotations {
+    serviceid apiName {
+    }
+    serviceid metadataType {
+    }
+    string label {
+    }
+    hidden_string keyPrefix {
+    }
+    s1.ActionOverride actionOverrides {
+    }
+    string compactLayoutAssignment {
+    }
+    string description {
+    }
+    boolean enableDataTranslation {
+    }
+    boolean enableDivisions {
+    }
+    boolean enableEnhancedLookup {
+    }
+    boolean enableFeeds {
+    }
+    boolean enableHistory {
+    }
+    boolean enableLicensing {
+    }
+    boolean enablePublishStatusTracking {
+    }
+    string externalDataSource {
+    }
+    string externalName {
+    }
+    string externalRepository {
+    }
+    s1.HistoryRetentionPolicy historyRetentionPolicy {
+    }
+    s1.MktDataLakeAttributes mktDataLakeAttributes {
+    }
+    s1.MktDataModelAttributes mktDataModelAttributes {
+    }
+    s1.ProfileSearchLayouts profileSearchLayouts {
+    }
+    boolean recordTypeTrackFeedHistory {
+    }
+    boolean recordTypeTrackHistory {
+    }
+    s1.SearchLayouts searchLayouts {
+    }
+    s1.SharingRecalculation sharingRecalculations {
+    }
+    string externalSharingModel {
+    }
+    hidden_string internalId {
+    }
+  }
+  apiName = "TopicAssignment"
+  metadataType = "CustomObject"
+  label = "Topic Assignment"
+  enableFeeds = false
+}

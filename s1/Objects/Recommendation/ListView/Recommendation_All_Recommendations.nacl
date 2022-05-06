@@ -1,0 +1,8 @@
+s1.ListView Recommendation_All_Recommendations {
+  fullName = "Recommendation.All_Recommendations"
+  filterScope = "Everything"
+  label = "All Recommendations"
+  _parent = [
+    s1.Recommendation,
+  ]
+}

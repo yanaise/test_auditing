@@ -1,0 +1,237 @@
+s1.Layout Payment_Payment_Layout@bs {
+  fullName = "Payment-Payment Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.Payment.field.PaymentNumber
+            },
+            {
+              behavior = "Edit"
+              field = s1.Payment.field.AccountId
+            },
+            {
+              behavior = "Required"
+              field = s1.Payment.field.Amount
+            },
+            {
+              behavior = "Edit"
+              field = s1.Payment.field.PaymentAuthorizationId
+            },
+            {
+              behavior = "Edit"
+              field = s1.Payment.field.PaymentMethodId
+            },
+            {
+              behavior = "Required"
+              field = s1.Payment.field.ProcessingMode
+            },
+            {
+              behavior = "Readonly"
+              field = s1.Payment.field.Balance
+            },
+            {
+              behavior = "Readonly"
+              field = s1.Payment.field.TotalRefundApplied
+            },
+            {
+              behavior = "Edit"
+              field = s1.Payment.field.Date
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.Payment.field.Status
+            },
+            {
+              behavior = "Required"
+              field = s1.Payment.field.Type
+            },
+            {
+              behavior = "Edit"
+              field = s1.Payment.field.PaymentGroupId
+            },
+            {
+              behavior = "Edit"
+              field = s1.Payment.field.EffectiveDate
+            },
+            {
+              behavior = "Edit"
+              field = s1.Payment.field.Comments
+            },
+            {
+              behavior = "Readonly"
+              field = s1.Payment.field.TotalRefundUnapplied
+            },
+            {
+              behavior = "Readonly"
+              field = s1.Payment.field.NetRefundApplied
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "AdditionalInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.Payment.field.ImpactAmount
+            },
+            {
+              behavior = "Edit"
+              field = s1.Payment.field.CancellationDate
+            },
+            {
+              behavior = "Edit"
+              field = s1.Payment.field.SfResultCode
+            },
+            {
+              behavior = "Edit"
+              field = s1.Payment.field.CancellationSfResultCode
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.Payment.field.CancellationEffectiveDate
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "GatewayDetails"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.Payment.field.PaymentGatewayId
+            },
+            {
+              behavior = "Edit"
+              field = s1.Payment.field.GatewayResultCode
+            },
+            {
+              behavior = "Edit"
+              field = s1.Payment.field.GatewayRefNumber
+            },
+            {
+              behavior = "Edit"
+              field = s1.Payment.field.CancellationGatewayDate
+            },
+            {
+              behavior = "Edit"
+              field = s1.Payment.field.CancellationGatewayRefNumber
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.Payment.field.GatewayDate
+            },
+            {
+              behavior = "Edit"
+              field = s1.Payment.field.GatewayResultCodeDescription
+            },
+            {
+              behavior = "Edit"
+              field = s1.Payment.field.GatewayRefDetails
+            },
+            {
+              behavior = "Edit"
+              field = s1.Payment.field.CancellationGatewayResultCode
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "SystemInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.Payment.field.CreatedById
+            },
+            {
+              behavior = "Readonly"
+              field = s1.Payment.field.CreatedDate
+            },
+            {
+              behavior = "Edit"
+              field = s1.Payment.field.MacAddress
+            },
+            {
+              behavior = "Edit"
+              field = s1.Payment.field.Phone
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.Payment.field.LastModifiedById
+            },
+            {
+              behavior = "Readonly"
+              field = s1.Payment.field.LastModifiedDate
+            },
+            {
+              behavior = "Edit"
+              field = s1.Payment.field.IpAddress
+            },
+            {
+              behavior = "Edit"
+              field = s1.Payment.field.Email
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.Payment,
+  ]
+}

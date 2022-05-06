@@ -1,0 +1,6 @@
+s1.ContractSettings {
+  fullName = "Contract"
+  autoCalculateEndDate = true
+  enableContractHistoryTracking = false
+  notifyOwnersOnContractExpiration = false
+}

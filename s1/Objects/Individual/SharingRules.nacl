@@ -1,0 +1,6 @@
+s1.SharingRules Individual {
+  fullName = "Individual"
+  _parent = [
+    s1.Individual,
+  ]
+}

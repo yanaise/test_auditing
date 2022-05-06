@@ -1,0 +1,24 @@
+type s1.SocialPersona {
+  string ExternalId {
+    _hidden_value = true
+  }
+  string ExternalPictureURL {
+    _hidden_value = true
+  }
+  string Name {
+    _hidden_value = true
+  }
+  s1.MasterDetail ParentId {
+    apiName = "SocialPersona.ParentId"
+    _hidden_value = true
+  }
+  string ProfileUrl {
+    _hidden_value = true
+  }
+  string Provider {
+    _hidden_value = true
+  }
+  string SourceApp {
+    _hidden_value = true
+  }
+}

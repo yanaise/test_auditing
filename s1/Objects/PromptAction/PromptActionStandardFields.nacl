@@ -1,0 +1,231 @@
+type s1.PromptAction {
+  serviceid Id {
+    apiName = "PromptAction.Id"
+    label = "Prompt Action ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  s1.Lookup OwnerId {
+    apiName = "PromptAction.OwnerId"
+    label = "Owner ID"
+    referenceTo = [
+      s1.Group,
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "Owner"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsDeleted {
+    apiName = "PromptAction.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Text Name {
+    apiName = "PromptAction.Name"
+    label = "Name"
+    _required = true
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  s1.DateTime CreatedDate {
+    apiName = "PromptAction.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup CreatedById {
+    apiName = "PromptAction.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime LastModifiedDate {
+    apiName = "PromptAction.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup LastModifiedById {
+    apiName = "PromptAction.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime SystemModstamp {
+    apiName = "PromptAction.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup PromptVersionId {
+    apiName = "PromptAction.PromptVersionId"
+    label = "Prompt Version ID"
+    _required = true
+    referenceTo = [
+      s1.PromptVersion,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "PromptVersion"
+    queryable = true
+  }
+  s1.Lookup UserId {
+    apiName = "PromptAction.UserId"
+    label = "User ID"
+    _required = true
+    referenceTo = [
+      s1.User,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "User"
+    queryable = true
+  }
+  s1.Number TimesDisplayed {
+    apiName = "PromptAction.TimesDisplayed"
+    label = "Times Displayed"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  s1.Number TimesActionTaken {
+    apiName = "PromptAction.TimesActionTaken"
+    label = "Times Action Taken"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  s1.Number TimesDismissed {
+    apiName = "PromptAction.TimesDismissed"
+    label = "Times Dismissed"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  s1.DateTime LastDisplayDate {
+    apiName = "PromptAction.LastDisplayDate"
+    label = "Last Display Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Picklist LastResult {
+    apiName = "PromptAction.LastResult"
+    label = "Last Result"
+    valueSet = [
+      {
+        fullName = "NotSeen"
+        default = false
+        label = "Not Seen"
+        isActive = true
+      },
+      {
+        fullName = "NoAction"
+        default = false
+        label = "No Action"
+        isActive = true
+      },
+      {
+        fullName = "Dismiss"
+        default = false
+        label = "Dismiss"
+        isActive = true
+      },
+      {
+        fullName = "CustomAction"
+        default = false
+        label = "Custom Action"
+        isActive = true
+      },
+      {
+        fullName = "Error"
+        default = false
+        label = "Error"
+        isActive = true
+      },
+      {
+        fullName = "Finish"
+        default = false
+        label = "Finish"
+        isActive = true
+      },
+      {
+        fullName = "Snooze"
+        default = false
+        label = "Snooze"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.DateTime LastResultDate {
+    apiName = "PromptAction.LastResultDate"
+    label = "Last Result Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Number StepNumber {
+    apiName = "PromptAction.StepNumber"
+    label = "Step Number"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  s1.Number StepCount {
+    apiName = "PromptAction.StepCount"
+    label = "Step Count"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+}

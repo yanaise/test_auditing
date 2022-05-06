@@ -1,0 +1,5 @@
+s1.NameSettings {
+  fullName = "Name"
+  enableMiddleName = false
+  enableNameSuffix = false
+}

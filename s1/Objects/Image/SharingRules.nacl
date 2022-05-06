@@ -1,0 +1,6 @@
+s1.SharingRules Image {
+  fullName = "Image"
+  _parent = [
+    s1.Image,
+  ]
+}

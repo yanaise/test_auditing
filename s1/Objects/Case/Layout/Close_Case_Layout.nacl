@@ -1,0 +1,39 @@
+s1.Layout CaseClose_Close_Case_Layout@bss {
+  fullName = "CaseClose-Close Case Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Case Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.Case.field.Status
+            },
+            {
+              behavior = "Required"
+              field = s1.Case.field.Reason
+            },
+            {
+              behavior = "Edit"
+              field = s1.Case.field.Comments
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+  ]
+  runAssignmentRulesDefault = false
+  showEmailCheckbox = false
+  showHighlightsPanel = false
+  showInteractionLogPanel = false
+  showSolutionSection = true
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.Case,
+  ]
+}

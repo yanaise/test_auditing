@@ -1,0 +1,110 @@
+type s1.OperatingHoursHoliday {
+  serviceid Id {
+    apiName = "OperatingHoursHoliday.Id"
+    label = "Operating Hour ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  s1.Checkbox IsDeleted {
+    apiName = "OperatingHoursHoliday.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.AutoNumber OperatingHoursHolidayNumber {
+    apiName = "OperatingHoursHoliday.OperatingHoursHolidayNumber"
+    label = "Operating Hours Holiday Number"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime CreatedDate {
+    apiName = "OperatingHoursHoliday.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup CreatedById {
+    apiName = "OperatingHoursHoliday.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime LastModifiedDate {
+    apiName = "OperatingHoursHoliday.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup LastModifiedById {
+    apiName = "OperatingHoursHoliday.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime SystemModstamp {
+    apiName = "OperatingHoursHoliday.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup OperatingHoursId {
+    apiName = "OperatingHoursHoliday.OperatingHoursId"
+    label = "Operating Hour ID"
+    _required = true
+    referenceTo = [
+      s1.OperatingHours,
+    ]
+    createable = true
+    updateable = false
+    relationshipName = "OperatingHours"
+    queryable = true
+  }
+  s1.Lookup HolidayId {
+    apiName = "OperatingHoursHoliday.HolidayId"
+    label = "Holiday ID"
+    _required = true
+    referenceTo = [
+      "Holiday",
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Holiday"
+    queryable = true
+  }
+  s1.Text DateAndTime {
+    apiName = "OperatingHoursHoliday.DateAndTime"
+    label = "Date and Time"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    _hidden_value = true
+  }
+}

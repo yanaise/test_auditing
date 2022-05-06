@@ -1,0 +1,6 @@
+s1.SharingRules Opportunity {
+  fullName = "Opportunity"
+  _parent = [
+    s1.Opportunity,
+  ]
+}

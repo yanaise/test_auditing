@@ -1,0 +1,70 @@
+s1.Layout AuthorizationForm_Authorization_Form_Layout@bss {
+  fullName = "AuthorizationForm-Authorization Form Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.AuthorizationForm.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = s1.AuthorizationForm.field.EffectiveFromDate
+            },
+            {
+              behavior = "Edit"
+              field = s1.AuthorizationForm.field.DefaultAuthFormTextId
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.AuthorizationForm.field.RevisionNumber
+            },
+            {
+              behavior = "Edit"
+              field = s1.AuthorizationForm.field.EffectiveToDate
+            },
+            {
+              behavior = "Edit"
+              field = s1.AuthorizationForm.field.IsSignatureRequired
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      fields = [
+        "Name",
+        "Locale",
+      ]
+      relatedList = "AuthorizationFormTextRelatedList"
+    },
+    {
+      relatedList = "RelatedEntityHistoryList"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.AuthorizationForm,
+  ]
+}

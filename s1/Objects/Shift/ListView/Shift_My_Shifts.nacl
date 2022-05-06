@@ -1,0 +1,8 @@
+s1.ListView Shift_My_Shifts {
+  fullName = "Shift.My_Shifts"
+  filterScope = "Mine"
+  label = "My Shifts"
+  _parent = [
+    s1.Shift,
+  ]
+}

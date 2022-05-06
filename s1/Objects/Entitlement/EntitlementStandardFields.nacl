@@ -1,0 +1,280 @@
+type s1.Entitlement {
+  serviceid Id {
+    apiName = "Entitlement.Id"
+    label = "Entitlement ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  s1.Checkbox IsDeleted {
+    apiName = "Entitlement.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Text Name {
+    apiName = "Entitlement.Name"
+    label = "Entitlement Name"
+    _required = true
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  s1.DateTime CreatedDate {
+    apiName = "Entitlement.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup CreatedById {
+    apiName = "Entitlement.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime LastModifiedDate {
+    apiName = "Entitlement.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup LastModifiedById {
+    apiName = "Entitlement.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime SystemModstamp {
+    apiName = "Entitlement.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup AccountId {
+    apiName = "Entitlement.AccountId"
+    label = "Account ID"
+    _required = true
+    referenceTo = [
+      s1.Account,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Account"
+    queryable = true
+    trackHistory = false
+  }
+  s1.Picklist Type {
+    apiName = "Entitlement.Type"
+    label = "Type"
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+    trackHistory = false
+    valueSetName = s1.StandardValueSet.instance.EntitlementType
+  }
+  s1.Lookup ServiceContractId {
+    apiName = "Entitlement.ServiceContractId"
+    label = "Service Contract ID"
+    referenceTo = [
+      s1.ServiceContract,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "ServiceContract"
+    queryable = true
+    trackHistory = false
+  }
+  s1.Lookup ContractLineItemId {
+    apiName = "Entitlement.ContractLineItemId"
+    label = "Contract Line Item ID"
+    referenceTo = [
+      s1.ContractLineItem,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "ContractLineItem"
+    queryable = true
+    trackHistory = false
+  }
+  s1.Lookup AssetId {
+    apiName = "Entitlement.AssetId"
+    label = "Asset ID"
+    referenceTo = [
+      s1.Asset,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Asset"
+    queryable = true
+    trackHistory = false
+  }
+  s1.Date StartDate {
+    apiName = "Entitlement.StartDate"
+    label = "Start Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Date EndDate {
+    apiName = "Entitlement.EndDate"
+    label = "End Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Lookup SlaProcessId {
+    apiName = "Entitlement.SlaProcessId"
+    label = "Entitlement Process ID"
+    referenceTo = [
+      "SlaProcess",
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "SlaProcess"
+    queryable = true
+    trackHistory = false
+  }
+  s1.Lookup BusinessHoursId {
+    apiName = "Entitlement.BusinessHoursId"
+    label = "Business Hours ID"
+    referenceTo = [
+      "BusinessHours",
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "BusinessHours"
+    queryable = true
+    trackHistory = false
+  }
+  s1.Checkbox IsPerIncident {
+    apiName = "Entitlement.IsPerIncident"
+    label = "Per Incident"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Number CasesPerEntitlement {
+    apiName = "Entitlement.CasesPerEntitlement"
+    label = "Cases Per Entitlement"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  s1.Number RemainingCases {
+    apiName = "Entitlement.RemainingCases"
+    label = "Remaining Cases"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  s1.Picklist Status {
+    apiName = "Entitlement.Status"
+    label = "Status"
+    valueSet = [
+      {
+        fullName = "Inactive"
+        default = false
+        label = "Inactive"
+        isActive = true
+      },
+      {
+        fullName = "Active"
+        default = false
+        label = "Active"
+        isActive = true
+      },
+      {
+        fullName = "Expired"
+        default = false
+        label = "Expired"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup SvcApptBookingWindowsId {
+    apiName = "Entitlement.SvcApptBookingWindowsId"
+    label = "Operating Hour ID"
+    referenceTo = [
+      s1.OperatingHours,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "SvcApptBookingWindows"
+    queryable = true
+    trackHistory = false
+  }
+  s1.Lookup LocationId {
+    apiName = "Entitlement.LocationId"
+    label = "Location ID"
+    referenceTo = [
+      s1.Location,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Location"
+    queryable = true
+    trackHistory = false
+  }
+  s1.Unknown RemainingWorkOrders {
+    apiName = "Entitlement.RemainingWorkOrders"
+    trackHistory = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Unknown StatusIndicator {
+    apiName = "Entitlement.StatusIndicator"
+    trackHistory = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Unknown WorkOrdersPerEntitlement {
+    apiName = "Entitlement.WorkOrdersPerEntitlement"
+    trackHistory = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+}

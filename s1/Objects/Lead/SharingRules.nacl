@@ -1,0 +1,6 @@
+s1.SharingRules Lead {
+  fullName = "Lead"
+  _parent = [
+    s1.Lead,
+  ]
+}

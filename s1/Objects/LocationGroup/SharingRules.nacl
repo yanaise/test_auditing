@@ -1,0 +1,6 @@
+s1.SharingRules LocationGroup {
+  fullName = "LocationGroup"
+  _parent = [
+    s1.LocationGroup,
+  ]
+}

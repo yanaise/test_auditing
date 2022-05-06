@@ -1,0 +1,83 @@
+s1.Layout EntityMilestone_Object_Milestone_Layout@bss {
+  fullName = "EntityMilestone-Object Milestone Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.EntityMilestone.field.BusinessHoursId
+            },
+            {
+              behavior = "Readonly"
+              field = s1.EntityMilestone.field.ParentEntityId
+            },
+            {
+              behavior = "Readonly"
+              field = s1.EntityMilestone.field.MilestoneId
+            },
+            {
+              behavior = "Edit"
+              field = s1.EntityMilestone.field.CompletionDate
+            },
+            {
+              behavior = "Readonly"
+              field = s1.EntityMilestone.field.IsViolated
+            },
+            {
+              behavior = "Readonly"
+              field = s1.EntityMilestone.field.IsCompleted
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.EntityMilestone.field.StartDate
+            },
+            {
+              behavior = "Readonly"
+              field = s1.EntityMilestone.field.TargetDate
+            },
+            {
+              behavior = "Readonly"
+              field = s1.EntityMilestone.field.TargetResponseInMins
+            },
+            {
+              behavior = "Readonly"
+              field = s1.EntityMilestone.field.TimeRemainingInMins
+            },
+            {
+              behavior = "Readonly"
+              field = s1.EntityMilestone.field.ElapsedTimeInMins
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  miniLayout = {
+    fields = [
+      "BusinessHoursId",
+    ]
+  }
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.EntityMilestone,
+  ]
+}

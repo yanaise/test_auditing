@@ -1,0 +1,6 @@
+s1.AccountIntelligenceSettings {
+  fullName = "AccountIntelligence"
+  enableAccountLogos = false
+  enableAutomatedAccountFields = false
+  enableNewsStories = false
+}

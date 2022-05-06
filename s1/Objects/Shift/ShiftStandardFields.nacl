@@ -1,0 +1,246 @@
+type s1.Shift {
+  serviceid Id {
+    apiName = "Shift.Id"
+    label = "Shift ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  s1.Lookup OwnerId {
+    apiName = "Shift.OwnerId"
+    label = "Owner ID"
+    referenceTo = [
+      s1.Group,
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "Owner"
+    queryable = true
+    _hidden_value = true
+    trackHistory = false
+  }
+  s1.Checkbox IsDeleted {
+    apiName = "Shift.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.AutoNumber ShiftNumber {
+    apiName = "Shift.ShiftNumber"
+    label = "Shift Number"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime CreatedDate {
+    apiName = "Shift.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup CreatedById {
+    apiName = "Shift.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime LastModifiedDate {
+    apiName = "Shift.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup LastModifiedById {
+    apiName = "Shift.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime SystemModstamp {
+    apiName = "Shift.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Text Label {
+    apiName = "Shift.Label"
+    label = "Label"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  s1.DateTime StartTime {
+    apiName = "Shift.StartTime"
+    label = "Start Time"
+    _required = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.DateTime EndTime {
+    apiName = "Shift.EndTime"
+    label = "End Time"
+    _required = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Lookup ServiceResourceId {
+    apiName = "Shift.ServiceResourceId"
+    label = "Service Resource ID"
+    referenceTo = [
+      s1.ServiceResource,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "ServiceResource"
+    queryable = true
+    trackHistory = false
+  }
+  s1.Lookup ServiceTerritoryId {
+    apiName = "Shift.ServiceTerritoryId"
+    label = "Service Territory ID"
+    referenceTo = [
+      s1.ServiceTerritory,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "ServiceTerritory"
+    queryable = true
+    trackHistory = false
+  }
+  s1.Picklist StatusCategory {
+    apiName = "Shift.StatusCategory"
+    label = "Status Category"
+    valueSet = [
+      {
+        fullName = "Tentative"
+        default = false
+        label = "Tentative"
+        isActive = true
+      },
+      {
+        fullName = "Published"
+        default = false
+        label = "Published"
+        isActive = true
+      },
+      {
+        fullName = "Confirmed"
+        default = false
+        label = "Confirmed"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Picklist Status {
+    apiName = "Shift.Status"
+    label = "Status"
+    _required = true
+    valueSet = [
+      {
+        fullName = "Tentative"
+        default = true
+        label = "Tentative"
+        isActive = true
+      },
+      {
+        fullName = "Published"
+        default = false
+        label = "Published"
+        isActive = true
+      },
+      {
+        fullName = "Confirmed"
+        default = false
+        label = "Confirmed"
+        isActive = true
+      },
+    ]
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+    trackHistory = false
+  }
+  s1.Picklist TimeSlotType {
+    apiName = "Shift.TimeSlotType"
+    label = "Time Slot Type"
+    _required = true
+    valueSet = [
+      {
+        fullName = "Normal"
+        default = true
+        label = "Normal"
+        isActive = true
+      },
+      {
+        fullName = "Extended"
+        default = false
+        label = "Extended"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Unknown BackgroundColor {
+    apiName = "Shift.BackgroundColor"
+    inlineHelpText = "Set a background color to highlight shifts in the schedule view."
+    trackHistory = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Lookup WorkTypeGroupId {
+    apiName = "Shift.WorkTypeGroupId"
+    trackHistory = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Lookup WorkTypeId {
+    apiName = "Shift.WorkTypeId"
+    trackHistory = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+}

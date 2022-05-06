@@ -1,0 +1,157 @@
+type s1.WorkPlan {
+  serviceid Id {
+    apiName = "WorkPlan.Id"
+    label = "Work Plan ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  s1.Lookup OwnerId {
+    apiName = "WorkPlan.OwnerId"
+    label = "Owner ID"
+    referenceTo = [
+      s1.Group,
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "Owner"
+    queryable = true
+    _hidden_value = true
+    trackHistory = false
+  }
+  s1.Checkbox IsDeleted {
+    apiName = "WorkPlan.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Text Name {
+    apiName = "WorkPlan.Name"
+    label = "Name"
+    _required = true
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  s1.DateTime CreatedDate {
+    apiName = "WorkPlan.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup CreatedById {
+    apiName = "WorkPlan.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime LastModifiedDate {
+    apiName = "WorkPlan.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup LastModifiedById {
+    apiName = "WorkPlan.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime SystemModstamp {
+    apiName = "WorkPlan.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup WorkOrderId {
+    apiName = "WorkPlan.WorkOrderId"
+    label = "Work Order ID"
+    referenceTo = [
+      s1.WorkOrder,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "WorkOrder"
+    queryable = true
+    trackHistory = false
+  }
+  s1.Number ExecutionOrder {
+    apiName = "WorkPlan.ExecutionOrder"
+    label = "Execution Order"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  s1.LongTextArea Description {
+    apiName = "WorkPlan.Description"
+    label = "Description"
+    createable = true
+    updateable = true
+    length = 32000
+    queryable = true
+  }
+  s1.Lookup WorkOrderLineItemId {
+    apiName = "WorkPlan.WorkOrderLineItemId"
+    label = "Line Item ID"
+    referenceTo = [
+      s1.WorkOrderLineItem,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "WorkOrderLineItem"
+    queryable = true
+    trackHistory = false
+  }
+  s1.Lookup ParentRecordId {
+    apiName = "WorkPlan.ParentRecordId"
+    trackHistory = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Unknown ParentRecordType {
+    apiName = "WorkPlan.ParentRecordType"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Lookup WorkPlanTemplateId {
+    apiName = "WorkPlan.WorkPlanTemplateId"
+    trackHistory = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+}

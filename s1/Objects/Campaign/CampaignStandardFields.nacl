@@ -1,0 +1,392 @@
+type s1.Campaign {
+  serviceid Id {
+    apiName = "Campaign.Id"
+    label = "Campaign ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  s1.Checkbox IsDeleted {
+    apiName = "Campaign.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Text Name {
+    apiName = "Campaign.Name"
+    label = "Name"
+    _required = true
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 80
+    queryable = true
+  }
+  s1.Lookup ParentId {
+    apiName = "Campaign.ParentId"
+    label = "Parent Campaign ID"
+    referenceTo = [
+      s1.Campaign,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Parent"
+    queryable = true
+  }
+  s1.Picklist Type {
+    apiName = "Campaign.Type"
+    label = "Type"
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+    valueSetName = s1.StandardValueSet.instance.CampaignType
+  }
+  s1.Picklist Status {
+    apiName = "Campaign.Status"
+    label = "Status"
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+    valueSetName = s1.StandardValueSet.instance.CampaignStatus
+  }
+  s1.Date StartDate {
+    apiName = "Campaign.StartDate"
+    label = "Start Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Date EndDate {
+    apiName = "Campaign.EndDate"
+    label = "End Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Currency ExpectedRevenue {
+    apiName = "Campaign.ExpectedRevenue"
+    label = "Expected Revenue in Campaign"
+    createable = true
+    updateable = true
+    scale = 0
+    precision = 18
+    queryable = true
+  }
+  s1.Currency BudgetedCost {
+    apiName = "Campaign.BudgetedCost"
+    label = "Budgeted Cost in Campaign"
+    createable = true
+    updateable = true
+    scale = 0
+    precision = 18
+    queryable = true
+  }
+  s1.Currency ActualCost {
+    apiName = "Campaign.ActualCost"
+    label = "Actual Cost in Campaign"
+    createable = true
+    updateable = true
+    scale = 0
+    precision = 18
+    queryable = true
+  }
+  s1.Percent ExpectedResponse {
+    apiName = "Campaign.ExpectedResponse"
+    label = "Expected Response (%)"
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 10
+    queryable = true
+  }
+  s1.Number NumberSent {
+    apiName = "Campaign.NumberSent"
+    label = "Num Sent in Campaign"
+    precision = 18
+    scale = 0
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  s1.Checkbox IsActive {
+    apiName = "Campaign.IsActive"
+    label = "Active"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.LongTextArea Description {
+    apiName = "Campaign.Description"
+    label = "Description"
+    createable = true
+    updateable = true
+    length = 32000
+    queryable = true
+  }
+  s1.Number NumberOfLeads {
+    apiName = "Campaign.NumberOfLeads"
+    label = "Leads in Campaign"
+    _required = true
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Number NumberOfConvertedLeads {
+    apiName = "Campaign.NumberOfConvertedLeads"
+    label = "Converted Leads in Campaign"
+    _required = true
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Number NumberOfContacts {
+    apiName = "Campaign.NumberOfContacts"
+    label = "Contacts in Campaign"
+    _required = true
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Number NumberOfResponses {
+    apiName = "Campaign.NumberOfResponses"
+    label = "Responses in Campaign"
+    _required = true
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Number NumberOfOpportunities {
+    apiName = "Campaign.NumberOfOpportunities"
+    label = "Opportunities in Campaign"
+    _required = true
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Number NumberOfWonOpportunities {
+    apiName = "Campaign.NumberOfWonOpportunities"
+    label = "Won Opportunities in Campaign"
+    _required = true
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Currency AmountAllOpportunities {
+    apiName = "Campaign.AmountAllOpportunities"
+    label = "Value Opportunities in Campaign"
+    _required = true
+    createable = false
+    updateable = false
+    scale = 0
+    precision = 18
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Currency AmountWonOpportunities {
+    apiName = "Campaign.AmountWonOpportunities"
+    label = "Value Won Opportunities in Campaign"
+    _required = true
+    createable = false
+    updateable = false
+    scale = 0
+    precision = 18
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup OwnerId {
+    apiName = "Campaign.OwnerId"
+    label = "Owner ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "Owner"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime CreatedDate {
+    apiName = "Campaign.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup CreatedById {
+    apiName = "Campaign.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime LastModifiedDate {
+    apiName = "Campaign.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup LastModifiedById {
+    apiName = "Campaign.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime SystemModstamp {
+    apiName = "Campaign.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Date LastActivityDate {
+    apiName = "Campaign.LastActivityDate"
+    label = "Last Activity"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup CampaignMemberRecordTypeId {
+    apiName = "Campaign.CampaignMemberRecordTypeId"
+    label = "Record Type ID"
+    referenceTo = [
+      s1.RecordType,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "CampaignMemberRecordType"
+    queryable = true
+  }
+  s1.Unknown HierarchyActualCost {
+    apiName = "Campaign.HierarchyActualCost"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Unknown HierarchyAmountAllOpportunities {
+    apiName = "Campaign.HierarchyAmountAllOpportunities"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Unknown HierarchyAmountWonOpportunities {
+    apiName = "Campaign.HierarchyAmountWonOpportunities"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Unknown HierarchyBudgetedCost {
+    apiName = "Campaign.HierarchyBudgetedCost"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Unknown HierarchyExpectedRevenue {
+    apiName = "Campaign.HierarchyExpectedRevenue"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Unknown HierarchyNumberOfContacts {
+    apiName = "Campaign.HierarchyNumberOfContacts"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Unknown HierarchyNumberOfConvertedLeads {
+    apiName = "Campaign.HierarchyNumberOfConvertedLeads"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Unknown HierarchyNumberOfLeads {
+    apiName = "Campaign.HierarchyNumberOfLeads"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Unknown HierarchyNumberOfOpportunities {
+    apiName = "Campaign.HierarchyNumberOfOpportunities"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Unknown HierarchyNumberOfResponses {
+    apiName = "Campaign.HierarchyNumberOfResponses"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Unknown HierarchyNumberOfWonOpportunities {
+    apiName = "Campaign.HierarchyNumberOfWonOpportunities"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Unknown HierarchyNumberSent {
+    apiName = "Campaign.HierarchyNumberSent"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+}

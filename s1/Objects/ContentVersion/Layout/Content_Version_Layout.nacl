@@ -1,0 +1,43 @@
+s1.Layout ContentVersion_Content_Version_Layout@bss {
+  fullName = "ContentVersion-Content Version Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.ContentVersion.field.Title
+            },
+            {
+              behavior = "Edit"
+              field = s1.ContentVersion.field.Description
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  miniLayout = {
+    fields = [
+      "Title",
+      "Description",
+    ]
+  }
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.ContentVersion,
+  ]
+}

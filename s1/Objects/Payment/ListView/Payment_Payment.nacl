@@ -1,0 +1,8 @@
+s1.ListView Payment_Payment {
+  fullName = "Payment.Payment"
+  filterScope = "Everything"
+  label = "All"
+  _parent = [
+    s1.Payment,
+  ]
+}

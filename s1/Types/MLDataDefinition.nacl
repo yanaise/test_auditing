@@ -1,0 +1,63 @@
+type s1.MLDataDefinition {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string developerName {
+  }
+  string entityDeveloperName {
+  }
+  string excludedFields {
+  }
+  string includedFields {
+  }
+  s1.MLField joinFields {
+  }
+  string parentDefinitionDevName {
+  }
+  s1.MLFilter scoringFilter {
+    foreignKeyDomain = [
+      s1.MLFilter,
+    ]
+  }
+  s1.MLFilter segmentFilter {
+    foreignKeyDomain = [
+      s1.MLFilter,
+    ]
+  }
+  s1.MLFilter trainingFilter {
+    foreignKeyDomain = [
+      s1.MLFilter,
+    ]
+  }
+  string type {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Candidate",
+        "Interaction",
+        "Prediction",
+        "Recipient",
+      ]
+    }
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "mlDataDefinition"
+  dirName = "mlDataDefinitions"
+  metadataType = "MLDataDefinition"
+}

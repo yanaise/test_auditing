@@ -1,0 +1,299 @@
+type s1.CreditMemo {
+  serviceid Id {
+    apiName = "CreditMemo.Id"
+    label = "Credit Memo ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  s1.Lookup OwnerId {
+    apiName = "CreditMemo.OwnerId"
+    label = "Owner ID"
+    referenceTo = [
+      s1.Group,
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "Owner"
+    queryable = true
+    _hidden_value = true
+    trackHistory = false
+  }
+  s1.Checkbox IsDeleted {
+    apiName = "CreditMemo.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.AutoNumber DocumentNumber {
+    apiName = "CreditMemo.DocumentNumber"
+    label = "Document Number"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime CreatedDate {
+    apiName = "CreditMemo.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup CreatedById {
+    apiName = "CreditMemo.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime LastModifiedDate {
+    apiName = "CreditMemo.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup LastModifiedById {
+    apiName = "CreditMemo.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime SystemModstamp {
+    apiName = "CreditMemo.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup BillingAccountId {
+    apiName = "CreditMemo.BillingAccountId"
+    label = "Account ID"
+    _required = true
+    referenceTo = [
+      s1.Account,
+    ]
+    createable = false
+    updateable = true
+    relationshipName = "BillingAccount"
+    queryable = true
+    trackHistory = false
+  }
+  s1.Text CreditMemoNumber {
+    apiName = "CreditMemo.CreditMemoNumber"
+    label = "Credit Memo Number"
+    createable = false
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+  }
+  s1.Summary TotalAmount {
+    apiName = "CreditMemo.TotalAmount"
+    label = "Total Amount"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Summary TotalAmountWithTax {
+    apiName = "CreditMemo.TotalAmountWithTax"
+    label = "Total with Tax"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Summary TotalChargeAmount {
+    apiName = "CreditMemo.TotalChargeAmount"
+    label = "Total Charges"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Summary TotalAdjustmentAmount {
+    apiName = "CreditMemo.TotalAdjustmentAmount"
+    label = "Total Adjustment Amount"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Summary TotalTaxAmount {
+    apiName = "CreditMemo.TotalTaxAmount"
+    label = "Total Tax"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Date CreditDate {
+    apiName = "CreditMemo.CreditDate"
+    label = "Credit Date"
+    _required = true
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Text Description {
+    apiName = "CreditMemo.Description"
+    label = "Description"
+    createable = false
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  s1.Picklist Status {
+    apiName = "CreditMemo.Status"
+    label = "Status"
+    _required = true
+    valueSet = [
+      {
+        fullName = "Draft"
+        default = false
+        label = "Draft"
+        isActive = true
+      },
+      {
+        fullName = "Pending"
+        default = false
+        label = "Pending"
+        isActive = true
+      },
+      {
+        fullName = "Posted"
+        default = false
+        label = "Posted"
+        isActive = true
+      },
+      {
+        fullName = "Canceled"
+        default = false
+        label = "Canceled"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Lookup BillToContactId {
+    apiName = "CreditMemo.BillToContactId"
+    label = "Contact ID"
+    referenceTo = [
+      s1.Contact,
+    ]
+    createable = false
+    updateable = true
+    relationshipName = "BillToContact"
+    queryable = true
+    trackHistory = false
+  }
+  s1.Currency Balance {
+    apiName = "CreditMemo.Balance"
+    label = "Balance"
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Currency TotalChargeTaxAmount {
+    apiName = "CreditMemo.TotalChargeTaxAmount"
+    label = "Total Charge Tax Amount"
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Currency TotalChargeAmountWithTax {
+    apiName = "CreditMemo.TotalChargeAmountWithTax"
+    label = "Total Charge Amount with Tax"
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Currency TotalAdjustmentTaxAmount {
+    apiName = "CreditMemo.TotalAdjustmentTaxAmount"
+    label = "Total Adjustment Tax Amount"
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Currency TotalAdjustmentAmountWithTax {
+    apiName = "CreditMemo.TotalAdjustmentAmountWithTax"
+    label = "Total Adjustment Amount with Tax"
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Unknown AppType {
+    apiName = "CreditMemo.AppType"
+    trackHistory = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Unknown CreationMode {
+    apiName = "CreditMemo.CreationMode"
+    trackHistory = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Unknown ExternalReference {
+    apiName = "CreditMemo.ExternalReference"
+    trackHistory = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Unknown ExternalReferenceDataSource {
+    apiName = "CreditMemo.ExternalReferenceDataSource"
+    trackHistory = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+}

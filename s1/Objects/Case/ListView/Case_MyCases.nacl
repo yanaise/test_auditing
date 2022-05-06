@@ -1,0 +1,8 @@
+s1.ListView Case_MyCases {
+  fullName = "Case.MyCases"
+  filterScope = "Mine"
+  label = "My Cases"
+  _parent = [
+    s1.Case,
+  ]
+}

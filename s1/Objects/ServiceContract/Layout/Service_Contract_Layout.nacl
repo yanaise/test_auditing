@@ -1,0 +1,193 @@
+s1.Layout ServiceContract_Service_Contract_Layout@bss {
+  fullName = "ServiceContract-Service Contract Layout"
+  excludeButtons = [
+    "Submit",
+  ]
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Service Contract Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.ServiceContract.field.OwnerId
+            },
+            {
+              behavior = "Readonly"
+              field = s1.ServiceContract.field.ContractNumber
+            },
+            {
+              behavior = "Required"
+              field = s1.ServiceContract.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = s1.ServiceContract.field.Description
+            },
+            {
+              behavior = "Required"
+              field = s1.ServiceContract.field.AccountId
+            },
+            {
+              behavior = "Edit"
+              field = s1.ServiceContract.field.ContactId
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.ServiceContract.field.StatusIndicator
+            },
+            {
+              behavior = "Edit"
+              field = s1.ServiceContract.field.StartDate
+            },
+            {
+              behavior = "Edit"
+              field = s1.ServiceContract.field.EndDate
+            },
+            {
+              behavior = "Edit"
+              field = s1.ServiceContract.field.Term
+            },
+            {
+              behavior = "Edit"
+              field = s1.ServiceContract.field.SpecialTerms
+            },
+            {
+              behavior = "Readonly"
+              field = s1.ServiceContract.field.LineItemCount
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Totals"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.ServiceContract.field.Subtotal
+            },
+            {
+              behavior = "Readonly"
+              field = s1.ServiceContract.field.Discount
+            },
+            {
+              behavior = "Readonly"
+              field = s1.ServiceContract.field.TotalPrice
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.ServiceContract.field.ShippingHandling
+            },
+            {
+              behavior = "Edit"
+              field = s1.ServiceContract.field.Tax
+            },
+            {
+              behavior = "Readonly"
+              field = s1.ServiceContract.field.GrandTotal
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Address Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.ServiceContract.field.BillingAddress
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.ServiceContract.field.ShippingAddress
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.ServiceContract.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.ServiceContract.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      fields = [
+        "LINEITEM.NAME",
+        "PRODUCT.NAME",
+        "LINEITEM.STARTDATE",
+        "LINEITEM.ENDDATE",
+        "LINEITEM.STATUS",
+        "ASSET.NAME",
+        "LINEITEM.QUANTITY",
+        "LINEITEM.UNIT_PRICE",
+      ]
+      relatedList = "RelatedContractLineItemList"
+    },
+  ]
+  showEmailCheckbox = false
+  showHighlightsPanel = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.ServiceContract,
+  ]
+}

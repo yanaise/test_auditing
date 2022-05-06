@@ -1,0 +1,117 @@
+s1.Layout ServiceTerritoryMember_Service_Territory_Member_Layout@bsss {
+  fullName = "ServiceTerritoryMember-Service Territory Member Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.ServiceTerritoryMember.field.MemberNumber
+            },
+            {
+              behavior = "Required"
+              field = s1.ServiceTerritoryMember.field.ServiceResourceId
+            },
+            {
+              behavior = "Required"
+              field = s1.ServiceTerritoryMember.field.ServiceTerritoryId
+            },
+            {
+              behavior = "Required"
+              field = s1.ServiceTerritoryMember.field.TerritoryType
+            },
+            {
+              behavior = "Edit"
+              field = s1.ServiceTerritoryMember.field.Address
+            },
+            {
+              behavior = "Edit"
+              field = s1.ServiceTerritoryMember.field.OperatingHoursId
+            },
+            {
+              behavior = "Edit"
+              field = s1.ServiceTerritoryMember.field.Role
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "EffectiveDuration"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.ServiceTerritoryMember.field.EffectiveStartDate
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.ServiceTerritoryMember.field.EffectiveEndDate
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.ServiceTerritoryMember.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.ServiceTerritoryMember.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      relatedList = "RelatedFileList"
+    },
+    {
+      relatedList = "RelatedEntityHistoryList"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.ServiceTerritoryMember,
+  ]
+}

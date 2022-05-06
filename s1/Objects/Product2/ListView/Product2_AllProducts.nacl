@@ -1,0 +1,8 @@
+s1.ListView Product2_AllProducts {
+  fullName = "Product2.AllProducts"
+  filterScope = "Everything"
+  label = "All Products"
+  _parent = [
+    s1.Product2,
+  ]
+}

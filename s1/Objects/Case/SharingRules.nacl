@@ -1,0 +1,6 @@
+s1.SharingRules Case {
+  fullName = "Case"
+  _parent = [
+    s1.Case,
+  ]
+}

@@ -1,0 +1,51 @@
+s1.Layout Macro_Macro_Layout@bs {
+  fullName = "Macro-Macro Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.Macro.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = s1.Macro.field.OwnerId
+            },
+            {
+              behavior = "Edit"
+              field = s1.Macro.field.Description
+            },
+            {
+              behavior = "Edit"
+              field = s1.Macro.field.StartingContext
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  miniLayout = {
+    fields = [
+      "StartingContext",
+    ]
+  }
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.Macro,
+  ]
+}

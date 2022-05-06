@@ -1,0 +1,8 @@
+s1.ListView CommSubscriptionConsent_All_CommSubscriptionConsents {
+  fullName = "CommSubscriptionConsent.All_CommSubscriptionConsents"
+  filterScope = "Everything"
+  label = "All Communication Subscription Consents"
+  _parent = [
+    s1.CommSubscriptionConsent,
+  ]
+}

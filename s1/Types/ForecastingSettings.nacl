@@ -1,0 +1,35 @@
+settings s1.ForecastingSettings {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  boolean defaultToPersonalCurrency {
+  }
+  boolean enableForecasts {
+  }
+  "List<s1.ForecastingCategoryMapping>" forecastingCategoryMappings {
+  }
+  s1.ForecastingDisplayedFamilySettings forecastingDisplayedFamilySettings {
+  }
+  "List<s1.ForecastingTypeSettings>" forecastingTypeSettings {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "settings"
+  dirName = "settings"
+  metadataType = "ForecastingSettings"
+}

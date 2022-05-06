@@ -1,0 +1,413 @@
+s1.Layout Opportunity_Opportunity_Layout@bs {
+  fullName = "Opportunity-Opportunity Layout"
+  excludeButtons = [
+    "Submit",
+  ]
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Opportunity Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.Opportunity.field.OwnerId
+            },
+            {
+              behavior = "Edit"
+              field = s1.Opportunity.field.IsPrivate
+            },
+            {
+              behavior = "Required"
+              field = s1.Opportunity.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = s1.Opportunity.field.AccountId
+            },
+            {
+              behavior = "Edit"
+              field = s1.Opportunity.field.Type
+            },
+            {
+              behavior = "Edit"
+              field = s1.Opportunity.field.LeadSource
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.Opportunity.field.Amount
+            },
+            {
+              behavior = "Readonly"
+              field = s1.Opportunity.field.ExpectedRevenue
+            },
+            {
+              behavior = "Required"
+              field = s1.Opportunity.field.CloseDate
+            },
+            {
+              behavior = "Edit"
+              field = s1.Opportunity.field.NextStep
+            },
+            {
+              behavior = "Required"
+              field = s1.Opportunity.field.StageName
+            },
+            {
+              behavior = "Edit"
+              field = s1.Opportunity.field.Probability
+            },
+            {
+              behavior = "Edit"
+              field = s1.Opportunity.field.CampaignId
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Other Information"
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Additional Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.Opportunity.field.OrderNumber__c
+            },
+            {
+              behavior = "Edit"
+              field = s1.Opportunity.field.CurrentGenerators__c
+            },
+            {
+              behavior = "Edit"
+              field = s1.Opportunity.field.TrackingNumber__c
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.Opportunity.field.MainCompetitors__c
+            },
+            {
+              behavior = "Edit"
+              field = s1.Opportunity.field.DeliveryInstallationStatus__c
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.Opportunity.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.Opportunity.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Description Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.Opportunity.field.Description
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              customLink = s1.WebLink.instance.Opportunity_DeliveryStatus
+            },
+          ]
+        },
+      ]
+      style = "CustomLinks"
+    },
+  ]
+  platformActionList = {
+    actionListContext = "Record"
+    platformActionListItems = [
+      {
+        actionName = "FeedItem.TextPost"
+        actionType = "QuickAction"
+        sortOrder = 0
+      },
+      {
+        actionName = "FeedItem.ContentPost"
+        actionType = "QuickAction"
+        sortOrder = 1
+      },
+      {
+        actionName = s1.QuickAction.instance.NewTask
+        actionType = "QuickAction"
+        sortOrder = 2
+      },
+      {
+        actionName = s1.QuickAction.instance.LogACall
+        actionType = "QuickAction"
+        sortOrder = 3
+      },
+      {
+        actionName = s1.QuickAction.instance.NewCase
+        actionType = "QuickAction"
+        sortOrder = 4
+      },
+      {
+        actionName = s1.QuickAction.instance.NewNote
+        actionType = "QuickAction"
+        sortOrder = 5
+      },
+      {
+        actionName = s1.QuickAction.instance.NewEvent
+        actionType = "QuickAction"
+        sortOrder = 6
+      },
+      {
+        actionName = "FeedItem.LinkPost"
+        actionType = "QuickAction"
+        sortOrder = 7
+      },
+      {
+        actionName = "FeedItem.PollPost"
+        actionType = "QuickAction"
+        sortOrder = 8
+      },
+      {
+        actionName = "FeedItem.QuestionPost"
+        actionType = "QuickAction"
+        sortOrder = 9
+      },
+      {
+        actionName = s1.QuickAction.instance.SendEmail
+        actionType = "QuickAction"
+        sortOrder = 10
+      },
+      {
+        actionName = "ChangeRecordType"
+        actionType = "StandardButton"
+        sortOrder = 11
+      },
+      {
+        actionName = "Clone"
+        actionType = "StandardButton"
+        sortOrder = 12
+      },
+      {
+        actionName = "Submit"
+        actionType = "StandardButton"
+        sortOrder = 13
+      },
+      {
+        actionName = "Delete"
+        actionType = "StandardButton"
+        sortOrder = 14
+      },
+      {
+        actionName = "SendEmail"
+        actionType = "StandardButton"
+        sortOrder = 15
+      },
+      {
+        actionName = "Edit"
+        actionType = "StandardButton"
+        sortOrder = 16
+      },
+      {
+        actionName = "ChangeOwnerOne"
+        actionType = "StandardButton"
+        sortOrder = 17
+      },
+      {
+        actionName = "Share"
+        actionType = "StandardButton"
+        sortOrder = 18
+      },
+    ]
+  }
+  quickActionList = {
+    quickActionListItems = [
+      {
+        quickActionName = "FeedItem.ContentPost"
+      },
+      {
+        quickActionName = "FeedItem.LinkPost"
+      },
+      {
+        quickActionName = "FeedItem.PollPost"
+      },
+      {
+        quickActionName = "FeedItem.QuestionPost"
+      },
+      {
+        quickActionName = "FeedItem.TextPost"
+      },
+      {
+        quickActionName = s1.QuickAction.instance.LogACall
+      },
+      {
+        quickActionName = s1.QuickAction.instance.NewCase
+      },
+      {
+        quickActionName = s1.QuickAction.instance.NewEvent
+      },
+      {
+        quickActionName = s1.QuickAction.instance.NewNote
+      },
+      {
+        quickActionName = s1.QuickAction.instance.NewTask
+      },
+      {
+        quickActionName = s1.QuickAction.instance.SendEmail
+      },
+    ]
+  }
+  relatedContent = {
+    relatedContentItems = [
+      {
+        layoutItem = {
+          behavior = "Readonly"
+          field = s1.Opportunity.field.AccountId
+        }
+      },
+      {
+        layoutItem = {
+          behavior = "Readonly"
+          field = s1.Opportunity.field.OwnerId
+        }
+      },
+    ]
+  }
+  relatedLists = [
+    {
+      fields = [
+        "Product2",
+        "Quantity",
+        "UnitPrice",
+        "ServiceDate",
+        "Description",
+      ]
+      relatedList = "RelatedLineItemList"
+    },
+    {
+      fields = [
+        "TASK.SUBJECT",
+        "TASK.WHO_NAME",
+        "ACTIVITY.TASK",
+        "TASK.DUE_DATE",
+        "TASK.STATUS",
+        "TASK.PRIORITY",
+        "CORE.USERS.FULL_NAME",
+      ]
+      relatedList = "RelatedActivityList"
+    },
+    {
+      fields = [
+        "TASK.SUBJECT",
+        "TASK.WHO_NAME",
+        "ACTIVITY.TASK",
+        "TASK.DUE_DATE",
+        "CORE.USERS.FULL_NAME",
+        "TASK.LAST_UPDATE",
+      ]
+      relatedList = "RelatedHistoryList"
+    },
+    {
+      relatedList = "RelatedNoteList"
+    },
+    {
+      fields = [
+        "ContactName",
+        "Role",
+        "ContactTitle",
+        "IsPrimary",
+        "ContactPhone",
+        "ContactEmail",
+        "ContactAccountName",
+      ]
+      relatedList = "RelatedContactRoleList"
+    },
+    {
+      fields = [
+        "ACCOUNT.NAME",
+        "PARTNER.ROLE",
+        "PARTNER.PRIMARY",
+      ]
+      relatedList = "RelatedPartnerList"
+    },
+    {
+      relatedList = "RelatedCompetitorList"
+    },
+    {
+      relatedList = "RelatedOpportunityHistoryList"
+    },
+  ]
+  relatedObjects = [
+    "AccountId",
+  ]
+  showEmailCheckbox = false
+  showHighlightsPanel = false
+  showInteractionLogPanel = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  summaryLayout = {
+    masterLabel = "00h1a0000012AH0"
+    sizeX = 4
+    sizeY = 0
+    summaryLayoutStyle = "Default"
+  }
+  _parent = [
+    s1.Opportunity,
+  ]
+}

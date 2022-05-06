@@ -1,0 +1,128 @@
+s1.Layout AssetAction_Asset_Action_Layout@bss {
+  fullName = "AssetAction-Asset Action Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.AssetAction.field.CategoryEnum
+            },
+            {
+              behavior = "Readonly"
+              field = s1.AssetAction.field.AssetActionNumber
+            },
+            {
+              behavior = "Required"
+              field = s1.AssetAction.field.Type
+            },
+            {
+              behavior = "Required"
+              field = s1.AssetAction.field.ActionDate
+            },
+            {
+              behavior = "Readonly"
+              field = s1.AssetAction.field.ProductAmountChange
+            },
+            {
+              behavior = "Readonly"
+              field = s1.AssetAction.field.EstimatedTaxChange
+            },
+            {
+              behavior = "Required"
+              field = s1.AssetAction.field.QuantityChange
+            },
+            {
+              behavior = "Readonly"
+              field = s1.AssetAction.field.SubtotalChange
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.AssetAction.field.AssetId
+            },
+            {
+              behavior = "Required"
+              field = s1.AssetAction.field.Category
+            },
+            {
+              behavior = "Required"
+              field = s1.AssetAction.field.Amount
+            },
+            {
+              behavior = "Readonly"
+              field = s1.AssetAction.field.AdjustmentAmountChange
+            },
+            {
+              behavior = "Readonly"
+              field = s1.AssetAction.field.ActualTaxChange
+            },
+            {
+              behavior = "Required"
+              field = s1.AssetAction.field.MrrChange
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "SystemInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.AssetAction.field.CreatedById
+            },
+            {
+              behavior = "Readonly"
+              field = s1.AssetAction.field.CreatedDate
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.AssetAction.field.LastModifiedById
+            },
+            {
+              behavior = "Readonly"
+              field = s1.AssetAction.field.LastModifiedDate
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  miniLayout = {
+    fields = [
+      "CategoryEnum",
+    ]
+  }
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.AssetAction,
+  ]
+}

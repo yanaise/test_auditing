@@ -1,0 +1,6 @@
+s1.SharingRules LegalEntity {
+  fullName = "LegalEntity"
+  _parent = [
+    s1.LegalEntity,
+  ]
+}

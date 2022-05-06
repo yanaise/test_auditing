@@ -1,0 +1,23 @@
+type salesforce.CaseRelatedIssue {
+  salesforce.MasterDetail CaseId {
+    apiName = "CaseRelatedIssue.CaseId"
+    trackHistory = false
+    _hidden_value = true
+  }
+  string Name {
+    _hidden_value = true
+  }
+  string RelatedEntityType {
+    _hidden_value = true
+  }
+  salesforce.Lookup RelatedIssueId {
+    apiName = "CaseRelatedIssue.RelatedIssueId"
+    trackHistory = false
+    _hidden_value = true
+  }
+  salesforce.Picklist RelationshipType {
+    apiName = "CaseRelatedIssue.RelationshipType"
+    trackHistory = false
+    _hidden_value = true
+  }
+}

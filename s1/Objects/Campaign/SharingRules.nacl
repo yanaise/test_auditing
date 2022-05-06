@@ -1,0 +1,6 @@
+s1.SharingRules Campaign {
+  fullName = "Campaign"
+  _parent = [
+    s1.Campaign,
+  ]
+}

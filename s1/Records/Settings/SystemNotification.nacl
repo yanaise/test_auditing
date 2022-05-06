@@ -1,0 +1,5 @@
+s1.SystemNotificationSettings {
+  fullName = "SystemNotification"
+  disableDowntimeNotifications = "false"
+  disableMaintenanceNotifications = "false"
+}

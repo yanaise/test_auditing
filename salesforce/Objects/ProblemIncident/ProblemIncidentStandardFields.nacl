@@ -1,0 +1,23 @@
+type salesforce.ProblemIncident {
+  salesforce.MasterDetail IssueId {
+    apiName = "ProblemIncident.IssueId"
+    trackHistory = false
+    _hidden_value = true
+  }
+  string Name {
+    _hidden_value = true
+  }
+  string RelatedEntityType {
+    _hidden_value = true
+  }
+  salesforce.Lookup RelatedIssueId {
+    apiName = "ProblemIncident.RelatedIssueId"
+    trackHistory = false
+    _hidden_value = true
+  }
+  salesforce.Picklist RelationshipType {
+    apiName = "ProblemIncident.RelationshipType"
+    trackHistory = false
+    _hidden_value = true
+  }
+}

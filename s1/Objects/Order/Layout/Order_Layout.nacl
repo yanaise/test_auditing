@@ -1,0 +1,185 @@
+s1.Layout Order_Order_Layout@bs {
+  fullName = "Order-Order Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Order Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.Order.field.OwnerId
+            },
+            {
+              behavior = "Readonly"
+              field = s1.Order.field.OrderNumber
+            },
+            {
+              behavior = "Required"
+              field = s1.Order.field.AccountId
+            },
+            {
+              behavior = "Required"
+              field = s1.Order.field.EffectiveDate
+            },
+            {
+              behavior = "Edit"
+              field = s1.Order.field.CustomerAuthorizedById
+            },
+            {
+              behavior = "Edit"
+              field = s1.Order.field.CompanyAuthorizedById
+            },
+            {
+              behavior = "Edit"
+              field = s1.Order.field.BillingAddress
+            },
+            {
+              behavior = "Readonly"
+              field = s1.Order.field.ActivatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.Order.field.ContractId
+            },
+            {
+              behavior = "Readonly"
+              field = s1.Order.field.TotalAmount
+            },
+            {
+              behavior = "Edit"
+              field = s1.Order.field.Type
+            },
+            {
+              behavior = "Required"
+              field = s1.Order.field.Status
+            },
+            {
+              behavior = "Edit"
+              field = s1.Order.field.ShippingAddress
+            },
+            {
+              behavior = "Readonly"
+              field = s1.Order.field.ActivatedDate
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.Order.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.Order.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Description Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.Order.field.Description
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Additional Information"
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      fields = [
+        "Product2",
+        "ProductCode",
+        "Quantity",
+        "UnitPrice",
+        "TotalPrice",
+        "Description",
+      ]
+      relatedList = "RelatedOrderItemList"
+    },
+    {
+      relatedList = "RelatedEntityHistoryList"
+    },
+    {
+      fields = [
+        "TASK.SUBJECT",
+        "TASK.WHO_NAME",
+        "ACTIVITY.TASK",
+        "TASK.DUE_DATE",
+        "TASK.STATUS",
+        "TASK.PRIORITY",
+        "CORE.USERS.FULL_NAME",
+      ]
+      relatedList = "RelatedActivityList"
+    },
+    {
+      fields = [
+        "TASK.SUBJECT",
+        "TASK.WHO_NAME",
+        "ACTIVITY.TASK",
+        "TASK.DUE_DATE",
+        "CORE.USERS.FULL_NAME",
+        "TASK.LAST_UPDATE",
+      ]
+      relatedList = "RelatedHistoryList"
+    },
+    {
+      relatedList = "RelatedNoteList"
+    },
+  ]
+  relatedObjects = [
+    "ContractId",
+    "AccountId",
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.Order,
+  ]
+}

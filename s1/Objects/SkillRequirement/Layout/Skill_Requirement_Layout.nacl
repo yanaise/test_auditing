@@ -1,0 +1,73 @@
+s1.Layout SkillRequirement_Skill_Requirement_Layout@bss {
+  fullName = "SkillRequirement-Skill Requirement Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.SkillRequirement.field.SkillNumber
+            },
+            {
+              behavior = "Required"
+              field = s1.SkillRequirement.field.RelatedRecordId
+            },
+            {
+              behavior = "Required"
+              field = s1.SkillRequirement.field.SkillId
+            },
+            {
+              behavior = "Edit"
+              field = s1.SkillRequirement.field.SkillLevel
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.SkillRequirement.field.CreatedById
+            },
+            {
+              behavior = "Readonly"
+              field = s1.SkillRequirement.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      relatedList = "RelatedEntityHistoryList"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.SkillRequirement,
+  ]
+}

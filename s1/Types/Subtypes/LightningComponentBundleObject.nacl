@@ -1,0 +1,5 @@
+type s1.LightningComponentBundleObject {
+  string object {
+  }
+  metadataType = "LightningComponentBundleObject"
+}

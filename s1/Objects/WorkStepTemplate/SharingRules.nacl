@@ -1,0 +1,6 @@
+s1.SharingRules WorkStepTemplate {
+  fullName = "WorkStepTemplate"
+  _parent = [
+    s1.WorkStepTemplate,
+  ]
+}

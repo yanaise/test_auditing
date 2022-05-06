@@ -1,0 +1,479 @@
+type s1.Lead {
+  serviceid Id {
+    apiName = "Lead.Id"
+    label = "Lead ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  s1.Checkbox IsDeleted {
+    apiName = "Lead.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup MasterRecordId {
+    apiName = "Lead.MasterRecordId"
+    label = "Master Record ID"
+    referenceTo = [
+      s1.Lead,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "MasterRecord"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Name Name {
+    apiName = "Lead.Name"
+    label = "Full Name"
+    _required = true
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Text Title {
+    apiName = "Lead.Title"
+    label = "Title"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 128
+    queryable = true
+  }
+  s1.Text Company {
+    apiName = "Lead.Company"
+    label = "Company"
+    _required = true
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  s1.Address Address {
+    apiName = "Lead.Address"
+    label = "Address"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Phone Phone {
+    apiName = "Lead.Phone"
+    label = "Phone"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Phone MobilePhone {
+    apiName = "Lead.MobilePhone"
+    label = "Mobile Phone"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Phone Fax {
+    apiName = "Lead.Fax"
+    label = "Fax"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Email Email {
+    apiName = "Lead.Email"
+    label = "Email"
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  s1.Url Website {
+    apiName = "Lead.Website"
+    label = "Website"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Url PhotoUrl {
+    apiName = "Lead.PhotoUrl"
+    label = "Photo URL"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.LongTextArea Description {
+    apiName = "Lead.Description"
+    label = "Description"
+    createable = true
+    updateable = true
+    length = 32000
+    queryable = true
+  }
+  s1.Picklist LeadSource {
+    apiName = "Lead.LeadSource"
+    label = "Lead Source"
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+    trackFeedHistory = false
+    valueSetName = s1.StandardValueSet.instance.LeadSource
+  }
+  s1.Picklist Status {
+    apiName = "Lead.Status"
+    label = "Status"
+    _required = true
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+    trackFeedHistory = true
+    valueSetName = s1.StandardValueSet.instance.LeadStatus
+  }
+  s1.Picklist Industry {
+    apiName = "Lead.Industry"
+    label = "Industry"
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+    trackFeedHistory = false
+    valueSetName = s1.StandardValueSet.instance.Industry
+  }
+  s1.Picklist Rating {
+    apiName = "Lead.Rating"
+    label = "Rating"
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+    trackFeedHistory = false
+    valueSetName = s1.StandardValueSet.instance.AccountRating
+  }
+  s1.Currency AnnualRevenue {
+    apiName = "Lead.AnnualRevenue"
+    label = "Annual Revenue"
+    createable = true
+    updateable = true
+    scale = 0
+    precision = 18
+    queryable = true
+  }
+  s1.Number NumberOfEmployees {
+    apiName = "Lead.NumberOfEmployees"
+    label = "Employees"
+    precision = 8
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  s1.Lookup OwnerId {
+    apiName = "Lead.OwnerId"
+    label = "Owner ID"
+    referenceTo = [
+      s1.Group,
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "Owner"
+    queryable = true
+    _hidden_value = true
+    trackFeedHistory = true
+  }
+  s1.Checkbox IsConverted {
+    apiName = "Lead.IsConverted"
+    label = "Converted"
+    defaultValue = false
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  s1.Date ConvertedDate {
+    apiName = "Lead.ConvertedDate"
+    label = "Converted Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup ConvertedAccountId {
+    apiName = "Lead.ConvertedAccountId"
+    label = "Converted Account ID"
+    referenceTo = [
+      s1.Account,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "ConvertedAccount"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup ConvertedContactId {
+    apiName = "Lead.ConvertedContactId"
+    label = "Converted Contact ID"
+    referenceTo = [
+      s1.Contact,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "ConvertedContact"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup ConvertedOpportunityId {
+    apiName = "Lead.ConvertedOpportunityId"
+    label = "Converted Opportunity ID"
+    referenceTo = [
+      s1.Opportunity,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "ConvertedOpportunity"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsUnreadByOwner {
+    apiName = "Lead.IsUnreadByOwner"
+    label = "Unread By Owner"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.DateTime CreatedDate {
+    apiName = "Lead.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup CreatedById {
+    apiName = "Lead.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime LastModifiedDate {
+    apiName = "Lead.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup LastModifiedById {
+    apiName = "Lead.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime SystemModstamp {
+    apiName = "Lead.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Date LastActivityDate {
+    apiName = "Lead.LastActivityDate"
+    label = "Last Activity"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Text Jigsaw {
+    apiName = "Lead.Jigsaw"
+    label = "Data.com Key"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 20
+    queryable = true
+  }
+  s1.Text JigsawContactId {
+    apiName = "Lead.JigsawContactId"
+    label = "Jigsaw Contact ID"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 20
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Picklist CleanStatus {
+    apiName = "Lead.CleanStatus"
+    label = "Clean Status"
+    valueSet = [
+      {
+        fullName = "Matched"
+        default = false
+        label = "In Sync"
+        isActive = true
+      },
+      {
+        fullName = "Different"
+        default = false
+        label = "Different"
+        isActive = true
+      },
+      {
+        fullName = "Acknowledged"
+        default = false
+        label = "Reviewed"
+        isActive = true
+      },
+      {
+        fullName = "NotFound"
+        default = false
+        label = "Not Found"
+        isActive = true
+      },
+      {
+        fullName = "Inactive"
+        default = false
+        label = "Inactive"
+        isActive = true
+      },
+      {
+        fullName = "Pending"
+        default = false
+        label = "Not Compared"
+        isActive = true
+      },
+      {
+        fullName = "SelectMatch"
+        default = false
+        label = "Select Match"
+        isActive = true
+      },
+      {
+        fullName = "Skipped"
+        default = false
+        label = "Skipped"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Text CompanyDunsNumber {
+    apiName = "Lead.CompanyDunsNumber"
+    label = "Company D-U-N-S Number"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 9
+    queryable = true
+  }
+  s1.Lookup DandbCompanyId {
+    apiName = "Lead.DandbCompanyId"
+    label = "D&B Company ID"
+    referenceTo = [
+      s1.DandBCompany,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "DandbCompany"
+    queryable = true
+    trackFeedHistory = false
+  }
+  s1.Text EmailBouncedReason {
+    apiName = "Lead.EmailBouncedReason"
+    label = "Email Bounced Reason"
+    createable = false
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  s1.DateTime EmailBouncedDate {
+    apiName = "Lead.EmailBouncedDate"
+    label = "Email Bounced Date"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Lookup IndividualId {
+    apiName = "Lead.IndividualId"
+    label = "Individual ID"
+    referenceTo = [
+      s1.Individual,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Individual"
+    queryable = true
+    trackFeedHistory = false
+  }
+  s1.Lookup CampaignId {
+    apiName = "Lead.CampaignId"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Unknown DoNotCall {
+    apiName = "Lead.DoNotCall"
+    trackFeedHistory = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Unknown HasOptedOutOfEmail {
+    apiName = "Lead.HasOptedOutOfEmail"
+    trackFeedHistory = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Unknown HasOptedOutOfFax {
+    apiName = "Lead.HasOptedOutOfFax"
+    trackFeedHistory = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Unknown LastTransferDate {
+    apiName = "Lead.LastTransferDate"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+}

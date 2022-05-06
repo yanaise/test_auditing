@@ -1,0 +1,6 @@
+s1.SharingRules QuickTextUsage {
+  fullName = "QuickTextUsage"
+  _parent = [
+    s1.QuickTextUsage,
+  ]
+}

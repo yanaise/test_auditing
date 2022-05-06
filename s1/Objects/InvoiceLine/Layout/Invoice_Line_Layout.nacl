@@ -1,0 +1,177 @@
+s1.Layout InvoiceLine_Invoice_Line_Layout@bss {
+  fullName = "InvoiceLine-Invoice Line Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.InvoiceLine.field.Name
+            },
+            {
+              behavior = "Required"
+              field = s1.InvoiceLine.field.InvoiceLineStartDate
+            },
+            {
+              behavior = "Required"
+              field = s1.InvoiceLine.field.InvoiceLineEndDate
+            },
+            {
+              behavior = "Edit"
+              field = s1.InvoiceLine.field.ReferenceEntityItemId
+            },
+            {
+              behavior = "Edit"
+              field = s1.InvoiceLine.field.RelatedLineId
+            },
+            {
+              behavior = "Edit"
+              field = s1.InvoiceLine.field.Description
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.InvoiceLine.field.InvoiceId
+            },
+            {
+              behavior = "Edit"
+              field = s1.InvoiceLine.field.ReferenceEntityItemType
+            },
+            {
+              behavior = "Edit"
+              field = s1.InvoiceLine.field.ReferenceEntityItemTypeCode
+            },
+            {
+              behavior = "Required"
+              field = s1.InvoiceLine.field.Type
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "InvoiceLineAmountInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.InvoiceLine.field.Product2Id
+            },
+            {
+              behavior = "Edit"
+              field = s1.InvoiceLine.field.Quantity
+            },
+            {
+              behavior = "Edit"
+              field = s1.InvoiceLine.field.UnitPrice
+            },
+            {
+              behavior = "Edit"
+              field = s1.InvoiceLine.field.ChargeAmount
+            },
+            {
+              behavior = "Edit"
+              field = s1.InvoiceLine.field.AdjustmentAmount
+            },
+            {
+              behavior = "Edit"
+              field = s1.InvoiceLine.field.TaxAmount
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "TaxInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.InvoiceLine.field.TaxRate
+            },
+            {
+              behavior = "Edit"
+              field = s1.InvoiceLine.field.TaxName
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.InvoiceLine.field.TaxEffectiveDate
+            },
+            {
+              behavior = "Edit"
+              field = s1.InvoiceLine.field.TaxCode
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "SystemInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.InvoiceLine.field.CreatedById
+            },
+            {
+              behavior = "Readonly"
+              field = s1.InvoiceLine.field.CreatedDate
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.InvoiceLine.field.LastModifiedById
+            },
+            {
+              behavior = "Readonly"
+              field = s1.InvoiceLine.field.LastModifiedDate
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.InvoiceLine,
+  ]
+}

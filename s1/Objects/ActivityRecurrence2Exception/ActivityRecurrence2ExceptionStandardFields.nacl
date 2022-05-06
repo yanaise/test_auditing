@@ -1,0 +1,6 @@
+type s1.ActivityRecurrence2Exception {
+  s1.Picklist Type {
+    apiName = "ActivityRecurrence2Exception.Type"
+    _hidden_value = true
+  }
+}

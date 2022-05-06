@@ -1,0 +1,79 @@
+s1.Layout OperatingHours_Operating_Hours_Layout@bss {
+  fullName = "OperatingHours-Operating Hours Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.OperatingHours.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = s1.OperatingHours.field.Description
+            },
+            {
+              behavior = "Required"
+              field = s1.OperatingHours.field.TimeZone
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.OperatingHours.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.OperatingHours.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      fields = [
+        "DayOfWeek",
+        "StartTime",
+        "EndTime",
+        "Type",
+      ]
+      relatedList = "TimeSlots"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.OperatingHours,
+  ]
+}

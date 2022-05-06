@@ -1,0 +1,6 @@
+s1.SharingRules Invoice {
+  fullName = "Invoice"
+  _parent = [
+    s1.Invoice,
+  ]
+}

@@ -1,0 +1,98 @@
+s1.Layout ServiceResourceSkill_Service_Resource_Skill_Layout@bsss {
+  fullName = "ServiceResourceSkill-Service Resource Skill Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.ServiceResourceSkill.field.SkillNumber
+            },
+            {
+              behavior = "Required"
+              field = s1.ServiceResourceSkill.field.ServiceResourceId
+            },
+            {
+              behavior = "Required"
+              field = s1.ServiceResourceSkill.field.SkillId
+            },
+            {
+              behavior = "Edit"
+              field = s1.ServiceResourceSkill.field.SkillLevel
+            },
+            {
+              behavior = "Required"
+              field = s1.ServiceResourceSkill.field.EffectiveStartDate
+            },
+            {
+              behavior = "Edit"
+              field = s1.ServiceResourceSkill.field.EffectiveEndDate
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.ServiceResourceSkill.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.ServiceResourceSkill.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      relatedList = "RelatedFileList"
+    },
+    {
+      relatedList = "RelatedEntityHistoryList"
+    },
+    {
+      fields = [
+        "CreatedDate",
+        "StepStatus",
+        "OriginalActor",
+        "Actor",
+        "Comments",
+      ]
+      relatedList = "RelatedProcessHistoryList"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.ServiceResourceSkill,
+  ]
+}

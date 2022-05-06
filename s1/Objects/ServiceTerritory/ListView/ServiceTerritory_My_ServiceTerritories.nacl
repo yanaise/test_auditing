@@ -1,0 +1,8 @@
+s1.ListView ServiceTerritory_My_ServiceTerritories {
+  fullName = "ServiceTerritory.My_ServiceTerritories"
+  filterScope = "Mine"
+  label = "My Service Territories"
+  _parent = [
+    s1.ServiceTerritory,
+  ]
+}

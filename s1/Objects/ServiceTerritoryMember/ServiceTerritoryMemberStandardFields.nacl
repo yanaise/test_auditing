@@ -1,0 +1,172 @@
+type s1.ServiceTerritoryMember {
+  serviceid Id {
+    apiName = "ServiceTerritoryMember.Id"
+    label = "Resource Territory ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  s1.Checkbox IsDeleted {
+    apiName = "ServiceTerritoryMember.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.AutoNumber MemberNumber {
+    apiName = "ServiceTerritoryMember.MemberNumber"
+    label = "Member Number"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime CreatedDate {
+    apiName = "ServiceTerritoryMember.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup CreatedById {
+    apiName = "ServiceTerritoryMember.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime LastModifiedDate {
+    apiName = "ServiceTerritoryMember.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup LastModifiedById {
+    apiName = "ServiceTerritoryMember.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime SystemModstamp {
+    apiName = "ServiceTerritoryMember.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup ServiceTerritoryId {
+    apiName = "ServiceTerritoryMember.ServiceTerritoryId"
+    label = "Territory ID"
+    _required = true
+    referenceTo = [
+      s1.ServiceTerritory,
+    ]
+    createable = true
+    updateable = false
+    relationshipName = "ServiceTerritory"
+    queryable = true
+    trackHistory = false
+  }
+  s1.Lookup ServiceResourceId {
+    apiName = "ServiceTerritoryMember.ServiceResourceId"
+    label = "Resource ID"
+    _required = true
+    referenceTo = [
+      s1.ServiceResource,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "ServiceResource"
+    queryable = true
+    trackHistory = false
+  }
+  s1.Picklist TerritoryType {
+    apiName = "ServiceTerritoryMember.TerritoryType"
+    label = "Territory Type"
+    valueSet = [
+      {
+        fullName = "P"
+        default = true
+        label = "Primary"
+        isActive = true
+      },
+      {
+        fullName = "S"
+        default = false
+        label = "Secondary"
+        isActive = true
+      },
+      {
+        fullName = "R"
+        default = false
+        label = "Relocation"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.DateTime EffectiveStartDate {
+    apiName = "ServiceTerritoryMember.EffectiveStartDate"
+    label = "Start Date"
+    _required = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.DateTime EffectiveEndDate {
+    apiName = "ServiceTerritoryMember.EffectiveEndDate"
+    label = "End Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Address Address {
+    apiName = "ServiceTerritoryMember.Address"
+    label = "Address"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup OperatingHoursId {
+    apiName = "ServiceTerritoryMember.OperatingHoursId"
+    label = "Operating Hour ID"
+    referenceTo = [
+      s1.OperatingHours,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "OperatingHours"
+    queryable = true
+    trackHistory = false
+  }
+  s1.Picklist Role {
+    apiName = "ServiceTerritoryMember.Role"
+    label = "Role"
+    createable = true
+    updateable = true
+    queryable = true
+    trackHistory = false
+  }
+}

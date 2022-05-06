@@ -1,0 +1,202 @@
+type s1.Name2 {
+  annotations {
+    serviceid apiName {
+    }
+    string description {
+    }
+    string inlineHelpText {
+    }
+    string label {
+    }
+    string businessOwnerUser {
+    }
+    string businessOwnerGroup {
+    }
+    s1.businessStatus businessStatus {
+    }
+    s1.securityClassification securityClassification {
+    }
+    string complianceGroup {
+    }
+    boolean createable {
+    }
+    boolean updateable {
+    }
+    boolean queryable {
+    }
+    hidden_string internalId {
+    }
+    boolean externalId {
+    }
+    boolean trackTrending {
+    }
+    boolean trackFeedHistory {
+    }
+    boolean deprecated {
+    }
+    boolean trackHistory {
+    }
+  }
+  string FirstName {
+  }
+  string LastName {
+  }
+  string MiddleName {
+  }
+  string Suffix {
+  }
+}
+type s1.Name {
+  annotations {
+    serviceid apiName {
+    }
+    string description {
+    }
+    string inlineHelpText {
+    }
+    string label {
+    }
+    string businessOwnerUser {
+    }
+    string businessOwnerGroup {
+    }
+    s1.businessStatus businessStatus {
+    }
+    s1.securityClassification securityClassification {
+    }
+    string complianceGroup {
+    }
+    boolean createable {
+    }
+    boolean updateable {
+    }
+    boolean queryable {
+    }
+    hidden_string internalId {
+    }
+    boolean externalId {
+    }
+    boolean trackTrending {
+    }
+    boolean trackFeedHistory {
+    }
+    boolean deprecated {
+    }
+    boolean trackHistory {
+    }
+  }
+  string FirstName {
+  }
+  string LastName {
+  }
+  s1.Picklist Salutation {
+  }
+  string MiddleName {
+  }
+  string Suffix {
+  }
+}
+type s1.Geolocation {
+  annotations {
+    boolean displayLocationInDecimal {
+    }
+    number scale {
+    }
+    serviceid apiName {
+    }
+    string description {
+    }
+    string inlineHelpText {
+    }
+    string label {
+    }
+    string businessOwnerUser {
+    }
+    string businessOwnerGroup {
+    }
+    s1.businessStatus businessStatus {
+    }
+    s1.securityClassification securityClassification {
+    }
+    string complianceGroup {
+    }
+    boolean createable {
+    }
+    boolean updateable {
+    }
+    boolean queryable {
+    }
+    hidden_string internalId {
+    }
+    boolean externalId {
+    }
+    boolean trackTrending {
+    }
+    boolean trackFeedHistory {
+    }
+    boolean deprecated {
+    }
+    boolean trackHistory {
+    }
+  }
+  number latitude {
+  }
+  number longitude {
+  }
+}
+type s1.Address {
+  annotations {
+    serviceid apiName {
+    }
+    string description {
+    }
+    string inlineHelpText {
+    }
+    string label {
+    }
+    string businessOwnerUser {
+    }
+    string businessOwnerGroup {
+    }
+    s1.businessStatus businessStatus {
+    }
+    s1.securityClassification securityClassification {
+    }
+    string complianceGroup {
+    }
+    boolean createable {
+    }
+    boolean updateable {
+    }
+    boolean queryable {
+    }
+    hidden_string internalId {
+    }
+    boolean externalId {
+    }
+    boolean trackTrending {
+    }
+    boolean trackFeedHistory {
+    }
+    boolean deprecated {
+    }
+    boolean trackHistory {
+    }
+  }
+  string city {
+  }
+  string country {
+  }
+  s1.Picklist geocodeAccuracy {
+  }
+  number latitude {
+  }
+  number longitude {
+  }
+  string postalCode {
+  }
+  string state {
+  }
+  s1.TextArea street {
+  }
+}

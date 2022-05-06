@@ -1,0 +1,8 @@
+s1.ListView Contact_MyContacts {
+  fullName = "Contact.MyContacts"
+  filterScope = "Mine"
+  label = "My Contacts"
+  _parent = [
+    s1.Contact,
+  ]
+}

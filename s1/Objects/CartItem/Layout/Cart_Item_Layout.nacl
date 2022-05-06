@@ -1,0 +1,118 @@
+s1.Layout CartItem_Cart_Item_Layout@bss {
+  fullName = "CartItem-Cart Item Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.CartItem.field.Name
+            },
+            {
+              behavior = "Required"
+              field = s1.CartItem.field.CartId
+            },
+            {
+              behavior = "Required"
+              field = s1.CartItem.field.CartDeliveryGroupId
+            },
+            {
+              behavior = "Required"
+              field = s1.CartItem.field.CreatedDate
+            },
+            {
+              behavior = "Required"
+              field = s1.CartItem.field.Product2Id
+            },
+            {
+              behavior = "Required"
+              field = s1.CartItem.field.LastModifiedDate
+            },
+            {
+              behavior = "Required"
+              field = s1.CartItem.field.ListPrice
+            },
+            {
+              behavior = "Required"
+              field = s1.CartItem.field.Quantity
+            },
+            {
+              behavior = "Required"
+              field = s1.CartItem.field.SalesPrice
+            },
+            {
+              behavior = "Required"
+              field = s1.CartItem.field.Sku
+            },
+            {
+              behavior = "Required"
+              field = s1.CartItem.field.AdjustmentAmount
+            },
+            {
+              behavior = "Required"
+              field = s1.CartItem.field.AdjustmentTaxAmount
+            },
+            {
+              behavior = "Required"
+              field = s1.CartItem.field.TotalAmount
+            },
+            {
+              behavior = "Required"
+              field = s1.CartItem.field.TotalAdjustmentAmount
+            },
+            {
+              behavior = "Required"
+              field = s1.CartItem.field.TotalPriceAfterAllAdjustments
+            },
+            {
+              behavior = "Required"
+              field = s1.CartItem.field.TotalLineAmount
+            },
+            {
+              behavior = "Readonly"
+              field = s1.CartItem.field.TotalLineTaxAmount
+            },
+            {
+              behavior = "Required"
+              field = s1.CartItem.field.TotalListPrice
+            },
+            {
+              behavior = "Required"
+              field = s1.CartItem.field.TotalPrice
+            },
+            {
+              behavior = "Required"
+              field = s1.CartItem.field.TotalTaxAmount
+            },
+            {
+              behavior = "Required"
+              field = s1.CartItem.field.UnitAdjustedPrice
+            },
+            {
+              behavior = "Required"
+              field = s1.CartItem.field.UnitAdjustmentAmount
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.CartItem,
+  ]
+}

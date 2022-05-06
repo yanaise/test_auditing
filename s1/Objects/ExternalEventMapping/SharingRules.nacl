@@ -1,0 +1,6 @@
+s1.SharingRules ExternalEventMapping {
+  fullName = "ExternalEventMapping"
+  _parent = [
+    s1.ExternalEventMapping,
+  ]
+}

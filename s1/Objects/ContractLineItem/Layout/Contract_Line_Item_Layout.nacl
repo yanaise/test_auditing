@@ -1,0 +1,146 @@
+s1.Layout ContractLineItem_Contract_Line_Item_Layout@bsss {
+  fullName = "ContractLineItem-Contract Line Item Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Contract Line Item Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.ContractLineItem.field.LineItemNumber
+            },
+            {
+              behavior = "Readonly"
+              field = s1.ContractLineItem.field.Product2Id
+            },
+            {
+              behavior = "Required"
+              field = s1.ContractLineItem.field.ServiceContractId
+            },
+            {
+              behavior = "Edit"
+              field = s1.ContractLineItem.field.Description
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.ContractLineItem.field.StatusIndicator
+            },
+            {
+              behavior = "Edit"
+              field = s1.ContractLineItem.field.StartDate
+            },
+            {
+              behavior = "Edit"
+              field = s1.ContractLineItem.field.EndDate
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Pricing"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.ContractLineItem.field.ListPrice
+            },
+            {
+              behavior = "Required"
+              field = s1.ContractLineItem.field.UnitPrice
+            },
+            {
+              behavior = "Required"
+              field = s1.ContractLineItem.field.Quantity
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.ContractLineItem.field.Subtotal
+            },
+            {
+              behavior = "Edit"
+              field = s1.ContractLineItem.field.Discount
+            },
+            {
+              behavior = "Readonly"
+              field = s1.ContractLineItem.field.TotalPrice
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Covered Asset"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.ContractLineItem.field.AssetId
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.ContractLineItem.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.ContractLineItem.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.ContractLineItem,
+  ]
+}

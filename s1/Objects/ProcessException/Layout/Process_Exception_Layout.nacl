@@ -1,0 +1,78 @@
+s1.Layout ProcessException_Process_Exception_Layout@bss {
+  fullName = "ProcessException-Process Exception Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "ProcessExceptionInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.ProcessException.field.OwnerId
+            },
+            {
+              behavior = "Required"
+              field = s1.ProcessException.field.Status
+            },
+            {
+              behavior = "Edit"
+              field = s1.ProcessException.field.Severity
+            },
+            {
+              behavior = "Required"
+              field = s1.ProcessException.field.AttachedToId
+            },
+            {
+              behavior = "Edit"
+              field = s1.ProcessException.field.CaseId
+            },
+            {
+              behavior = "Edit"
+              field = s1.ProcessException.field.ExternalReference
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.ProcessException.field.ProcessExceptionNumber
+            },
+            {
+              behavior = "Edit"
+              field = s1.ProcessException.field.Category
+            },
+            {
+              behavior = "Edit"
+              field = s1.ProcessException.field.Priority
+            },
+            {
+              behavior = "Required"
+              field = s1.ProcessException.field.Message
+            },
+            {
+              behavior = "Edit"
+              field = s1.ProcessException.field.Description
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.ProcessException,
+  ]
+}

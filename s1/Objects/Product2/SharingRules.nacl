@@ -1,0 +1,6 @@
+s1.SharingRules Product2 {
+  fullName = "Product2"
+  _parent = [
+    s1.Product2,
+  ]
+}

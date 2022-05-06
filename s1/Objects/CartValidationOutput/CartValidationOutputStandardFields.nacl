@@ -1,0 +1,227 @@
+type s1.CartValidationOutput {
+  serviceid Id {
+    apiName = "CartValidationOutput.Id"
+    label = "Cart Validation Output ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  s1.Checkbox IsDeleted {
+    apiName = "CartValidationOutput.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Text Name {
+    apiName = "CartValidationOutput.Name"
+    label = "Cart Validation Output"
+    _required = true
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  s1.DateTime CreatedDate {
+    apiName = "CartValidationOutput.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup CreatedById {
+    apiName = "CartValidationOutput.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime LastModifiedDate {
+    apiName = "CartValidationOutput.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup LastModifiedById {
+    apiName = "CartValidationOutput.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime SystemModstamp {
+    apiName = "CartValidationOutput.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup CartId {
+    apiName = "CartValidationOutput.CartId"
+    label = "Cart ID"
+    _required = true
+    referenceTo = [
+      s1.WebCart,
+    ]
+    createable = true
+    updateable = false
+    relationshipName = "Cart"
+    queryable = true
+  }
+  s1.Lookup RelatedEntityId {
+    apiName = "CartValidationOutput.RelatedEntityId"
+    label = "Cart Delivery Group ID or Cart Item ID or Web Cart ID"
+    _required = true
+    referenceTo = [
+      s1.CartDeliveryGroup,
+      s1.CartItem,
+      s1.CartTax,
+      s1.WebCart,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "RelatedEntity"
+    queryable = true
+  }
+  s1.Lookup BackgroundOperationId {
+    apiName = "CartValidationOutput.BackgroundOperationId"
+    label = "Background Operation ID"
+    referenceTo = [
+      "BackgroundOperation",
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "BackgroundOperation"
+    queryable = true
+  }
+  s1.Picklist Type {
+    apiName = "CartValidationOutput.Type"
+    label = "Type"
+    _required = true
+    valueSet = [
+      {
+        fullName = "Inventory"
+        default = false
+        label = "Inventory"
+        isActive = true
+      },
+      {
+        fullName = "Taxes"
+        default = false
+        label = "Taxes"
+        isActive = true
+      },
+      {
+        fullName = "Pricing"
+        default = false
+        label = "Pricing"
+        isActive = true
+      },
+      {
+        fullName = "Shipping"
+        default = false
+        label = "Shipping"
+        isActive = true
+      },
+      {
+        fullName = "Entitlement"
+        default = false
+        label = "Entitlement"
+        isActive = true
+      },
+      {
+        fullName = "SystemError"
+        default = false
+        label = "SystemError"
+        isActive = true
+      },
+      {
+        fullName = "Other"
+        default = false
+        label = "Other"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Picklist Level {
+    apiName = "CartValidationOutput.Level"
+    label = "Level"
+    _required = true
+    valueSet = [
+      {
+        fullName = "Info"
+        default = false
+        label = "Info"
+        isActive = true
+      },
+      {
+        fullName = "Error"
+        default = false
+        label = "Error"
+        isActive = true
+      },
+      {
+        fullName = "Warning"
+        default = false
+        label = "Warning"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Text Message {
+    apiName = "CartValidationOutput.Message"
+    label = "Message"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  s1.Checkbox IsDismissed {
+    apiName = "CartValidationOutput.IsDismissed"
+    label = "Is Dismissed"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Text RelatedEntityPrefix {
+    apiName = "CartValidationOutput.RelatedEntityPrefix"
+    label = "Related Entity Prefix"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 3
+    queryable = true
+    _hidden_value = true
+  }
+}

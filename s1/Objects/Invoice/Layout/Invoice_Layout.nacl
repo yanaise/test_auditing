@@ -1,0 +1,136 @@
+s1.Layout Invoice_Invoice_Layout@bs {
+  fullName = "Invoice-Invoice Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.Invoice.field.DocumentNumber
+            },
+            {
+              behavior = "Edit"
+              field = s1.Invoice.field.InvoiceNumber
+            },
+            {
+              behavior = "Required"
+              field = s1.Invoice.field.BillingAccountId
+            },
+            {
+              behavior = "Edit"
+              field = s1.Invoice.field.ReferenceEntityId
+            },
+            {
+              behavior = "Edit"
+              field = s1.Invoice.field.BillToContactId
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.Invoice.field.InvoiceDate
+            },
+            {
+              behavior = "Required"
+              field = s1.Invoice.field.DueDate
+            },
+            {
+              behavior = "Required"
+              field = s1.Invoice.field.Status
+            },
+            {
+              behavior = "Edit"
+              field = s1.Invoice.field.Description
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "InvoiceAmountInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.Invoice.field.TotalChargeAmount
+            },
+            {
+              behavior = "Readonly"
+              field = s1.Invoice.field.TotalAdjustmentAmount
+            },
+            {
+              behavior = "Readonly"
+              field = s1.Invoice.field.TotalTaxAmount
+            },
+            {
+              behavior = "Readonly"
+              field = s1.Invoice.field.TotalAmount
+            },
+            {
+              behavior = "Readonly"
+              field = s1.Invoice.field.TotalAmountWithTax
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "SystemInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.Invoice.field.CreatedById
+            },
+            {
+              behavior = "Readonly"
+              field = s1.Invoice.field.CreatedDate
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.Invoice.field.LastModifiedById
+            },
+            {
+              behavior = "Readonly"
+              field = s1.Invoice.field.LastModifiedDate
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.Invoice,
+  ]
+}

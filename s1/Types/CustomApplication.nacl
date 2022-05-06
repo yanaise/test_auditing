@@ -1,0 +1,96 @@
+type s1.CustomApplication {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  s1.AppActionOverride actionOverrides {
+  }
+  s1.AppBrand brand {
+    foreignKeyDomain = [
+      s1.AppBrand,
+    ]
+  }
+  s1.ServiceCloudConsoleConfig consoleConfig {
+  }
+  string defaultLandingTab {
+  }
+  string description {
+  }
+  "List<string>" formFactors {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Large",
+        "Medium",
+        "Small",
+      ]
+    }
+  }
+  boolean isNavAutoTempTabsDisabled {
+  }
+  boolean isNavPersonalizationDisabled {
+  }
+  boolean isServiceCloudConsole {
+  }
+  string label {
+  }
+  string logo {
+  }
+  string navType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Console",
+        "Standard",
+      ]
+    }
+  }
+  s1.AppPreferences preferences {
+  }
+  "List<s1.AppProfileActionOverride>" profileActionOverrides {
+  }
+  string setupExperience {
+    foreignKeyDomain = [
+      "SetupApp",
+    ]
+  }
+  string subscriberTabs {
+  }
+  "List<string>" tabs {
+  }
+  string uiType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Aloha",
+        "Lightning",
+      ]
+    }
+  }
+  string utilityBar {
+    foreignKeyDomain = [
+      s1.LightningPage,
+    ]
+  }
+  s1.AppWorkspaceConfig workspaceConfig {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "app"
+  dirName = "applications"
+  metadataType = "CustomApplication"
+}

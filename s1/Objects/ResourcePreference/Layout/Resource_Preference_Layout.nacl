@@ -1,0 +1,69 @@
+s1.Layout ResourcePreference_Resource_Preference_Layout@bss {
+  fullName = "ResourcePreference-Resource Preference Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.ResourcePreference.field.ServiceResourceId
+            },
+            {
+              behavior = "Required"
+              field = s1.ResourcePreference.field.RelatedRecordId
+            },
+            {
+              behavior = "Required"
+              field = s1.ResourcePreference.field.PreferenceType
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = false
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.ResourcePreference.field.CreatedById
+            },
+            {
+              behavior = "Readonly"
+              field = s1.ResourcePreference.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      relatedList = "RelatedEntityHistoryList"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.ResourcePreference,
+  ]
+}

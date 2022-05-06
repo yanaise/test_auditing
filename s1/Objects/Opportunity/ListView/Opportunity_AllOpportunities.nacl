@@ -1,0 +1,8 @@
+s1.ListView Opportunity_AllOpportunities {
+  fullName = "Opportunity.AllOpportunities"
+  filterScope = "Everything"
+  label = "All Opportunities"
+  _parent = [
+    s1.Opportunity,
+  ]
+}

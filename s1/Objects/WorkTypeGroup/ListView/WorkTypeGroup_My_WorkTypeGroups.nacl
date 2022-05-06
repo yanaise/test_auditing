@@ -1,0 +1,8 @@
+s1.ListView WorkTypeGroup_My_WorkTypeGroups {
+  fullName = "WorkTypeGroup.My_WorkTypeGroups"
+  filterScope = "Mine"
+  label = "My Work Type Groups"
+  _parent = [
+    s1.WorkTypeGroup,
+  ]
+}

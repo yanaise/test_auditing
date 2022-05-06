@@ -1,0 +1,28 @@
+type s1.ProblemRelatedItem {
+  s1.Lookup AssetId {
+    apiName = "ProblemRelatedItem.AssetId"
+    trackHistory = false
+    _hidden_value = true
+  }
+  string Comment {
+    _hidden_value = true
+  }
+  s1.Picklist ImpactLevel {
+    apiName = "ProblemRelatedItem.ImpactLevel"
+    trackHistory = false
+    _hidden_value = true
+  }
+  s1.Picklist ImpactType {
+    apiName = "ProblemRelatedItem.ImpactType"
+    trackHistory = false
+    _hidden_value = true
+  }
+  string Name {
+    _hidden_value = true
+  }
+  s1.MasterDetail ProblemId {
+    apiName = "ProblemRelatedItem.ProblemId"
+    trackHistory = false
+    _hidden_value = true
+  }
+}

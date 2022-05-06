@@ -1,0 +1,110 @@
+s1.Layout ConsumptionSchedule_Consumption_Schedule_Layout@bss {
+  fullName = "ConsumptionSchedule-Consumption Schedule Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.ConsumptionSchedule.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = s1.ConsumptionSchedule.field.UnitOfMeasure
+            },
+            {
+              behavior = "Required"
+              field = s1.ConsumptionSchedule.field.RatingMethod
+            },
+            {
+              behavior = "Required"
+              field = s1.ConsumptionSchedule.field.Type
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.ConsumptionSchedule.field.IsActive
+            },
+            {
+              behavior = "Edit"
+              field = s1.ConsumptionSchedule.field.Description
+            },
+            {
+              behavior = "Required"
+              field = s1.ConsumptionSchedule.field.BillingTerm
+            },
+            {
+              behavior = "Required"
+              field = s1.ConsumptionSchedule.field.BillingTermUnit
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.ConsumptionSchedule.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.ConsumptionSchedule.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      fields = [
+        "Name",
+        "LowerBound",
+        "UpperBound",
+        "Price",
+        "PricingMethod",
+        "ProcessingOrder",
+      ]
+      relatedList = "ConsumptionRates"
+    },
+    {
+      fields = [
+        "Product",
+      ]
+      relatedList = "ProductConsumptionSchedules"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.ConsumptionSchedule,
+  ]
+}

@@ -1,0 +1,8 @@
+s1.ListView PaymentAuthAdjustment_PaymentAuthAdjustment {
+  fullName = "PaymentAuthAdjustment.PaymentAuthAdjustment"
+  filterScope = "Everything"
+  label = "All"
+  _parent = [
+    s1.PaymentAuthAdjustment,
+  ]
+}

@@ -1,0 +1,27 @@
+type s1.EscalationRules {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  s1.EscalationRule escalationRule {
+  }
+  serviceid fullName {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "escalationRules"
+  dirName = "escalationRules"
+  metadataType = "EscalationRules"
+}

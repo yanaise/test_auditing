@@ -1,0 +1,158 @@
+type s1.QuickText {
+  serviceid Id {
+    apiName = "QuickText.Id"
+    label = "Quick Text ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  s1.Lookup OwnerId {
+    apiName = "QuickText.OwnerId"
+    label = "Owner ID"
+    referenceTo = [
+      s1.Group,
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "Owner"
+    queryable = true
+    _hidden_value = true
+    trackHistory = false
+  }
+  s1.Checkbox IsDeleted {
+    apiName = "QuickText.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Text Name {
+    apiName = "QuickText.Name"
+    label = "Quick Text Name"
+    _required = true
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  s1.DateTime CreatedDate {
+    apiName = "QuickText.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup CreatedById {
+    apiName = "QuickText.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime LastModifiedDate {
+    apiName = "QuickText.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup LastModifiedById {
+    apiName = "QuickText.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime SystemModstamp {
+    apiName = "QuickText.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.LongTextArea Message {
+    apiName = "QuickText.Message"
+    label = "Message"
+    _required = true
+    createable = true
+    updateable = true
+    length = 4096
+    queryable = true
+  }
+  s1.Picklist Category {
+    apiName = "QuickText.Category"
+    label = "Category"
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+    trackHistory = false
+    valueSetName = s1.StandardValueSet.instance.QuickTextCategory
+  }
+  s1.MultiselectPicklist Channel {
+    apiName = "QuickText.Channel"
+    label = "Channel"
+    restricted = false
+    visibleLines = 0
+    createable = true
+    updateable = true
+    queryable = true
+    trackHistory = false
+    valueSetName = s1.StandardValueSet.instance.QuickTextChannel
+  }
+  s1.Checkbox IsInsertable {
+    apiName = "QuickText.IsInsertable"
+    label = "Include in selected channels"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Picklist SourceType {
+    apiName = "QuickText.SourceType"
+    label = "Source Entity Type"
+    valueSet = [
+      {
+        fullName = "EINSTEIN_GENERATED"
+        default = false
+        label = "Einstein"
+        isActive = true
+      },
+      {
+        fullName = "USER_GENERATED"
+        default = false
+        label = "User"
+        isActive = true
+      },
+      {
+        fullName = "USER_EDITED"
+        default = false
+        label = "Einstein with user edits"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+}

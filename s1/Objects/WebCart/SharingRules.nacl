@@ -1,0 +1,6 @@
+s1.SharingRules WebCart {
+  fullName = "WebCart"
+  _parent = [
+    s1.WebCart,
+  ]
+}

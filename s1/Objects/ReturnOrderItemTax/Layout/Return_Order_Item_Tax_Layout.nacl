@@ -1,0 +1,66 @@
+s1.Layout ReturnOrderItemTax_Return_Order_Item_Tax_Layout@bssss {
+  fullName = "ReturnOrderItemTax-Return Order Item Tax Layout"
+  layoutSections = [
+    {
+      customLabel = true
+      detailHeading = true
+      editHeading = true
+      label = "Return Order Item Tax Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.ReturnOrderItemTax.field.ReturnOrderLineItemId
+            },
+            {
+              behavior = "Edit"
+              field = s1.ReturnOrderItemTax.field.ReturnOrderItemAdjustmentId
+            },
+            {
+              behavior = "Required"
+              field = s1.ReturnOrderItemTax.field.Type
+            },
+            {
+              behavior = "Required"
+              field = s1.ReturnOrderItemTax.field.TaxEffectiveDate
+            },
+            {
+              behavior = "Edit"
+              field = s1.ReturnOrderItemTax.field.Description
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.ReturnOrderItemTax.field.ReturnOrderId
+            },
+            {
+              behavior = "Required"
+              field = s1.ReturnOrderItemTax.field.Amount
+            },
+            {
+              behavior = "Edit"
+              field = s1.ReturnOrderItemTax.field.Rate
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.ReturnOrderItemTax,
+  ]
+}

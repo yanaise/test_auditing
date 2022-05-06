@@ -1,0 +1,27 @@
+type s1.FlowTextTemplate {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string description {
+  }
+  boolean isViewedAsPlainText {
+  }
+  string name {
+  }
+  s1.FlowMetadataValue processMetadataValues {
+  }
+  string text {
+  }
+  metadataType = "FlowTextTemplate"
+}

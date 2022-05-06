@@ -1,0 +1,4 @@
+s1.EmailTemplateSettings {
+  fullName = "EmailTemplate"
+  enableTemplateEnhancedFolderPref = false
+}

@@ -1,0 +1,160 @@
+type s1.CartTax {
+  serviceid Id {
+    apiName = "CartTax.Id"
+    label = "Cart Tax ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  s1.Checkbox IsDeleted {
+    apiName = "CartTax.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Text Name {
+    apiName = "CartTax.Name"
+    label = "Cart Tax Name"
+    _required = true
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  s1.DateTime CreatedDate {
+    apiName = "CartTax.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup CreatedById {
+    apiName = "CartTax.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime LastModifiedDate {
+    apiName = "CartTax.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup LastModifiedById {
+    apiName = "CartTax.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime SystemModstamp {
+    apiName = "CartTax.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup CartItemId {
+    apiName = "CartTax.CartItemId"
+    label = "Cart Item ID"
+    _required = true
+    referenceTo = [
+      s1.CartItem,
+    ]
+    createable = true
+    updateable = false
+    relationshipName = "CartItem"
+    queryable = true
+  }
+  s1.Lookup CartId {
+    apiName = "CartTax.CartId"
+    label = "Cart ID"
+    referenceTo = [
+      s1.WebCart,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "Cart"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Picklist TaxType {
+    apiName = "CartTax.TaxType"
+    label = "Tax Type"
+    _required = true
+    valueSet = [
+      {
+        fullName = "Actual"
+        default = false
+        label = "Actual"
+        isActive = true
+      },
+      {
+        fullName = "Estimated"
+        default = false
+        label = "Estimated"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Date TaxCalculationDate {
+    apiName = "CartTax.TaxCalculationDate"
+    label = "Tax Calculation Date"
+    _required = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Currency Amount {
+    apiName = "CartTax.Amount"
+    label = "Amount"
+    _required = true
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 18
+    queryable = true
+  }
+  s1.Percent TaxRate {
+    apiName = "CartTax.TaxRate"
+    label = "Tax Rate"
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 5
+    queryable = true
+  }
+  s1.LongTextArea Description {
+    apiName = "CartTax.Description"
+    label = "Description"
+    createable = true
+    updateable = true
+    length = 2000
+    queryable = true
+  }
+}

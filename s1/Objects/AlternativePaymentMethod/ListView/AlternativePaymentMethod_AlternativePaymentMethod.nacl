@@ -1,0 +1,8 @@
+s1.ListView AlternativePaymentMethod_AlternativePaymentMethod {
+  fullName = "AlternativePaymentMethod.AlternativePaymentMethod"
+  filterScope = "Everything"
+  label = "All"
+  _parent = [
+    s1.AlternativePaymentMethod,
+  ]
+}

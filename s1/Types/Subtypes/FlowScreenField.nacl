@@ -1,0 +1,88 @@
+type s1.FlowScreenField {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string choiceReferences {
+  }
+  s1.FlowDataTypeMapping dataTypeMappings {
+  }
+  string defaultSelectedChoiceReference {
+  }
+  s1.FlowElementReferenceOrValue defaultValue {
+  }
+  string description {
+  }
+  string extensionName {
+  }
+  string fieldText {
+  }
+  s1.FlowScreenField fields {
+  }
+  string helpText {
+  }
+  s1.FlowScreenFieldInputParameter inputParameters {
+  }
+  boolean isRequired {
+  }
+  boolean isVisible {
+  }
+  string name {
+  }
+  string objectFieldReference {
+  }
+  s1.FlowScreenFieldOutputParameter outputParameters {
+  }
+  s1.FlowMetadataValue processMetadataValues {
+  }
+  number scale {
+  }
+  boolean storeOutputAutomatically {
+  }
+  s1.FlowInputValidationRule validationRule {
+  }
+  s1.FlowVisibilityRule visibilityRule {
+  }
+  string dataType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Boolean",
+        "Currency",
+        "Date",
+        "DateTime",
+        "Number",
+        "String",
+      ]
+    }
+  }
+  string fieldType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "ComponentChoice",
+        "ComponentInput",
+        "ComponentInstance",
+        "DisplayText",
+        "DropdownBox",
+        "InputField",
+        "LargeTextArea",
+        "MultiSelectCheckboxes",
+        "MultiSelectPicklist",
+        "PasswordField",
+        "RadioButtons",
+      ]
+    }
+  }
+  metadataType = "FlowScreenField"
+}

@@ -1,0 +1,17 @@
+s1.Layout CartTax_Cart_Tax_Layout@bss {
+  fullName = "CartTax-Cart Tax Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.CartTax,
+  ]
+}

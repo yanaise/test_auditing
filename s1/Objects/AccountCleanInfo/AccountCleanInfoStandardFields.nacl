@@ -1,0 +1,884 @@
+type s1.AccountCleanInfo {
+  serviceid Id {
+    apiName = "AccountCleanInfo.Id"
+    label = "Account Clean Info ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  s1.Checkbox IsDeleted {
+    apiName = "AccountCleanInfo.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Text Name {
+    apiName = "AccountCleanInfo.Name"
+    label = "Account Clean Info Name"
+    _required = true
+    createable = false
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  s1.DateTime CreatedDate {
+    apiName = "AccountCleanInfo.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup CreatedById {
+    apiName = "AccountCleanInfo.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime LastModifiedDate {
+    apiName = "AccountCleanInfo.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup LastModifiedById {
+    apiName = "AccountCleanInfo.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime SystemModstamp {
+    apiName = "AccountCleanInfo.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup AccountId {
+    apiName = "AccountCleanInfo.AccountId"
+    label = "Account ID"
+    _required = true
+    referenceTo = [
+      s1.Account,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "Account"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime LastMatchedDate {
+    apiName = "AccountCleanInfo.LastMatchedDate"
+    label = "Last Matched Date"
+    _required = true
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime LastStatusChangedDate {
+    apiName = "AccountCleanInfo.LastStatusChangedDate"
+    label = "Last Status Changed Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup LastStatusChangedById {
+    apiName = "AccountCleanInfo.LastStatusChangedById"
+    label = "User ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastStatusChangedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsInactive {
+    apiName = "AccountCleanInfo.IsInactive"
+    label = "Company Status in Salesforce"
+    defaultValue = false
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Text CompanyName {
+    apiName = "AccountCleanInfo.CompanyName"
+    label = "Company Name"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Phone Phone {
+    apiName = "AccountCleanInfo.Phone"
+    label = "Phone"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Address Address {
+    apiName = "AccountCleanInfo.Address"
+    label = "Address"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Url Website {
+    apiName = "AccountCleanInfo.Website"
+    label = "Website"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Text TickerSymbol {
+    apiName = "AccountCleanInfo.TickerSymbol"
+    label = "Ticker Symbol"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 20
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Currency AnnualRevenue {
+    apiName = "AccountCleanInfo.AnnualRevenue"
+    label = "Annual Revenue"
+    createable = false
+    updateable = false
+    scale = 0
+    precision = 18
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Number NumberOfEmployees {
+    apiName = "AccountCleanInfo.NumberOfEmployees"
+    label = "Number of Employees"
+    precision = 8
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Picklist Industry {
+    apiName = "AccountCleanInfo.Industry"
+    label = "Industry"
+    restricted = false
+    createable = false
+    updateable = false
+    queryable = true
+    valueSetName = s1.StandardValueSet.instance.Industry
+    _hidden_value = true
+  }
+  s1.Picklist Ownership {
+    apiName = "AccountCleanInfo.Ownership"
+    label = "Ownership"
+    restricted = false
+    createable = false
+    updateable = false
+    queryable = true
+    valueSetName = s1.StandardValueSet.instance.AccountOwnership
+    _hidden_value = true
+  }
+  s1.Text DunsNumber {
+    apiName = "AccountCleanInfo.DunsNumber"
+    label = "D-U-N-S Number"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 9
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Text Sic {
+    apiName = "AccountCleanInfo.Sic"
+    label = "SIC Code"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 20
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Text SicDescription {
+    apiName = "AccountCleanInfo.SicDescription"
+    label = "SIC Description"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 80
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Text NaicsCode {
+    apiName = "AccountCleanInfo.NaicsCode"
+    label = "NAICS Code"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 8
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Text NaicsDescription {
+    apiName = "AccountCleanInfo.NaicsDescription"
+    label = "NAICS Description"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 120
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Text YearStarted {
+    apiName = "AccountCleanInfo.YearStarted"
+    label = "Year Started"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 12
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Phone Fax {
+    apiName = "AccountCleanInfo.Fax"
+    label = "Fax"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Text AccountSite {
+    apiName = "AccountCleanInfo.AccountSite"
+    label = "Account Site"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 80
+    queryable = true
+    _hidden_value = true
+  }
+  s1.LongTextArea Description {
+    apiName = "AccountCleanInfo.Description"
+    label = "Description"
+    createable = false
+    updateable = false
+    length = 32000
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Text Tradestyle {
+    apiName = "AccountCleanInfo.Tradestyle"
+    label = "Tradestyle"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Text DandBCompanyDunsNumber {
+    apiName = "AccountCleanInfo.DandBCompanyDunsNumber"
+    label = "D&B Company D-U-N-S Number"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 9
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Text DunsRightMatchGrade {
+    apiName = "AccountCleanInfo.DunsRightMatchGrade"
+    label = "DUNSRight™ Match Grade"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Number DunsRightMatchConfidence {
+    apiName = "AccountCleanInfo.DunsRightMatchConfidence"
+    label = "DUNSRight™ Match Confidence"
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Picklist CompanyStatusDataDotCom {
+    apiName = "AccountCleanInfo.CompanyStatusDataDotCom"
+    label = "Company Status per Data.com"
+    valueSet = [
+      {
+        fullName = "IsActiveCompanyDataDotCom"
+        default = false
+        label = "Company is In Business per Data.com"
+        isActive = true
+      },
+      {
+        fullName = "IsInactiveCompanyDataDotCom"
+        default = false
+        label = "Company is Out of Business per Data.com"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsReviewedCompanyName {
+    apiName = "AccountCleanInfo.IsReviewedCompanyName"
+    label = "Company Name is Reviewed"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsReviewedPhone {
+    apiName = "AccountCleanInfo.IsReviewedPhone"
+    label = "Phone is Reviewed"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsReviewedAddress {
+    apiName = "AccountCleanInfo.IsReviewedAddress"
+    label = "Address is Reviewed"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsReviewedWebsite {
+    apiName = "AccountCleanInfo.IsReviewedWebsite"
+    label = "Website is Reviewed"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsReviewedTickerSymbol {
+    apiName = "AccountCleanInfo.IsReviewedTickerSymbol"
+    label = "Ticker Symbol is Reviewed"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsReviewedAnnualRevenue {
+    apiName = "AccountCleanInfo.IsReviewedAnnualRevenue"
+    label = "Annual Revenue is Reviewed"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsReviewedNumberOfEmployees {
+    apiName = "AccountCleanInfo.IsReviewedNumberOfEmployees"
+    label = "Number of Employees is Reviewed"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsReviewedIndustry {
+    apiName = "AccountCleanInfo.IsReviewedIndustry"
+    label = "Industry is Reviewed"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsReviewedOwnership {
+    apiName = "AccountCleanInfo.IsReviewedOwnership"
+    label = "Ownership is Reviewed"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsReviewedDunsNumber {
+    apiName = "AccountCleanInfo.IsReviewedDunsNumber"
+    label = "D-U-N-S Number is Reviewed"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsReviewedSic {
+    apiName = "AccountCleanInfo.IsReviewedSic"
+    label = "SIC Code is Reviewed"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsReviewedSicDescription {
+    apiName = "AccountCleanInfo.IsReviewedSicDescription"
+    label = "SIC Description is Reviewed"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsReviewedNaicsCode {
+    apiName = "AccountCleanInfo.IsReviewedNaicsCode"
+    label = "NAICS Code is Reviewed"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsReviewedNaicsDescription {
+    apiName = "AccountCleanInfo.IsReviewedNaicsDescription"
+    label = "NAICS Description is Reviewed"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsReviewedYearStarted {
+    apiName = "AccountCleanInfo.IsReviewedYearStarted"
+    label = "Year Started is Reviewed"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsReviewedFax {
+    apiName = "AccountCleanInfo.IsReviewedFax"
+    label = "Fax is Reviewed"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsReviewedAccountSite {
+    apiName = "AccountCleanInfo.IsReviewedAccountSite"
+    label = "Account Site is Reviewed"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsReviewedDescription {
+    apiName = "AccountCleanInfo.IsReviewedDescription"
+    label = "Description is Reviewed"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsReviewedTradestyle {
+    apiName = "AccountCleanInfo.IsReviewedTradestyle"
+    label = "Tradestyle is Reviewed"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsReviewedDandBCompanyDunsNumber {
+    apiName = "AccountCleanInfo.IsReviewedDandBCompanyDunsNumber"
+    label = "D&B Company D-U-N-S Number is Reviewed"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsDifferentCompanyName {
+    apiName = "AccountCleanInfo.IsDifferentCompanyName"
+    label = "Company Name is Different"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsDifferentPhone {
+    apiName = "AccountCleanInfo.IsDifferentPhone"
+    label = "Phone is Different"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsDifferentStreet {
+    apiName = "AccountCleanInfo.IsDifferentStreet"
+    label = "Street is Different"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsDifferentCity {
+    apiName = "AccountCleanInfo.IsDifferentCity"
+    label = "City is Different"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsDifferentState {
+    apiName = "AccountCleanInfo.IsDifferentState"
+    label = "State is Different"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsDifferentPostalCode {
+    apiName = "AccountCleanInfo.IsDifferentPostalCode"
+    label = "ZIP is Different"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsDifferentCountry {
+    apiName = "AccountCleanInfo.IsDifferentCountry"
+    label = "Country is Different"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsDifferentWebsite {
+    apiName = "AccountCleanInfo.IsDifferentWebsite"
+    label = "Website is Different"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsDifferentTickerSymbol {
+    apiName = "AccountCleanInfo.IsDifferentTickerSymbol"
+    label = "Ticker Symbol is Different"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsDifferentAnnualRevenue {
+    apiName = "AccountCleanInfo.IsDifferentAnnualRevenue"
+    label = "Annual Revenue is Different"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsDifferentNumberOfEmployees {
+    apiName = "AccountCleanInfo.IsDifferentNumberOfEmployees"
+    label = "Number of Employees is Different"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsDifferentIndustry {
+    apiName = "AccountCleanInfo.IsDifferentIndustry"
+    label = "Industry is Different"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsDifferentOwnership {
+    apiName = "AccountCleanInfo.IsDifferentOwnership"
+    label = "Ownership is Different"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsDifferentDunsNumber {
+    apiName = "AccountCleanInfo.IsDifferentDunsNumber"
+    label = "D-U-N-S Number is Different"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsDifferentSic {
+    apiName = "AccountCleanInfo.IsDifferentSic"
+    label = "SIC Code is Different"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsDifferentSicDescription {
+    apiName = "AccountCleanInfo.IsDifferentSicDescription"
+    label = "SIC Description is Different"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsDifferentNaicsCode {
+    apiName = "AccountCleanInfo.IsDifferentNaicsCode"
+    label = "NAICS Code is Different"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsDifferentNaicsDescription {
+    apiName = "AccountCleanInfo.IsDifferentNaicsDescription"
+    label = "NAICS Description is Different"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsDifferentYearStarted {
+    apiName = "AccountCleanInfo.IsDifferentYearStarted"
+    label = "Year Started is Different"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsDifferentFax {
+    apiName = "AccountCleanInfo.IsDifferentFax"
+    label = "Fax is Different"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsDifferentAccountSite {
+    apiName = "AccountCleanInfo.IsDifferentAccountSite"
+    label = "Account Site is Different"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsDifferentDescription {
+    apiName = "AccountCleanInfo.IsDifferentDescription"
+    label = "Description is Different"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsDifferentTradestyle {
+    apiName = "AccountCleanInfo.IsDifferentTradestyle"
+    label = "Tradestyle is Different"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsDifferentDandBCompanyDunsNumber {
+    apiName = "AccountCleanInfo.IsDifferentDandBCompanyDunsNumber"
+    label = "D&B Company D-U-N-S Number is Different"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsDifferentStateCode {
+    apiName = "AccountCleanInfo.IsDifferentStateCode"
+    label = "State Code is Different"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsDifferentCountryCode {
+    apiName = "AccountCleanInfo.IsDifferentCountryCode"
+    label = "Country Code is Different"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox CleanedByJob {
+    apiName = "AccountCleanInfo.CleanedByJob"
+    label = "Cleaned by Job"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox CleanedByUser {
+    apiName = "AccountCleanInfo.CleanedByUser"
+    label = "Cleaned by User"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsFlaggedWrongCompanyName {
+    apiName = "AccountCleanInfo.IsFlaggedWrongCompanyName"
+    label = "Company Name is Flagged Wrong"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsFlaggedWrongPhone {
+    apiName = "AccountCleanInfo.IsFlaggedWrongPhone"
+    label = "Phone is Flagged Wrong"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsFlaggedWrongAddress {
+    apiName = "AccountCleanInfo.IsFlaggedWrongAddress"
+    label = "Address is Flagged Wrong"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsFlaggedWrongWebsite {
+    apiName = "AccountCleanInfo.IsFlaggedWrongWebsite"
+    label = "Website is Flagged Wrong"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsFlaggedWrongTickerSymbol {
+    apiName = "AccountCleanInfo.IsFlaggedWrongTickerSymbol"
+    label = "Ticker Symbol is Flagged Wrong"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsFlaggedWrongAnnualRevenue {
+    apiName = "AccountCleanInfo.IsFlaggedWrongAnnualRevenue"
+    label = "Annual Revenue is Flagged Wrong"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsFlaggedWrongNumberOfEmployees {
+    apiName = "AccountCleanInfo.IsFlaggedWrongNumberOfEmployees"
+    label = "Number of Employees is Flagged Wrong"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsFlaggedWrongIndustry {
+    apiName = "AccountCleanInfo.IsFlaggedWrongIndustry"
+    label = "Industry is Flagged Wrong"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsFlaggedWrongOwnership {
+    apiName = "AccountCleanInfo.IsFlaggedWrongOwnership"
+    label = "Ownership is Flagged Wrong"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsFlaggedWrongDunsNumber {
+    apiName = "AccountCleanInfo.IsFlaggedWrongDunsNumber"
+    label = "D-U-N-S Number is Flagged Wrong"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsFlaggedWrongSic {
+    apiName = "AccountCleanInfo.IsFlaggedWrongSic"
+    label = "SIC Code is Flagged Wrong"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsFlaggedWrongSicDescription {
+    apiName = "AccountCleanInfo.IsFlaggedWrongSicDescription"
+    label = "SIC Description is Flagged Wrong"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsFlaggedWrongNaicsCode {
+    apiName = "AccountCleanInfo.IsFlaggedWrongNaicsCode"
+    label = "NAICS Code is Flagged Wrong"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsFlaggedWrongNaicsDescription {
+    apiName = "AccountCleanInfo.IsFlaggedWrongNaicsDescription"
+    label = "NAICS Description is Flagged Wrong"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsFlaggedWrongYearStarted {
+    apiName = "AccountCleanInfo.IsFlaggedWrongYearStarted"
+    label = "Year Started is Flagged Wrong"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsFlaggedWrongFax {
+    apiName = "AccountCleanInfo.IsFlaggedWrongFax"
+    label = "Fax is Flagged Wrong"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsFlaggedWrongAccountSite {
+    apiName = "AccountCleanInfo.IsFlaggedWrongAccountSite"
+    label = "Account Site is Flagged Wrong"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsFlaggedWrongDescription {
+    apiName = "AccountCleanInfo.IsFlaggedWrongDescription"
+    label = "Description is Flagged Wrong"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsFlaggedWrongTradestyle {
+    apiName = "AccountCleanInfo.IsFlaggedWrongTradestyle"
+    label = "Tradestyle is Flagged Wrong"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Text DataDotComId {
+    apiName = "AccountCleanInfo.DataDotComId"
+    label = "Data.com ID"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 20
+    queryable = true
+    _hidden_value = true
+  }
+}

@@ -1,0 +1,6 @@
+s1.SharingRules CommSubscriptionConsent {
+  fullName = "CommSubscriptionConsent"
+  _parent = [
+    s1.CommSubscriptionConsent,
+  ]
+}

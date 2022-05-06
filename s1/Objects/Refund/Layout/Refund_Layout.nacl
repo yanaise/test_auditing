@@ -1,0 +1,229 @@
+s1.Layout Refund_Refund_Layout@bs {
+  fullName = "Refund-Refund Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.Refund.field.RefundNumber
+            },
+            {
+              behavior = "Edit"
+              field = s1.Refund.field.AccountId
+            },
+            {
+              behavior = "Required"
+              field = s1.Refund.field.Amount
+            },
+            {
+              behavior = "Edit"
+              field = s1.Refund.field.PaymentGroupId
+            },
+            {
+              behavior = "Required"
+              field = s1.Refund.field.ProcessingMode
+            },
+            {
+              behavior = "Readonly"
+              field = s1.Refund.field.TotalApplied
+            },
+            {
+              behavior = "Readonly"
+              field = s1.Refund.field.NetApplied
+            },
+            {
+              behavior = "Edit"
+              field = s1.Refund.field.Date
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.Refund.field.Status
+            },
+            {
+              behavior = "Required"
+              field = s1.Refund.field.Type
+            },
+            {
+              behavior = "Edit"
+              field = s1.Refund.field.PaymentMethodId
+            },
+            {
+              behavior = "Edit"
+              field = s1.Refund.field.EffectiveDate
+            },
+            {
+              behavior = "Readonly"
+              field = s1.Refund.field.TotalUnapplied
+            },
+            {
+              behavior = "Readonly"
+              field = s1.Refund.field.Balance
+            },
+            {
+              behavior = "Edit"
+              field = s1.Refund.field.Comments
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "AdditionalInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.Refund.field.ImpactAmount
+            },
+            {
+              behavior = "Edit"
+              field = s1.Refund.field.CancellationDate
+            },
+            {
+              behavior = "Edit"
+              field = s1.Refund.field.SfResultCode
+            },
+            {
+              behavior = "Edit"
+              field = s1.Refund.field.CancellationSfResultCode
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.Refund.field.CancellationEffectiveDate
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "GatewayDetails"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.Refund.field.PaymentGatewayId
+            },
+            {
+              behavior = "Edit"
+              field = s1.Refund.field.GatewayResultCode
+            },
+            {
+              behavior = "Edit"
+              field = s1.Refund.field.GatewayRefNumber
+            },
+            {
+              behavior = "Edit"
+              field = s1.Refund.field.CancellationGatewayDate
+            },
+            {
+              behavior = "Edit"
+              field = s1.Refund.field.CancellationGatewayRefNumber
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.Refund.field.GatewayDate
+            },
+            {
+              behavior = "Edit"
+              field = s1.Refund.field.GatewayResultCodeDescription
+            },
+            {
+              behavior = "Edit"
+              field = s1.Refund.field.CancellationGatewayResultCode
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "SystemInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.Refund.field.CreatedById
+            },
+            {
+              behavior = "Readonly"
+              field = s1.Refund.field.CreatedDate
+            },
+            {
+              behavior = "Edit"
+              field = s1.Refund.field.MacAddress
+            },
+            {
+              behavior = "Edit"
+              field = s1.Refund.field.Phone
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.Refund.field.LastModifiedById
+            },
+            {
+              behavior = "Readonly"
+              field = s1.Refund.field.LastModifiedDate
+            },
+            {
+              behavior = "Edit"
+              field = s1.Refund.field.IpAddress
+            },
+            {
+              behavior = "Edit"
+              field = s1.Refund.field.Email
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.Refund,
+  ]
+}

@@ -1,0 +1,46 @@
+s1.Layout CartCheckoutSession_Cart_Checkout_Session_Layout@bsss {
+  fullName = "CartCheckoutSession-Cart Checkout Session Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.CartCheckoutSession.field.WebCartId
+            },
+            {
+              behavior = "Edit"
+              field = s1.CartCheckoutSession.field.IsProcessing
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.CartCheckoutSession.field.State
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.CartCheckoutSession,
+  ]
+}

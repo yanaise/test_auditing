@@ -1,0 +1,28 @@
+type salesforce.IncidentRelatedItem {
+  salesforce.Lookup AssetId {
+    apiName = "IncidentRelatedItem.AssetId"
+    trackHistory = false
+    _hidden_value = true
+  }
+  string Comment {
+    _hidden_value = true
+  }
+  salesforce.Picklist ImpactLevel {
+    apiName = "IncidentRelatedItem.ImpactLevel"
+    trackHistory = false
+    _hidden_value = true
+  }
+  salesforce.Picklist ImpactType {
+    apiName = "IncidentRelatedItem.ImpactType"
+    trackHistory = false
+    _hidden_value = true
+  }
+  salesforce.MasterDetail IncidentId {
+    apiName = "IncidentRelatedItem.IncidentId"
+    trackHistory = false
+    _hidden_value = true
+  }
+  string Name {
+    _hidden_value = true
+  }
+}

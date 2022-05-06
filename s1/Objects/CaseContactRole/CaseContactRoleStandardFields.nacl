@@ -1,0 +1,100 @@
+type s1.CaseContactRole {
+  serviceid Id {
+    apiName = "CaseContactRole.Id"
+    label = "Contact Role ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  s1.Lookup CasesId {
+    apiName = "CaseContactRole.CasesId"
+    label = "Case ID"
+    _required = true
+    referenceTo = [
+      s1.Case,
+    ]
+    createable = true
+    updateable = false
+    relationshipName = "Cases"
+    queryable = true
+  }
+  s1.Lookup ContactId {
+    apiName = "CaseContactRole.ContactId"
+    label = "Contact ID"
+    _required = true
+    referenceTo = [
+      s1.Contact,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Contact"
+    queryable = true
+  }
+  s1.Picklist Role {
+    apiName = "CaseContactRole.Role"
+    label = "Role"
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+    valueSetName = s1.StandardValueSet.instance.CaseContactRole
+  }
+  s1.DateTime CreatedDate {
+    apiName = "CaseContactRole.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup CreatedById {
+    apiName = "CaseContactRole.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime LastModifiedDate {
+    apiName = "CaseContactRole.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup LastModifiedById {
+    apiName = "CaseContactRole.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime SystemModstamp {
+    apiName = "CaseContactRole.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsDeleted {
+    apiName = "CaseContactRole.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

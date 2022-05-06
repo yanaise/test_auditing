@@ -1,0 +1,31 @@
+type s1.ReportChartComponentLayoutItem {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  boolean cacheData {
+  }
+  string contextFilterableField {
+  }
+  string error {
+  }
+  boolean hideOnError {
+  }
+  boolean includeContext {
+  }
+  string reportName {
+  }
+  boolean showTitle {
+  }
+  metadataType = "ReportChartComponentLayoutItem"
+}

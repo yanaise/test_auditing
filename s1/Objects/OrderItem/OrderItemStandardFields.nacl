@@ -1,0 +1,202 @@
+type s1.OrderItem {
+  serviceid Id {
+    apiName = "OrderItem.Id"
+    label = "Order Product ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  s1.Lookup Product2Id {
+    apiName = "OrderItem.Product2Id"
+    label = "Product ID"
+    referenceTo = [
+      s1.Product2,
+    ]
+    createable = true
+    updateable = false
+    relationshipName = "Product2"
+    queryable = true
+  }
+  s1.Checkbox IsDeleted {
+    apiName = "OrderItem.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup OrderId {
+    apiName = "OrderItem.OrderId"
+    label = "Order ID"
+    _required = true
+    referenceTo = [
+      s1.Order,
+    ]
+    createable = true
+    updateable = false
+    relationshipName = "Order"
+    queryable = true
+  }
+  s1.Lookup PricebookEntryId {
+    apiName = "OrderItem.PricebookEntryId"
+    label = "Price Book Entry ID"
+    _required = true
+    referenceTo = [
+      s1.PricebookEntry,
+    ]
+    createable = true
+    updateable = false
+    relationshipName = "PricebookEntry"
+    queryable = true
+  }
+  s1.Lookup OriginalOrderItemId {
+    apiName = "OrderItem.OriginalOrderItemId"
+    label = "Original Order Item ID"
+    referenceTo = [
+      s1.OrderItem,
+    ]
+    createable = true
+    updateable = false
+    relationshipName = "OriginalOrderItem"
+    queryable = true
+  }
+  s1.Number AvailableQuantity {
+    apiName = "OrderItem.AvailableQuantity"
+    label = "Available Quantity"
+    precision = 18
+    scale = 2
+    createable = false
+    updateable = false
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Number Quantity {
+    apiName = "OrderItem.Quantity"
+    label = "Quantity"
+    _required = true
+    precision = 18
+    scale = 2
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  s1.Currency UnitPrice {
+    apiName = "OrderItem.UnitPrice"
+    label = "Unit Price"
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 18
+    queryable = true
+  }
+  s1.Currency ListPrice {
+    apiName = "OrderItem.ListPrice"
+    label = "List Price"
+    createable = true
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+  }
+  s1.Currency TotalPrice {
+    apiName = "OrderItem.TotalPrice"
+    label = "Total Price"
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Date ServiceDate {
+    apiName = "OrderItem.ServiceDate"
+    label = "Start Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Date EndDate {
+    apiName = "OrderItem.EndDate"
+    label = "End Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Text Description {
+    apiName = "OrderItem.Description"
+    label = "Line Description"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  s1.DateTime CreatedDate {
+    apiName = "OrderItem.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup CreatedById {
+    apiName = "OrderItem.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime LastModifiedDate {
+    apiName = "OrderItem.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup LastModifiedById {
+    apiName = "OrderItem.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime SystemModstamp {
+    apiName = "OrderItem.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.AutoNumber OrderItemNumber {
+    apiName = "OrderItem.OrderItemNumber"
+    label = "Order Product Number"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Unknown ProductCode {
+    apiName = "OrderItem.ProductCode"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+}

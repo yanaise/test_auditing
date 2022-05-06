@@ -1,0 +1,4 @@
+s1.SurveySettings {
+  fullName = "Survey"
+  enableSurvey = "false"
+}

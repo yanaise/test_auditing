@@ -1,0 +1,306 @@
+type s1.Individual {
+  serviceid Id {
+    apiName = "Individual.Id"
+    label = "Individual ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  s1.Lookup OwnerId {
+    apiName = "Individual.OwnerId"
+    label = "Owner ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "Owner"
+    queryable = true
+    _hidden_value = true
+    trackHistory = false
+  }
+  s1.Checkbox IsDeleted {
+    apiName = "Individual.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Name Name {
+    apiName = "Individual.Name"
+    label = "Name"
+    _required = true
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox HasOptedOutTracking {
+    apiName = "Individual.HasOptedOutTracking"
+    label = "Don't Track"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox HasOptedOutProfiling {
+    apiName = "Individual.HasOptedOutProfiling"
+    label = "Don't Profile"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox HasOptedOutProcessing {
+    apiName = "Individual.HasOptedOutProcessing"
+    label = "Don't Process"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox HasOptedOutSolicit {
+    apiName = "Individual.HasOptedOutSolicit"
+    label = "Don't Market"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox ShouldForget {
+    apiName = "Individual.ShouldForget"
+    label = "Forget this Individual"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox SendIndividualData {
+    apiName = "Individual.SendIndividualData"
+    label = "Export Individual's Data"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox CanStorePiiElsewhere {
+    apiName = "Individual.CanStorePiiElsewhere"
+    label = "OK to Store PII Data Elsewhere"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox HasOptedOutGeoTracking {
+    apiName = "Individual.HasOptedOutGeoTracking"
+    label = "Block Geolocation Tracking"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Date BirthDate {
+    apiName = "Individual.BirthDate"
+    label = "Birth Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Date DeathDate {
+    apiName = "Individual.DeathDate"
+    label = "Death Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Number ConvictionsCount {
+    apiName = "Individual.ConvictionsCount"
+    label = "Conviction Count"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  s1.Number ChildrenCount {
+    apiName = "Individual.ChildrenCount"
+    label = "Number of Children"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  s1.Picklist MilitaryService {
+    apiName = "Individual.MilitaryService"
+    label = "Military Service"
+    valueSet = [
+      {
+        fullName = "Unknown"
+        default = false
+        label = "Unknown"
+        isActive = true
+      },
+      {
+        fullName = "Yes"
+        default = false
+        label = "Yes"
+        isActive = true
+      },
+      {
+        fullName = "No"
+        default = false
+        label = "No"
+        isActive = true
+      },
+    ]
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+    trackHistory = false
+  }
+  s1.Checkbox IsHomeOwner {
+    apiName = "Individual.IsHomeOwner"
+    label = "Is Homeowner"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Text Occupation {
+    apiName = "Individual.Occupation"
+    label = "Occupation"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 150
+    queryable = true
+  }
+  s1.Url Website {
+    apiName = "Individual.Website"
+    label = "Website"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Picklist IndividualsAge {
+    apiName = "Individual.IndividualsAge"
+    label = "Individual's Age"
+    valueSet = [
+      {
+        fullName = "13 or Older"
+        default = false
+        label = "13 or Older"
+        isActive = true
+      },
+      {
+        fullName = "16 or Older"
+        default = false
+        label = "16 or Older"
+        isActive = true
+      },
+    ]
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+    trackHistory = false
+  }
+  s1.Lookup MasterRecordId {
+    apiName = "Individual.MasterRecordId"
+    label = "Master Record ID"
+    referenceTo = [
+      s1.Individual,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "MasterRecord"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Number ConsumerCreditScore {
+    apiName = "Individual.ConsumerCreditScore"
+    label = "Consumer Credit Score"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  s1.Text ConsumerCreditScoreProviderName {
+    apiName = "Individual.ConsumerCreditScoreProviderName"
+    label = "Consumer Credit Score Provider Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  s1.Number InfluencerRating {
+    apiName = "Individual.InfluencerRating"
+    label = "Influencer Rating"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  s1.DateTime CreatedDate {
+    apiName = "Individual.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup CreatedById {
+    apiName = "Individual.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime LastModifiedDate {
+    apiName = "Individual.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup LastModifiedById {
+    apiName = "Individual.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime SystemModstamp {
+    apiName = "Individual.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

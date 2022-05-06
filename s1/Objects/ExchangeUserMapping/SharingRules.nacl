@@ -1,0 +1,6 @@
+s1.SharingRules ExchangeUserMapping {
+  fullName = "ExchangeUserMapping"
+  _parent = [
+    s1.ExchangeUserMapping,
+  ]
+}

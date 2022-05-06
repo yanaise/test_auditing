@@ -1,0 +1,516 @@
+type s1.FeedItem {
+  serviceid Id {
+    apiName = "FeedItem.Id"
+    label = "Feed Item ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  s1.Lookup ParentId {
+    apiName = "FeedItem.ParentId"
+    label = "Parent ID"
+    _required = true
+    referenceTo = [
+      s1.Account,
+      s1.ApiAnomalyEventStore,
+      s1.Asset,
+      s1.AssetRelationship,
+      s1.AssignedResource,
+      s1.AuthorizationFormText,
+      s1.Campaign,
+      s1.Case,
+      s1.CollaborationGroup,
+      s1.CommSubscription,
+      s1.CommSubscriptionChannelType,
+      s1.CommSubscriptionConsent,
+      s1.CommSubscriptionTiming,
+      s1.ConsumptionSchedule,
+      s1.Contact,
+      "ContentDocument",
+      s1.Contract,
+      s1.ContractLineItem,
+      s1.CredentialStuffingEventStore,
+      s1.CreditMemo,
+      s1.CreditMemoLine,
+      "Dashboard",
+      "DashboardComponent",
+      s1.EngagementChannelType,
+      "EnhancedLetterhead",
+      s1.Entitlement,
+      s1.EntityMilestone,
+      s1.Event,
+      s1.Image,
+      s1.Invoice,
+      s1.InvoiceLine,
+      s1.Lead,
+      s1.LegalEntity,
+      s1.Location,
+      s1.MessagingSession,
+      s1.OperatingHours,
+      s1.OperatingHoursHoliday,
+      s1.Opportunity,
+      s1.Order,
+      s1.OrderItem,
+      s1.PartyConsent,
+      s1.Product2,
+      s1.Report,
+      s1.ReportAnomalyEventStore,
+      s1.ResourceAbsence,
+      s1.ResourcePreference,
+      s1.ReturnOrder,
+      s1.ReturnOrderLineItem,
+      s1.ServiceAppointment,
+      s1.ServiceContract,
+      s1.ServiceResource,
+      s1.ServiceResourceSkill,
+      s1.ServiceTerritory,
+      s1.ServiceTerritoryMember,
+      s1.ServiceTerritoryWorkType,
+      s1.SessionHijackingEventStore,
+      s1.Shift,
+      s1.Site,
+      s1.SkillRequirement,
+      s1.Solution,
+      s1.Task,
+      "ThreatDetectionFeedback",
+      s1.Topic,
+      s1.User,
+      s1.WorkOrder,
+      s1.WorkOrderLineItem,
+      s1.WorkPlan,
+      s1.WorkPlanTemplate,
+      s1.WorkPlanTemplateEntry,
+      s1.WorkStep,
+      s1.WorkStepTemplate,
+      s1.WorkType,
+      s1.WorkTypeGroup,
+      s1.WorkTypeGroupMember,
+    ]
+    createable = true
+    updateable = false
+    relationshipName = "Parent"
+    queryable = true
+  }
+  s1.Picklist Type {
+    apiName = "FeedItem.Type"
+    label = "Feed Item Type"
+    valueSet = [
+      {
+        fullName = "TrackedChange"
+        default = false
+        label = "Tracked Change"
+        isActive = true
+      },
+      {
+        fullName = "UserStatus"
+        default = false
+        label = "User Status"
+        isActive = true
+      },
+      {
+        fullName = "TextPost"
+        default = false
+        label = "Text Post"
+        isActive = true
+      },
+      {
+        fullName = "AdvancedTextPost"
+        default = false
+        label = "Advanced Text Post"
+        isActive = true
+      },
+      {
+        fullName = "LinkPost"
+        default = false
+        label = "Link Post"
+        isActive = true
+      },
+      {
+        fullName = "ContentPost"
+        default = false
+        label = "Content Post"
+        isActive = true
+      },
+      {
+        fullName = "PollPost"
+        default = false
+        label = "Poll"
+        isActive = true
+      },
+      {
+        fullName = "RypplePost"
+        default = false
+        label = "WDC Thanks"
+        isActive = true
+      },
+      {
+        fullName = "ProfileSkillPost"
+        default = false
+        label = "Profile Skill Post"
+        isActive = true
+      },
+      {
+        fullName = "DashboardComponentSnapshot"
+        default = false
+        label = "Dashboard Component Snapshot"
+        isActive = true
+      },
+      {
+        fullName = "ApprovalPost"
+        default = false
+        label = "Approval Post"
+        isActive = true
+      },
+      {
+        fullName = "CaseCommentPost"
+        default = false
+        label = "Case Comment Feed"
+        isActive = true
+      },
+      {
+        fullName = "ReplyPost"
+        default = false
+        label = "Reply Post"
+        isActive = true
+      },
+      {
+        fullName = "EmailMessageEvent"
+        default = false
+        label = "Email Message Feed"
+        isActive = true
+      },
+      {
+        fullName = "CallLogPost"
+        default = false
+        label = "Call Log Feed"
+        isActive = true
+      },
+      {
+        fullName = "ChangeStatusPost"
+        default = false
+        label = "Change Status Feed"
+        isActive = true
+      },
+      {
+        fullName = "AttachArticleEvent"
+        default = false
+        label = "Attached Article"
+        isActive = true
+      },
+      {
+        fullName = "MilestoneEvent"
+        default = false
+        label = "Milestone Event"
+        isActive = true
+      },
+      {
+        fullName = "ActivityEvent"
+        default = false
+        label = "Activity Change"
+        isActive = true
+      },
+      {
+        fullName = "ChatTranscriptPost"
+        default = false
+        label = "Chat Transcript Post"
+        isActive = true
+      },
+      {
+        fullName = "CollaborationGroupCreated"
+        default = false
+        label = "Collaboration Group Created"
+        isActive = true
+      },
+      {
+        fullName = "CollaborationGroupUnarchived"
+        default = false
+        label = "Collaboration Group Reactivated"
+        isActive = true
+      },
+      {
+        fullName = "SocialPost"
+        default = false
+        label = "Social Post"
+        isActive = true
+      },
+      {
+        fullName = "QuestionPost"
+        default = false
+        label = "Question Post"
+        isActive = true
+      },
+      {
+        fullName = "FacebookPost"
+        default = false
+        label = "Facebook Post"
+        isActive = true
+      },
+      {
+        fullName = "BasicTemplateFeedItem"
+        default = false
+        label = "Basic Template Post"
+        isActive = true
+      },
+      {
+        fullName = "CreateRecordEvent"
+        default = false
+        label = "Created Record"
+        isActive = true
+      },
+      {
+        fullName = "CanvasPost"
+        default = false
+        label = "Canvas"
+        isActive = true
+      },
+      {
+        fullName = "AnnouncementPost"
+        default = false
+        label = "a"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  s1.Lookup CreatedById {
+    apiName = "FeedItem.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime CreatedDate {
+    apiName = "FeedItem.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsDeleted {
+    apiName = "FeedItem.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime LastModifiedDate {
+    apiName = "FeedItem.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime SystemModstamp {
+    apiName = "FeedItem.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Number Revision {
+    apiName = "FeedItem.Revision"
+    label = "Revision"
+    precision = 9
+    createable = true
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  s1.Lookup LastEditById {
+    apiName = "FeedItem.LastEditById"
+    label = "Last Edit By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  s1.DateTime LastEditDate {
+    apiName = "FeedItem.LastEditDate"
+    label = "Last Edit Date"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  s1.Number CommentCount {
+    apiName = "FeedItem.CommentCount"
+    label = "Comment Count"
+    _required = true
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Number LikeCount {
+    apiName = "FeedItem.LikeCount"
+    label = "Like Count"
+    _required = true
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Text Title {
+    apiName = "FeedItem.Title"
+    label = "Title"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  s1.LongTextArea Body {
+    apiName = "FeedItem.Body"
+    label = "Body"
+    createable = true
+    updateable = true
+    length = 10000
+    queryable = true
+  }
+  s1.Url LinkUrl {
+    apiName = "FeedItem.LinkUrl"
+    label = "Link Url"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  s1.Checkbox IsRichText {
+    apiName = "FeedItem.IsRichText"
+    label = "Is Rich Text"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Lookup RelatedRecordId {
+    apiName = "FeedItem.RelatedRecordId"
+    label = "Related Record ID"
+    referenceTo = [
+      s1.ContentVersion,
+    ]
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  s1.Lookup InsertedById {
+    apiName = "FeedItem.InsertedById"
+    label = "InsertedBy ID"
+    _required = true
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "InsertedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup BestCommentId {
+    apiName = "FeedItem.BestCommentId"
+    label = "Best Comment ID"
+    referenceTo = [
+      "FeedComment",
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "BestComment"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox HasContent {
+    apiName = "FeedItem.HasContent"
+    label = "Has Content"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox HasLink {
+    apiName = "FeedItem.HasLink"
+    label = "Has Link"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox HasFeedEntity {
+    apiName = "FeedItem.HasFeedEntity"
+    label = "Has Feed Entity Attachment"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox HasVerifiedComment {
+    apiName = "FeedItem.HasVerifiedComment"
+    label = "Has Verified Comment"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsClosed {
+    apiName = "FeedItem.IsClosed"
+    label = "Is Closed"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Picklist Status {
+    apiName = "FeedItem.Status"
+    label = "Status"
+    valueSet = [
+      {
+        fullName = "Published"
+        default = false
+        label = "Published"
+        isActive = true
+      },
+      {
+        fullName = "PendingReview"
+        default = false
+        label = "PendingReview"
+        isActive = true
+      },
+      {
+        fullName = "Draft"
+        default = false
+        label = "Draft"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+}

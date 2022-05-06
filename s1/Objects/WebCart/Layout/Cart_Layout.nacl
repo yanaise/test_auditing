@@ -1,0 +1,215 @@
+s1.Layout WebCart_Cart_Layout@bs {
+  fullName = "WebCart-Cart Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.WebCart.field.TotalLineItemsWithErrors
+            },
+            {
+              behavior = "Readonly"
+              field = s1.WebCart.field.TotalAdjustmentAmount
+            },
+            {
+              behavior = "Required"
+              field = s1.WebCart.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = s1.WebCart.field.LastModifiedDate
+            },
+            {
+              behavior = "Required"
+              field = s1.WebCart.field.WebStoreId
+            },
+            {
+              behavior = "Required"
+              field = s1.WebCart.field.PoNumber
+            },
+            {
+              behavior = "Edit"
+              field = s1.WebCart.field.CreatedById
+            },
+            {
+              behavior = "Readonly"
+              field = s1.WebCart.field.TotalProductCount
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.WebCart.field.OwnerId
+            },
+            {
+              behavior = "Required"
+              field = s1.WebCart.field.AccountId
+            },
+            {
+              behavior = "Edit"
+              field = s1.WebCart.field.BillingAddress
+            },
+            {
+              behavior = "Edit"
+              field = s1.WebCart.field.CreatedDate
+            },
+            {
+              behavior = "Readonly"
+              field = s1.WebCart.field.UniqueProductCount
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "AdditionalInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.WebCart.field.Status
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.WebCart.field.Type
+            },
+            {
+              behavior = "Readonly"
+              field = s1.WebCart.field.IsSecondary
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "PaymentInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.WebCart.field.PaymentMethodId
+            },
+            {
+              behavior = "Readonly"
+              field = s1.WebCart.field.IsRepricingNeeded
+            },
+            {
+              behavior = "Readonly"
+              field = s1.WebCart.field.LastRepricingDate
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.WebCart.field.PaymentGroupId
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "CostInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.WebCart.field.TotalListAmount
+            },
+            {
+              behavior = "Readonly"
+              field = s1.WebCart.field.TotalProductAmount
+            },
+            {
+              behavior = "Readonly"
+              field = s1.WebCart.field.TotalProductTaxAmount
+            },
+            {
+              behavior = "Readonly"
+              field = s1.WebCart.field.TotalAmount
+            },
+            {
+              behavior = "Readonly"
+              field = s1.WebCart.field.GrandTotalAmount
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.WebCart.field.TotalChargeAmount
+            },
+            {
+              behavior = "Readonly"
+              field = s1.WebCart.field.TotalChargeTaxAmount
+            },
+            {
+              behavior = "Readonly"
+              field = s1.WebCart.field.TotalTaxAmount
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  miniLayout = {
+    fields = [
+      "TotalLineItemsWithErrors",
+      "TotalAdjustmentAmount",
+    ]
+  }
+  relatedLists = [
+    {
+      fields = [
+        "Name",
+        "Product2",
+        "Quantity",
+        "SalesPrice",
+        "CreatedDate",
+      ]
+      relatedList = "CartItems"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.WebCart,
+  ]
+}

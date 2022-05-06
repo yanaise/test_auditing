@@ -1,0 +1,6 @@
+s1.SharingRules StreamActivityAccess {
+  fullName = "StreamActivityAccess"
+  _parent = [
+    s1.StreamActivityAccess,
+  ]
+}

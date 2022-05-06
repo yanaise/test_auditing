@@ -1,0 +1,8 @@
+s1.ListView PaymentAuthorization_PaymentAuthorization {
+  fullName = "PaymentAuthorization.PaymentAuthorization"
+  filterScope = "Everything"
+  label = "All"
+  _parent = [
+    s1.PaymentAuthorization,
+  ]
+}

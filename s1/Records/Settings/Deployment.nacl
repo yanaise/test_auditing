@@ -1,0 +1,4 @@
+s1.DeploymentSettings {
+  fullName = "Deployment"
+  doesSkipAsyncApexValidation = false
+}

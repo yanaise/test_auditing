@@ -1,0 +1,66 @@
+s1.Layout Shift_Shift_Layout@bs {
+  fullName = "Shift-Shift Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.Shift.field.StartTime
+            },
+            {
+              behavior = "Required"
+              field = s1.Shift.field.Status
+            },
+            {
+              behavior = "Edit"
+              field = s1.Shift.field.ServiceTerritoryId
+            },
+            {
+              behavior = "Required"
+              field = s1.Shift.field.TimeSlotType
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.Shift.field.EndTime
+            },
+            {
+              behavior = "Edit"
+              field = s1.Shift.field.WorkTypeGroupId
+            },
+            {
+              behavior = "Edit"
+              field = s1.Shift.field.ServiceResourceId
+            },
+            {
+              behavior = "Edit"
+              field = s1.Shift.field.Label
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.Shift,
+  ]
+}

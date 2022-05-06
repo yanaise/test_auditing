@@ -1,0 +1,133 @@
+s1.Layout ApiAnomalyEventStore_API_Anomaly_Event_Store_Layout@bssss {
+  fullName = "ApiAnomalyEventStore-API Anomaly Event Store Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = false
+      label = "Event Details"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.ApiAnomalyEventStore.field.ApiAnomalyEventNumber
+            },
+            {
+              behavior = "Required"
+              field = s1.ApiAnomalyEventStore.field.EventIdentifier
+            },
+            {
+              behavior = "Edit"
+              field = s1.ApiAnomalyEventStore.field.Summary
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.ApiAnomalyEventStore.field.EventDate
+            },
+            {
+              behavior = "Edit"
+              field = s1.ApiAnomalyEventStore.field.Score
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = false
+      label = "Event Data"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.ApiAnomalyEventStore.field.Operation
+            },
+            {
+              behavior = "Edit"
+              field = s1.ApiAnomalyEventStore.field.RequestIdentifier
+            },
+            {
+              behavior = "Edit"
+              field = s1.ApiAnomalyEventStore.field.Uri
+            },
+            {
+              behavior = "Edit"
+              field = s1.ApiAnomalyEventStore.field.SecurityEventData
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.ApiAnomalyEventStore.field.QueriedEntities
+            },
+            {
+              behavior = "Edit"
+              field = s1.ApiAnomalyEventStore.field.RowsProcessed
+            },
+            {
+              behavior = "Edit"
+              field = s1.ApiAnomalyEventStore.field.UserAgent
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = true
+      detailHeading = true
+      editHeading = false
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.ApiAnomalyEventStore.field.UserId
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.ApiAnomalyEventStore.field.SourceIp
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      fields = [
+        "Name",
+        "Response",
+      ]
+      relatedList = "RelatedFeedback"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.ApiAnomalyEventStore,
+  ]
+}

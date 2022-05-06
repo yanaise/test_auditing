@@ -1,0 +1,8 @@
+s1.ListView ServiceResource_All_ServiceResources {
+  fullName = "ServiceResource.All_ServiceResources"
+  filterScope = "Everything"
+  label = "All Service Resources"
+  _parent = [
+    s1.ServiceResource,
+  ]
+}

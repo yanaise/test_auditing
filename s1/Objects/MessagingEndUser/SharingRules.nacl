@@ -1,0 +1,6 @@
+s1.SharingRules MessagingEndUser {
+  fullName = "MessagingEndUser"
+  _parent = [
+    s1.MessagingEndUser,
+  ]
+}

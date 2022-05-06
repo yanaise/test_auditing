@@ -1,0 +1,21 @@
+type s1.ItemInstance {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  s1.ComponentInstance componentInstance {
+  }
+  s1.FieldInstance fieldInstance {
+  }
+  metadataType = "ItemInstance"
+}

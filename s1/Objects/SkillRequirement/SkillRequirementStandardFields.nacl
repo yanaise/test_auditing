@@ -1,0 +1,113 @@
+type s1.SkillRequirement {
+  serviceid Id {
+    apiName = "SkillRequirement.Id"
+    label = "Skill Requirement ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  s1.Checkbox IsDeleted {
+    apiName = "SkillRequirement.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.AutoNumber SkillNumber {
+    apiName = "SkillRequirement.SkillNumber"
+    label = "Skill Requirement Number"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime CreatedDate {
+    apiName = "SkillRequirement.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup CreatedById {
+    apiName = "SkillRequirement.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime LastModifiedDate {
+    apiName = "SkillRequirement.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup LastModifiedById {
+    apiName = "SkillRequirement.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime SystemModstamp {
+    apiName = "SkillRequirement.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup RelatedRecordId {
+    apiName = "SkillRequirement.RelatedRecordId"
+    label = "Required For ID"
+    _required = true
+    referenceTo = [
+      s1.WorkOrder,
+      s1.WorkOrderLineItem,
+      s1.WorkType,
+    ]
+    createable = true
+    updateable = false
+    relationshipName = "RelatedRecord"
+    queryable = true
+    trackHistory = false
+  }
+  s1.Lookup SkillId {
+    apiName = "SkillRequirement.SkillId"
+    label = "Skill ID"
+    _required = true
+    referenceTo = [
+      s1.Skill,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Skill"
+    queryable = true
+    trackHistory = false
+  }
+  s1.Number SkillLevel {
+    apiName = "SkillRequirement.SkillLevel"
+    label = "Skill Level"
+    precision = 4
+    scale = 2
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+}

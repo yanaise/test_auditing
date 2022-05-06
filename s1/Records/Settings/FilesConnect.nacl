@@ -1,0 +1,6 @@
+s1.FilesConnectSettings {
+  fullName = "FilesConnect"
+  enableContentHubAllowed = "true"
+  enableContentHubCvtLinksAllowed = "true"
+  enableContentHubEOSearchLayout = "false"
+}

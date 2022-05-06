@@ -1,0 +1,4 @@
+s1.PicklistSettings {
+  fullName = "Picklist"
+  isPicklistApiNameEditDisabled = false
+}

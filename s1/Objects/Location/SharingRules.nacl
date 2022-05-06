@@ -1,0 +1,6 @@
+s1.SharingRules Location {
+  fullName = "Location"
+  _parent = [
+    s1.Location,
+  ]
+}

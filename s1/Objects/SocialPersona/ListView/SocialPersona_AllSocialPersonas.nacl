@@ -1,0 +1,13 @@
+s1.ListView SocialPersona_AllSocialPersonas {
+  fullName = "SocialPersona.AllSocialPersonas"
+  columns = [
+    "Name",
+    "Provider",
+    "Parent",
+  ]
+  filterScope = "Everything"
+  label = "All social personas"
+  _parent = [
+    s1.SocialPersona,
+  ]
+}

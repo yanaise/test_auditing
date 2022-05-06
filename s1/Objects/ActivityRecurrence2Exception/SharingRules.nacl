@@ -1,0 +1,6 @@
+s1.SharingRules ActivityRecurrence2Exception {
+  fullName = "ActivityRecurrence2Exception"
+  _parent = [
+    s1.ActivityRecurrence2Exception,
+  ]
+}

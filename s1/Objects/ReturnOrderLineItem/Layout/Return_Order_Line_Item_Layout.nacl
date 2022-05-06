@@ -1,0 +1,137 @@
+s1.Layout ReturnOrderLineItem_Return_Order_Line_Item_Layout@bssss {
+  fullName = "ReturnOrderLineItem-Return Order Line Item Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.ReturnOrderLineItem.field.ReturnOrderLineItemNumber
+            },
+            {
+              behavior = "Edit"
+              field = s1.ReturnOrderLineItem.field.Product2Id
+            },
+            {
+              behavior = "Edit"
+              field = s1.ReturnOrderLineItem.field.AssetId
+            },
+            {
+              behavior = "Required"
+              field = s1.ReturnOrderLineItem.field.QuantityReturned
+            },
+            {
+              behavior = "Edit"
+              field = s1.ReturnOrderLineItem.field.QuantityUnitOfMeasure
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.ReturnOrderLineItem.field.ReturnOrderId
+            },
+            {
+              behavior = "Edit"
+              field = s1.ReturnOrderLineItem.field.ReasonForReturn
+            },
+            {
+              behavior = "Edit"
+              field = s1.ReturnOrderLineItem.field.ProcessingPlan
+            },
+            {
+              behavior = "Edit"
+              field = s1.ReturnOrderLineItem.field.RepaymentMethod
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Shipping Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.ReturnOrderLineItem.field.SourceLocationId
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.ReturnOrderLineItem.field.DestinationLocationId
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Description"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.ReturnOrderLineItem.field.Description
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.ReturnOrderLineItem.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.ReturnOrderLineItem.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.ReturnOrderLineItem,
+  ]
+}

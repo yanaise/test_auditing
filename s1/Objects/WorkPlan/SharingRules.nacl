@@ -1,0 +1,6 @@
+s1.SharingRules WorkPlan {
+  fullName = "WorkPlan"
+  _parent = [
+    s1.WorkPlan,
+  ]
+}

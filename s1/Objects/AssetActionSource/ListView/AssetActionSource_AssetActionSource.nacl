@@ -1,0 +1,8 @@
+s1.ListView AssetActionSource_AssetActionSource {
+  fullName = "AssetActionSource.AssetActionSource"
+  filterScope = "Everything"
+  label = "All"
+  _parent = [
+    s1.AssetActionSource,
+  ]
+}

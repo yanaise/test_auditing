@@ -1,0 +1,8 @@
+s1.ListView CommSubscription_All_CommSubscriptions {
+  fullName = "CommSubscription.All_CommSubscriptions"
+  filterScope = "Everything"
+  label = "All Communication Subscriptions"
+  _parent = [
+    s1.CommSubscription,
+  ]
+}

@@ -1,0 +1,5 @@
+s1.RecordPageSettings {
+  fullName = "RecordPage"
+  enableActivityRelatedList = false
+  enableFullRecordView = false
+}

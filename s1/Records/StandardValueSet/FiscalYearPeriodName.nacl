@@ -1,0 +1,4 @@
+s1.StandardValueSet FiscalYearPeriodName {
+  fullName = "FiscalYearPeriodName"
+  sorted = false
+}

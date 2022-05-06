@@ -1,0 +1,8 @@
+s1.ListView Contract_AllContracts {
+  fullName = "Contract.AllContracts"
+  filterScope = "Everything"
+  label = "All Contracts"
+  _parent = [
+    s1.Contract,
+  ]
+}

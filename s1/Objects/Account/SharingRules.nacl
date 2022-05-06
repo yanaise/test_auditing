@@ -1,0 +1,6 @@
+s1.SharingRules Account {
+  fullName = "Account"
+  _parent = [
+    s1.Account,
+  ]
+}

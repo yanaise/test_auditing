@@ -1,0 +1,6 @@
+s1.SharingRules ServiceContract {
+  fullName = "ServiceContract"
+  _parent = [
+    s1.ServiceContract,
+  ]
+}

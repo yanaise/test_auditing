@@ -1,0 +1,140 @@
+s1.Layout CampaignMember_Campaign_Member_Page_Layout@bsss {
+  fullName = "CampaignMember-Campaign Member Page Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Campaign Member Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.CampaignMember.field.CampaignId
+            },
+            {
+              behavior = "Required"
+              field = s1.CampaignMember.field.ContactId
+            },
+            {
+              behavior = "Required"
+              field = s1.CampaignMember.field.LeadId
+            },
+            {
+              behavior = "Required"
+              field = s1.CampaignMember.field.Status
+            },
+            {
+              behavior = "Readonly"
+              field = s1.CampaignMember.field.HasResponded
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              emptySpace = true
+            },
+            {
+              emptySpace = true
+            },
+            {
+              emptySpace = true
+            },
+            {
+              emptySpace = true
+            },
+            {
+              emptySpace = true
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Detail Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.CampaignMember.field.CompanyOrAccount
+            },
+            {
+              behavior = "Readonly"
+              field = s1.CampaignMember.field.Title
+            },
+            {
+              behavior = "Readonly"
+              field = s1.CampaignMember.field.Phone
+            },
+            {
+              behavior = "Readonly"
+              field = s1.CampaignMember.field.Email
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              emptySpace = true
+            },
+            {
+              emptySpace = true
+            },
+            {
+              emptySpace = true
+            },
+            {
+              emptySpace = true
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.CampaignMember.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.CampaignMember.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.CampaignMember,
+  ]
+}

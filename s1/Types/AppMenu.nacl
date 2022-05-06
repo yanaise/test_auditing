@@ -1,0 +1,27 @@
+type s1.AppMenu {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  "List<s1.AppMenuItem>" appMenuItems {
+  }
+  serviceid fullName {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "appMenu"
+  dirName = "appMenus"
+  metadataType = "AppMenu"
+}

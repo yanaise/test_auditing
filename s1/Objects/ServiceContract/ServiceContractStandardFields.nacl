@@ -1,0 +1,334 @@
+type s1.ServiceContract {
+  serviceid Id {
+    apiName = "ServiceContract.Id"
+    label = "Service Contract ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  s1.Lookup OwnerId {
+    apiName = "ServiceContract.OwnerId"
+    label = "Owner ID"
+    referenceTo = [
+      s1.Group,
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "Owner"
+    queryable = true
+    _hidden_value = true
+    trackHistory = false
+  }
+  s1.Checkbox IsDeleted {
+    apiName = "ServiceContract.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Text Name {
+    apiName = "ServiceContract.Name"
+    label = "Contract Name"
+    _required = true
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  s1.DateTime CreatedDate {
+    apiName = "ServiceContract.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup CreatedById {
+    apiName = "ServiceContract.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime LastModifiedDate {
+    apiName = "ServiceContract.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup LastModifiedById {
+    apiName = "ServiceContract.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime SystemModstamp {
+    apiName = "ServiceContract.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup AccountId {
+    apiName = "ServiceContract.AccountId"
+    label = "Account ID"
+    referenceTo = [
+      s1.Account,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Account"
+    queryable = true
+    trackHistory = false
+  }
+  s1.Lookup ContactId {
+    apiName = "ServiceContract.ContactId"
+    label = "Contact ID"
+    referenceTo = [
+      s1.Contact,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Contact"
+    queryable = true
+    trackHistory = false
+  }
+  s1.Number Term {
+    apiName = "ServiceContract.Term"
+    label = "Term (months)"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  s1.Date StartDate {
+    apiName = "ServiceContract.StartDate"
+    label = "Start Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Date EndDate {
+    apiName = "ServiceContract.EndDate"
+    label = "End Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.DateTime ActivationDate {
+    apiName = "ServiceContract.ActivationDate"
+    label = "Activation Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Picklist ApprovalStatus {
+    apiName = "ServiceContract.ApprovalStatus"
+    label = "Approval Status"
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+    trackHistory = false
+    valueSetName = s1.StandardValueSet.instance.ServiceContractApprovalStatus
+  }
+  s1.LongTextArea Description {
+    apiName = "ServiceContract.Description"
+    label = "Description"
+    createable = true
+    updateable = true
+    length = 32000
+    queryable = true
+  }
+  s1.Address BillingAddress {
+    apiName = "ServiceContract.BillingAddress"
+    label = "Billing Address"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Address ShippingAddress {
+    apiName = "ServiceContract.ShippingAddress"
+    label = "Shipping Address"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup Pricebook2Id {
+    apiName = "ServiceContract.Pricebook2Id"
+    label = "Price Book ID"
+    referenceTo = [
+      s1.Pricebook2,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Pricebook2"
+    queryable = true
+    trackHistory = false
+  }
+  s1.Currency ShippingHandling {
+    apiName = "ServiceContract.ShippingHandling"
+    label = "Shipping and Handling"
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 18
+    queryable = true
+  }
+  s1.Currency Tax {
+    apiName = "ServiceContract.Tax"
+    label = "Tax"
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 18
+    queryable = true
+  }
+  s1.Summary Subtotal {
+    apiName = "ServiceContract.Subtotal"
+    label = "Subtotal"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Summary TotalPrice {
+    apiName = "ServiceContract.TotalPrice"
+    label = "Total Price"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Summary LineItemCount {
+    apiName = "ServiceContract.LineItemCount"
+    label = "Line Items"
+    precision = 9
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.AutoNumber ContractNumber {
+    apiName = "ServiceContract.ContractNumber"
+    label = "Contract Number"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.LongTextArea SpecialTerms {
+    apiName = "ServiceContract.SpecialTerms"
+    label = "Special Terms"
+    createable = true
+    updateable = true
+    length = 32000
+    queryable = true
+  }
+  s1.Percent Discount {
+    apiName = "ServiceContract.Discount"
+    label = "Discount"
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 5
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Currency GrandTotal {
+    apiName = "ServiceContract.GrandTotal"
+    label = "Grand Total"
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Picklist Status {
+    apiName = "ServiceContract.Status"
+    label = "Status"
+    valueSet = [
+      {
+        fullName = "Inactive"
+        default = false
+        label = "Inactive"
+        isActive = true
+      },
+      {
+        fullName = "Active"
+        default = false
+        label = "Active"
+        isActive = true
+      },
+      {
+        fullName = "Expired"
+        default = false
+        label = "Expired"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup ParentServiceContractId {
+    apiName = "ServiceContract.ParentServiceContractId"
+    label = "Parent Service Contract ID"
+    referenceTo = [
+      s1.ServiceContract,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "ParentServiceContract"
+    queryable = true
+    trackHistory = false
+  }
+  s1.Lookup RootServiceContractId {
+    apiName = "ServiceContract.RootServiceContractId"
+    label = "Root Service Contract ID"
+    referenceTo = [
+      s1.ServiceContract,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "RootServiceContract"
+    queryable = true
+    trackHistory = false
+    _hidden_value = true
+  }
+  s1.Unknown StatusIndicator {
+    apiName = "ServiceContract.StatusIndicator"
+    trackHistory = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+}

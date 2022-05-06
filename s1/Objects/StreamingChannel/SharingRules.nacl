@@ -1,0 +1,6 @@
+s1.SharingRules StreamingChannel {
+  fullName = "StreamingChannel"
+  _parent = [
+    s1.StreamingChannel,
+  ]
+}

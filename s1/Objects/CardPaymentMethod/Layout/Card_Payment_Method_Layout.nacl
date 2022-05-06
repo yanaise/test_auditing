@@ -1,0 +1,160 @@
+s1.Layout CardPaymentMethod_Card_Payment_Method_Layout@bsss {
+  fullName = "CardPaymentMethod-Card Payment Method Layout"
+  layoutSections = [
+    {
+      customLabel = true
+      detailHeading = true
+      editHeading = true
+      label = "Card Payment Method"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.CardPaymentMethod.field.NickName
+            },
+            {
+              behavior = "Edit"
+              field = s1.CardPaymentMethod.field.InputCardNumber
+            },
+            {
+              behavior = "Edit"
+              field = s1.CardPaymentMethod.field.CardType
+            },
+            {
+              behavior = "Edit"
+              field = s1.CardPaymentMethod.field.CardHolderName
+            },
+            {
+              behavior = "Edit"
+              field = s1.CardPaymentMethod.field.ExpiryMonth
+            },
+            {
+              behavior = "Edit"
+              field = s1.CardPaymentMethod.field.CardBin
+            },
+            {
+              behavior = "Edit"
+              field = s1.CardPaymentMethod.field.StartMonth
+            },
+            {
+              behavior = "Edit"
+              field = s1.CardPaymentMethod.field.CardHolderFirstName
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.CardPaymentMethod.field.CardCategory
+            },
+            {
+              behavior = "Readonly"
+              field = s1.CardPaymentMethod.field.DisplayCardNumber
+            },
+            {
+              behavior = "Edit"
+              field = s1.CardPaymentMethod.field.AutoCardType
+            },
+            {
+              behavior = "Required"
+              field = s1.CardPaymentMethod.field.Status
+            },
+            {
+              behavior = "Edit"
+              field = s1.CardPaymentMethod.field.ExpiryYear
+            },
+            {
+              behavior = "Edit"
+              field = s1.CardPaymentMethod.field.CardLastFour
+            },
+            {
+              behavior = "Edit"
+              field = s1.CardPaymentMethod.field.StartYear
+            },
+            {
+              behavior = "Edit"
+              field = s1.CardPaymentMethod.field.CardHolderLastName
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "GatewayDetails"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.CardPaymentMethod.field.PaymentGatewayId
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.CardPaymentMethod.field.GatewayToken
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "AdditionalInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.CardPaymentMethod.field.CompanyName
+            },
+            {
+              behavior = "Edit"
+              field = s1.CardPaymentMethod.field.PaymentMethodAddress
+            },
+            {
+              behavior = "Edit"
+              field = s1.CardPaymentMethod.field.Email
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.CardPaymentMethod.field.AccountId
+            },
+            {
+              behavior = "Edit"
+              field = s1.CardPaymentMethod.field.Comments
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.CardPaymentMethod,
+  ]
+}

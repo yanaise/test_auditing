@@ -1,0 +1,423 @@
+s1.Layout DandBCompany_D_26B_Company_Layout@bpss {
+  fullName = "DandBCompany-D%26B Company Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "DandBDescription"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.Description
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "DandBPrimary"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.DandBCompany.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.Address
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.Phone
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.CountryAccessCode
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.SalesVolume
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.CurrencyCode
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.PublicIndicator
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.StockExchange
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.FipsMsaCode
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.TradeStyle1
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.PrimarySic
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.PrimaryNaics
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.Longitude
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.URL
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.MailingAddress
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.Fax
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.YearStarted
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.SalesVolumeReliability
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.LocationStatus
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.OutOfBusiness
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.StockSymbol
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.FipsMsaDesc
+            },
+            {
+              behavior = "Required"
+              field = s1.DandBCompany.field.DunsNumber
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.PrimarySicDesc
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.PrimaryNaicsDesc
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.Latitude
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "DandBAdditionaClassification"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.SecondSic
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.ThirdSic
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.FourthSic
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.FifthSic
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.SixthSic
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.SecondNaics
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.ThirdNaics
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.FourthNaics
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.FifthNaics
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.SixthNaics
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.SecondSicDesc
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.ThirdSicDesc
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.FourthSicDesc
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.FifthSicDesc
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.SixthSicDesc
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.SecondNaicsDesc
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.ThirdNaicsDesc
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.FourthNaicsDesc
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.FifthNaicsDesc
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.SixthNaicsDesc
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "DandBFirmographic"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.EmployeesTotal
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.EmployeesHere
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.FamilyMembers
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.LegalStatus
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.ImportExportAgent
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.WomenOwned
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.OwnOrRent
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.NationalId
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.GeoCodeAccuracy
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.TradeStyle2
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.TradeStyle4
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.MarketingSegmentationCluster
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.EmployeesTotalReliability
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.EmployeesHereReliability
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.GlobalUltimateTotalEmployees
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.Subsidiary
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.SmallBusiness
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.MinorityOwned
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.UsTaxId
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.NationalIdType
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.MarketingPreScreen
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.TradeStyle3
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.TradeStyle5
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "DandBAdditionalParentCompany"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.GlobalUltimateBusinessName
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.ParentOrHqBusinessName
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.DomesticUltimateBusinessName
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.GlobalUltimateDunsNumber
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.ParentOrHqDunsNumber
+            },
+            {
+              behavior = "Edit"
+              field = s1.DandBCompany.field.DomesticUltimateDunsNumber
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  miniLayout = {
+    fields = [
+      "Name",
+      "DunsNumber",
+      "Phone",
+      "Address",
+    ]
+  }
+  relatedLists = [
+    {
+      fields = [
+        "ACCOUNT.NAME",
+        "ACCOUNT.SITE",
+        "ACCOUNT.ADDRESS1_STATE",
+        "ACCOUNT.PHONE1",
+        "ACCOUNT.TYPE",
+        "CORE.USERS.ALIAS",
+      ]
+      relatedList = "RelatedAccountList"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.DandBCompany,
+  ]
+}

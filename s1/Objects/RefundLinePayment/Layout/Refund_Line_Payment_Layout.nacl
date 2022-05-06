@@ -1,0 +1,169 @@
+s1.Layout RefundLinePayment_Refund_Line_Payment_Layout@bsss {
+  fullName = "RefundLinePayment-Refund Line Payment Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.RefundLinePayment.field.RefundLinePaymentNumber
+            },
+            {
+              behavior = "Required"
+              field = s1.RefundLinePayment.field.RefundId
+            },
+            {
+              behavior = "Required"
+              field = s1.RefundLinePayment.field.HasBeenUnapplied
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.RefundLinePayment.field.Type
+            },
+            {
+              behavior = "Required"
+              field = s1.RefundLinePayment.field.PaymentId
+            },
+            {
+              behavior = "Edit"
+              field = s1.RefundLinePayment.field.Comments
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Balances"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.RefundLinePayment.field.Amount
+            },
+            {
+              behavior = "Readonly"
+              field = s1.RefundLinePayment.field.ImpactAmount
+            },
+            {
+              behavior = "Readonly"
+              field = s1.RefundLinePayment.field.RefundBalance
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.RefundLinePayment.field.EffectiveImpactAmount
+            },
+            {
+              behavior = "Readonly"
+              field = s1.RefundLinePayment.field.PaymentBalance
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "AdditionalInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.RefundLinePayment.field.AssociatedAccountId
+            },
+            {
+              behavior = "Edit"
+              field = s1.RefundLinePayment.field.Date
+            },
+            {
+              behavior = "Edit"
+              field = s1.RefundLinePayment.field.AppliedDate
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.RefundLinePayment.field.AssociatedRefundLinePaymentId
+            },
+            {
+              behavior = "Edit"
+              field = s1.RefundLinePayment.field.EffectiveDate
+            },
+            {
+              behavior = "Edit"
+              field = s1.RefundLinePayment.field.UnappliedDate
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "SystemInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.RefundLinePayment.field.CreatedById
+            },
+            {
+              behavior = "Readonly"
+              field = s1.RefundLinePayment.field.CreatedDate
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.RefundLinePayment.field.LastModifiedById
+            },
+            {
+              behavior = "Readonly"
+              field = s1.RefundLinePayment.field.LastModifiedDate
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.RefundLinePayment,
+  ]
+}

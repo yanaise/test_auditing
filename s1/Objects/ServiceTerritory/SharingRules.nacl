@@ -1,0 +1,6 @@
+s1.SharingRules ServiceTerritory {
+  fullName = "ServiceTerritory"
+  _parent = [
+    s1.ServiceTerritory,
+  ]
+}

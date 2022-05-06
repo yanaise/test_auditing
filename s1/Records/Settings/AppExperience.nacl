@@ -1,0 +1,4 @@
+s1.AppExperienceSettings {
+  fullName = "AppExperience"
+  doesHideAllAppsInAppLauncher = false
+}

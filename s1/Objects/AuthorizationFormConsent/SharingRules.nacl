@@ -1,0 +1,6 @@
+s1.SharingRules AuthorizationFormConsent {
+  fullName = "AuthorizationFormConsent"
+  _parent = [
+    s1.AuthorizationFormConsent,
+  ]
+}

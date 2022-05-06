@@ -1,0 +1,158 @@
+type s1.OrgMetricScanSummary {
+  serviceid Id {
+    apiName = "OrgMetricScanSummary.Id"
+    label = "Org Metric Scan ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  s1.Checkbox IsDeleted {
+    apiName = "OrgMetricScanSummary.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Text Name {
+    apiName = "OrgMetricScanSummary.Name"
+    label = "Org Metric Scan Summary"
+    _required = true
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime CreatedDate {
+    apiName = "OrgMetricScanSummary.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup CreatedById {
+    apiName = "OrgMetricScanSummary.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime LastModifiedDate {
+    apiName = "OrgMetricScanSummary.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup LastModifiedById {
+    apiName = "OrgMetricScanSummary.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime SystemModstamp {
+    apiName = "OrgMetricScanSummary.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup OrgMetricId {
+    apiName = "OrgMetricScanSummary.OrgMetricId"
+    label = "Org Metric ID"
+    _required = true
+    referenceTo = [
+      "OrgMetric",
+    ]
+    createable = true
+    updateable = false
+    relationshipName = "OrgMetric"
+    queryable = true
+  }
+  s1.Picklist Status {
+    apiName = "OrgMetricScanSummary.Status"
+    label = "Status"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  s1.Picklist ImplementationEffort {
+    apiName = "OrgMetricScanSummary.ImplementationEffort"
+    label = "Implementation Effort"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  s1.Picklist ErrorMessage {
+    apiName = "OrgMetricScanSummary.ErrorMessage"
+    label = "Error Message"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  s1.Number ItemCount {
+    apiName = "OrgMetricScanSummary.ItemCount"
+    label = "Count"
+    precision = 9
+    createable = true
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  s1.Number FeatureLimit {
+    apiName = "OrgMetricScanSummary.FeatureLimit"
+    label = "Limit"
+    precision = 9
+    createable = true
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  s1.Text Unit {
+    apiName = "OrgMetricScanSummary.Unit"
+    label = "Unit"
+    createable = true
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 64
+    queryable = true
+  }
+  s1.Percent PercentUsage {
+    apiName = "OrgMetricScanSummary.PercentUsage"
+    label = "Percent Usage"
+    createable = true
+    updateable = false
+    scale = 0
+    precision = 3
+    queryable = true
+  }
+  s1.DateTime ScanDate {
+    apiName = "OrgMetricScanSummary.ScanDate"
+    label = "Scan Date"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+}

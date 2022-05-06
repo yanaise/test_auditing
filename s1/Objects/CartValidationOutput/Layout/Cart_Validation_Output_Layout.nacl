@@ -1,0 +1,58 @@
+s1.Layout CartValidationOutput_Cart_Validation_Output_Layout@bsss {
+  fullName = "CartValidationOutput-Cart Validation Output Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.CartValidationOutput.field.CartId
+            },
+            {
+              behavior = "Required"
+              field = s1.CartValidationOutput.field.RelatedEntityId
+            },
+            {
+              behavior = "Required"
+              field = s1.CartValidationOutput.field.BackgroundOperationId
+            },
+            {
+              behavior = "Required"
+              field = s1.CartValidationOutput.field.Type
+            },
+            {
+              behavior = "Required"
+              field = s1.CartValidationOutput.field.Level
+            },
+            {
+              behavior = "Edit"
+              field = s1.CartValidationOutput.field.Message
+            },
+            {
+              behavior = "Edit"
+              field = s1.CartValidationOutput.field.IsDismissed
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.CartValidationOutput,
+  ]
+}

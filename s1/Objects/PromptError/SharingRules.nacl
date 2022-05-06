@@ -1,0 +1,6 @@
+s1.SharingRules PromptError {
+  fullName = "PromptError"
+  _parent = [
+    s1.PromptError,
+  ]
+}

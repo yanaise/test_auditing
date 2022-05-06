@@ -1,0 +1,105 @@
+s1.Layout WorkTypeGroup_Work_Type_Group_Layout@bsss {
+  fullName = "WorkTypeGroup-Work Type Group Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Description"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.WorkTypeGroup.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = s1.WorkTypeGroup.field.Description
+            },
+            {
+              behavior = "Required"
+              field = s1.WorkTypeGroup.field.GroupType
+            },
+            {
+              behavior = "Edit"
+              field = s1.WorkTypeGroup.field.IsActive
+            },
+            {
+              behavior = "Edit"
+              field = s1.WorkTypeGroup.field.AdditionalInformation
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.WorkTypeGroup.field.CreatedById
+            },
+            {
+              behavior = "Edit"
+              field = s1.WorkTypeGroup.field.OwnerId
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.WorkTypeGroup.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      relatedList = "RelatedEntityHistoryList"
+    },
+    {
+      fields = [
+        "CreatedDate",
+        "StepStatus",
+        "OriginalActor",
+        "Actor",
+        "Comments",
+      ]
+      relatedList = "RelatedProcessHistoryList"
+    },
+    {
+      relatedList = "RelatedFileList"
+    },
+    {
+      fields = [
+        "Name",
+        "WorkType",
+      ]
+      relatedList = "WorkTypeGroupMembers"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.WorkTypeGroup,
+  ]
+}

@@ -1,0 +1,109 @@
+s1.AssignmentRules Case {
+  assignmentRule = [
+    {
+      fullName = "Standard"
+      active = true
+      ruleEntry = [
+        {
+          assignedTo = "yanai.sened+a1@salto.io"
+          assignedToType = "User"
+          criteriaItems = [
+            {
+              field = "Account.BillingCountry"
+              operation = "equals"
+              value = "US,USA,United States,United States of America"
+            },
+            {
+              field = s1.Account.field.SLA__c
+              operation = "equals"
+              value = "Gold,Platinum"
+            },
+            {
+              field = s1.Account.field.Type
+              operation = "contains"
+              value = "Customer"
+            },
+          ]
+        },
+        {
+          assignedTo = "yanai.sened+a1@salto.io"
+          assignedToType = "User"
+          criteriaItems = [
+            {
+              field = "Account.BillingCountry"
+              operation = "equals"
+              value = "US,USA,United States,United States of America"
+            },
+            {
+              field = s1.Account.field.SLA__c
+              operation = "equals"
+              value = "Silver,Bronze"
+            },
+            {
+              field = s1.Account.field.Type
+              operation = "contains"
+              value = "Customer"
+            },
+          ]
+        },
+        {
+          assignedTo = "yanai.sened+a1@salto.io"
+          assignedToType = "User"
+          criteriaItems = [
+            {
+              field = "Account.BillingCountry"
+              operation = "notEqual"
+              value = "US,USA,United States,United States of America"
+            },
+            {
+              field = s1.Account.field.SLA__c
+              operation = "equals"
+              value = "Gold,Platinum"
+            },
+            {
+              field = s1.Account.field.Type
+              operation = "contains"
+              value = "Customer"
+            },
+          ]
+        },
+        {
+          assignedTo = "yanai.sened+a1@salto.io"
+          assignedToType = "User"
+          criteriaItems = [
+            {
+              field = "Account.BillingCountry"
+              operation = "notEqual"
+              value = "US,USA,United States,United States of America"
+            },
+            {
+              field = s1.Account.field.SLA__c
+              operation = "equals"
+              value = "Silver,Bronze"
+            },
+            {
+              field = s1.Account.field.Type
+              operation = "contains"
+              value = "Customer"
+            },
+          ]
+        },
+        {
+          assignedTo = "yanai.sened+a1@salto.io"
+          assignedToType = "User"
+          criteriaItems = [
+            {
+              field = s1.Account.field.Type
+              operation = "contains"
+              value = "Partner"
+            },
+          ]
+        },
+      ]
+    },
+  ]
+  fullName = "Case"
+  _parent = [
+    s1.Case,
+  ]
+}

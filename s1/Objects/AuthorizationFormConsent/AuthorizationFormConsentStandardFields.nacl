@@ -1,0 +1,228 @@
+type s1.AuthorizationFormConsent {
+  serviceid Id {
+    apiName = "AuthorizationFormConsent.Id"
+    label = "Authorization Form Consent ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  s1.Lookup OwnerId {
+    apiName = "AuthorizationFormConsent.OwnerId"
+    label = "Owner ID"
+    referenceTo = [
+      s1.Group,
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "Owner"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsDeleted {
+    apiName = "AuthorizationFormConsent.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Text Name {
+    apiName = "AuthorizationFormConsent.Name"
+    label = "Name"
+    _required = true
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  s1.DateTime CreatedDate {
+    apiName = "AuthorizationFormConsent.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup CreatedById {
+    apiName = "AuthorizationFormConsent.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime LastModifiedDate {
+    apiName = "AuthorizationFormConsent.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup LastModifiedById {
+    apiName = "AuthorizationFormConsent.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime SystemModstamp {
+    apiName = "AuthorizationFormConsent.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup ConsentGiverId {
+    apiName = "AuthorizationFormConsent.ConsentGiverId"
+    label = "Consent Giver ID"
+    _required = true
+    referenceTo = [
+      s1.Account,
+      s1.Contact,
+      s1.Individual,
+      s1.User,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "ConsentGiver"
+    queryable = true
+    trackHistory = false
+  }
+  s1.Lookup AuthorizationFormTextId {
+    apiName = "AuthorizationFormConsent.AuthorizationFormTextId"
+    label = "Authorization Form Text ID"
+    referenceTo = [
+      s1.AuthorizationFormText,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "AuthorizationFormText"
+    queryable = true
+    trackHistory = false
+  }
+  s1.Text ConsentCapturedSource {
+    apiName = "AuthorizationFormConsent.ConsentCapturedSource"
+    label = "Consent Captured Source"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  s1.Picklist ConsentCapturedSourceType {
+    apiName = "AuthorizationFormConsent.ConsentCapturedSourceType"
+    label = "Consent Captured Source Type"
+    valueSet = [
+      {
+        fullName = "Email"
+        default = false
+        label = "Email"
+        isActive = true
+      },
+      {
+        fullName = "Phone"
+        default = false
+        label = "Phone"
+        isActive = true
+      },
+      {
+        fullName = "Web"
+        default = false
+        label = "Web"
+        isActive = true
+      },
+      {
+        fullName = "Social"
+        default = false
+        label = "Social"
+        isActive = true
+      },
+      {
+        fullName = "MailingAddress"
+        default = false
+        label = "Mailing Address"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.DateTime ConsentCapturedDateTime {
+    apiName = "AuthorizationFormConsent.ConsentCapturedDateTime"
+    label = "Consent Captured Date Time"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Picklist Status {
+    apiName = "AuthorizationFormConsent.Status"
+    label = "Status"
+    valueSet = [
+      {
+        fullName = "Seen"
+        default = false
+        label = "Seen"
+        isActive = true
+      },
+      {
+        fullName = "Signed"
+        default = false
+        label = "Signed"
+        isActive = true
+      },
+      {
+        fullName = "Rejected"
+        default = false
+        label = "Rejected"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Lookup DocumentVersionId {
+    apiName = "AuthorizationFormConsent.DocumentVersionId"
+    label = "ContentVersion ID"
+    referenceTo = [
+      s1.ContentVersion,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "DocumentVersion"
+    queryable = true
+    trackHistory = false
+  }
+  s1.Lookup RelatedRecordId {
+    apiName = "AuthorizationFormConsent.RelatedRecordId"
+    label = "Related Record ID"
+    referenceTo = [
+      s1.Account,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "RelatedRecord"
+    queryable = true
+    trackHistory = false
+  }
+}

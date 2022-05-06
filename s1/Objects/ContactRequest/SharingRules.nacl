@@ -1,0 +1,6 @@
+s1.SharingRules ContactRequest {
+  fullName = "ContactRequest"
+  _parent = [
+    s1.ContactRequest,
+  ]
+}

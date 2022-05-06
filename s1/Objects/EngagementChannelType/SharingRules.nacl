@@ -1,0 +1,6 @@
+s1.SharingRules EngagementChannelType {
+  fullName = "EngagementChannelType"
+  _parent = [
+    s1.EngagementChannelType,
+  ]
+}

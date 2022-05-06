@@ -1,0 +1,141 @@
+s1.Layout ReturnOrder_Return_Order_Layout@bss {
+  fullName = "ReturnOrder-Return Order Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.ReturnOrder.field.ReturnOrderNumber
+            },
+            {
+              behavior = "Edit"
+              field = s1.ReturnOrder.field.CaseId
+            },
+            {
+              behavior = "Edit"
+              field = s1.ReturnOrder.field.AccountId
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.ReturnOrder.field.ReturnedById
+            },
+            {
+              behavior = "Edit"
+              field = s1.ReturnOrder.field.Status
+            },
+            {
+              behavior = "Edit"
+              field = s1.ReturnOrder.field.ContactId
+            },
+            {
+              behavior = "Edit"
+              field = s1.ReturnOrder.field.OwnerId
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Shipping Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.ReturnOrder.field.SourceLocationId
+            },
+            {
+              behavior = "Edit"
+              field = s1.ReturnOrder.field.ShipmentType
+            },
+            {
+              behavior = "Edit"
+              field = s1.ReturnOrder.field.ExpectedArrivalDate
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.ReturnOrder.field.DestinationLocationId
+            },
+            {
+              behavior = "Edit"
+              field = s1.ReturnOrder.field.ShipFromAddress
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Description"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.ReturnOrder.field.Description
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.ReturnOrder.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.ReturnOrder.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.ReturnOrder,
+  ]
+}

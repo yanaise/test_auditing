@@ -1,0 +1,8 @@
+s1.ListView AuthorizationFormConsent_All_AuthorizationFormConsents {
+  fullName = "AuthorizationFormConsent.All_AuthorizationFormConsents"
+  filterScope = "Everything"
+  label = "All Authorization Form Consents"
+  _parent = [
+    s1.AuthorizationFormConsent,
+  ]
+}

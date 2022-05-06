@@ -1,0 +1,23 @@
+type s1.ChangeRequestRelatedIssue {
+  s1.MasterDetail ChangeRequestId {
+    apiName = "ChangeRequestRelatedIssue.ChangeRequestId"
+    trackHistory = false
+    _hidden_value = true
+  }
+  string Name {
+    _hidden_value = true
+  }
+  string RelatedEntityType {
+    _hidden_value = true
+  }
+  s1.Lookup RelatedIssueId {
+    apiName = "ChangeRequestRelatedIssue.RelatedIssueId"
+    trackHistory = false
+    _hidden_value = true
+  }
+  s1.Picklist RelationshipType {
+    apiName = "ChangeRequestRelatedIssue.RelationshipType"
+    trackHistory = false
+    _hidden_value = true
+  }
+}

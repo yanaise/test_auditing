@@ -1,0 +1,45 @@
+type s1.ApprovalStep {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  boolean allowDelegate {
+  }
+  s1.ApprovalAction approvalActions {
+  }
+  s1.ApprovalStepApprover assignedApprover {
+  }
+  string description {
+  }
+  s1.ApprovalEntryCriteria entryCriteria {
+  }
+  string ifCriteriaNotMet {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "ApproveRecord",
+        "GotoNextStep",
+        "RejectRecord",
+      ]
+    }
+  }
+  string label {
+  }
+  string name {
+  }
+  s1.ApprovalStepRejectBehavior rejectBehavior {
+  }
+  s1.ApprovalAction rejectionActions {
+  }
+  metadataType = "ApprovalStep"
+}

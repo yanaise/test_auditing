@@ -1,0 +1,113 @@
+s1.Layout OrderItem_Order_Product_Layout@bss {
+  fullName = "OrderItem-Order Product Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Product Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.OrderItem.field.OrderId
+            },
+            {
+              behavior = "Readonly"
+              field = s1.OrderItem.field.Product2Id
+            },
+            {
+              behavior = "Readonly"
+              field = s1.OrderItem.field.ProductCode
+            },
+            {
+              behavior = "Readonly"
+              field = s1.OrderItem.field.ListPrice
+            },
+            {
+              behavior = "Required"
+              field = s1.OrderItem.field.UnitPrice
+            },
+            {
+              behavior = "Required"
+              field = s1.OrderItem.field.Quantity
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.OrderItem.field.TotalPrice
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.OrderItem.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.OrderItem.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Description Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.OrderItem.field.Description
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Additional Information"
+      style = "TwoColumnsLeftToRight"
+    },
+  ]
+  multilineLayoutFields = [
+    "Product2Id",
+    "Quantity",
+    "UnitPrice",
+    "ListPrice",
+    "Description",
+    "OrderId",
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.OrderItem,
+  ]
+}

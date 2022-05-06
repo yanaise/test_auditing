@@ -1,0 +1,30 @@
+type s1.FieldMappingField {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string dataServiceField {
+    foreignKeyDomain = [
+      s1.CustomField,
+      "CustomFieldDataColumn",
+    ]
+  }
+  string dataServiceObjectName {
+    foreignKeyDomain = [
+      "CustomObject",
+    ]
+  }
+  number priority {
+  }
+  metadataType = "FieldMappingField"
+}

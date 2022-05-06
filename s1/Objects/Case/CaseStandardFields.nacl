@@ -1,0 +1,458 @@
+type s1.Case {
+  serviceid Id {
+    apiName = "Case.Id"
+    label = "Case ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  s1.Checkbox IsDeleted {
+    apiName = "Case.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup MasterRecordId {
+    apiName = "Case.MasterRecordId"
+    label = "Master Record ID"
+    referenceTo = [
+      s1.Case,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "MasterRecord"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.AutoNumber CaseNumber {
+    apiName = "Case.CaseNumber"
+    label = "Case Number"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup ContactId {
+    apiName = "Case.ContactId"
+    label = "Contact ID"
+    referenceTo = [
+      s1.Contact,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Contact"
+    queryable = true
+    trackFeedHistory = false
+    trackHistory = true
+    trackTrending = false
+  }
+  s1.Lookup AccountId {
+    apiName = "Case.AccountId"
+    label = "Account ID"
+    referenceTo = [
+      s1.Account,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Account"
+    queryable = true
+    trackFeedHistory = false
+    trackHistory = false
+    trackTrending = false
+  }
+  s1.Lookup AssetId {
+    apiName = "Case.AssetId"
+    label = "Asset ID"
+    referenceTo = [
+      s1.Asset,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Asset"
+    queryable = true
+    trackFeedHistory = false
+    trackHistory = true
+    trackTrending = false
+  }
+  s1.Lookup SourceId {
+    apiName = "Case.SourceId"
+    label = "Source ID"
+    referenceTo = [
+      s1.EmailMessage,
+      s1.MessagingSession,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Source"
+    queryable = true
+    trackFeedHistory = false
+    trackHistory = false
+    trackTrending = false
+  }
+  s1.Lookup ParentId {
+    apiName = "Case.ParentId"
+    label = "Parent Case ID"
+    referenceTo = [
+      s1.Case,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Parent"
+    queryable = true
+    trackFeedHistory = false
+    trackHistory = false
+    trackTrending = false
+  }
+  s1.Text SuppliedName {
+    apiName = "Case.SuppliedName"
+    label = "Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 80
+    queryable = true
+  }
+  s1.Email SuppliedEmail {
+    apiName = "Case.SuppliedEmail"
+    label = "Email Address"
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  s1.Text SuppliedPhone {
+    apiName = "Case.SuppliedPhone"
+    label = "Phone"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 40
+    queryable = true
+  }
+  s1.Text SuppliedCompany {
+    apiName = "Case.SuppliedCompany"
+    label = "Company"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 80
+    queryable = true
+  }
+  s1.Picklist Type {
+    apiName = "Case.Type"
+    label = "Case Type"
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+    trackFeedHistory = false
+    trackHistory = true
+    trackTrending = false
+    valueSetName = s1.StandardValueSet.instance.CaseType
+  }
+  s1.Picklist Status {
+    apiName = "Case.Status"
+    label = "Status"
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+    trackFeedHistory = false
+    trackHistory = true
+    trackTrending = false
+    valueSetName = s1.StandardValueSet.instance.CaseStatus
+  }
+  s1.Picklist Reason {
+    apiName = "Case.Reason"
+    label = "Case Reason"
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+    trackFeedHistory = false
+    trackHistory = true
+    trackTrending = false
+    valueSetName = s1.StandardValueSet.instance.CaseReason
+  }
+  s1.Picklist Origin {
+    apiName = "Case.Origin"
+    label = "Case Origin"
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+    trackFeedHistory = false
+    trackHistory = true
+    trackTrending = false
+    valueSetName = s1.StandardValueSet.instance.CaseOrigin
+  }
+  s1.Text Subject {
+    apiName = "Case.Subject"
+    label = "Subject"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  s1.Picklist Priority {
+    apiName = "Case.Priority"
+    label = "Priority"
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+    trackFeedHistory = true
+    trackHistory = true
+    trackTrending = false
+    valueSetName = s1.StandardValueSet.instance.CasePriority
+  }
+  s1.LongTextArea Description {
+    apiName = "Case.Description"
+    label = "Description"
+    createable = true
+    updateable = true
+    length = 32000
+    queryable = true
+  }
+  s1.Checkbox IsClosed {
+    apiName = "Case.IsClosed"
+    label = "Closed"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime ClosedDate {
+    apiName = "Case.ClosedDate"
+    label = "Closed Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsEscalated {
+    apiName = "Case.IsEscalated"
+    label = "Escalated"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Lookup OwnerId {
+    apiName = "Case.OwnerId"
+    label = "Owner ID"
+    referenceTo = [
+      s1.Group,
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "Owner"
+    queryable = true
+    _hidden_value = true
+    trackFeedHistory = true
+    trackHistory = true
+    trackTrending = false
+  }
+  s1.DateTime CreatedDate {
+    apiName = "Case.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup CreatedById {
+    apiName = "Case.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime LastModifiedDate {
+    apiName = "Case.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup LastModifiedById {
+    apiName = "Case.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime SystemModstamp {
+    apiName = "Case.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Phone ContactPhone {
+    apiName = "Case.ContactPhone"
+    label = "Contact Phone"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Phone ContactMobile {
+    apiName = "Case.ContactMobile"
+    label = "Contact Mobile"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Email ContactEmail {
+    apiName = "Case.ContactEmail"
+    label = "Contact Email"
+    createable = false
+    updateable = false
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Phone ContactFax {
+    apiName = "Case.ContactFax"
+    label = "Contact Fax"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.LongTextArea Comments {
+    apiName = "Case.Comments"
+    label = "Internal Comments"
+    createable = true
+    updateable = true
+    length = 4000
+    queryable = true
+  }
+  s1.Lookup BusinessHoursId {
+    apiName = "Case.BusinessHoursId"
+    trackFeedHistory = false
+    trackHistory = false
+    trackTrending = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Lookup EntitlementId {
+    apiName = "Case.EntitlementId"
+    trackFeedHistory = false
+    trackHistory = false
+    trackTrending = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Unknown IsClosedOnCreate {
+    apiName = "Case.IsClosedOnCreate"
+    trackFeedHistory = false
+    trackHistory = false
+    trackTrending = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Unknown IsStopped {
+    apiName = "Case.IsStopped"
+    trackFeedHistory = false
+    trackHistory = false
+    trackTrending = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Unknown MilestoneStatus {
+    apiName = "Case.MilestoneStatus"
+    trackTrending = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Unknown MilestoneStatusIcon {
+    apiName = "Case.MilestoneStatusIcon"
+    trackTrending = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Lookup ProductId {
+    apiName = "Case.ProductId"
+    trackFeedHistory = false
+    trackHistory = false
+    trackTrending = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Lookup ServiceContractId {
+    apiName = "Case.ServiceContractId"
+    trackFeedHistory = false
+    trackHistory = false
+    trackTrending = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Unknown SlaExitDate {
+    apiName = "Case.SlaExitDate"
+    trackTrending = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Unknown SlaStartDate {
+    apiName = "Case.SlaStartDate"
+    trackFeedHistory = false
+    trackHistory = false
+    trackTrending = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Unknown StopStartDate {
+    apiName = "Case.StopStartDate"
+    trackTrending = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+}

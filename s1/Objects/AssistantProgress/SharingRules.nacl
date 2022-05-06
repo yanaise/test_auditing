@@ -1,0 +1,6 @@
+s1.SharingRules AssistantProgress {
+  fullName = "AssistantProgress"
+  _parent = [
+    s1.AssistantProgress,
+  ]
+}

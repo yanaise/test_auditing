@@ -1,0 +1,6 @@
+s1.SharingRules PartyConsent {
+  fullName = "PartyConsent"
+  _parent = [
+    s1.PartyConsent,
+  ]
+}

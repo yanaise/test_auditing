@@ -1,0 +1,6 @@
+s1.SharingRules UserProvisioningRequest {
+  fullName = "UserProvisioningRequest"
+  _parent = [
+    s1.UserProvisioningRequest,
+  ]
+}

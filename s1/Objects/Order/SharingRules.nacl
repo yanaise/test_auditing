@@ -1,0 +1,6 @@
+s1.SharingRules Order {
+  fullName = "Order"
+  _parent = [
+    s1.Order,
+  ]
+}

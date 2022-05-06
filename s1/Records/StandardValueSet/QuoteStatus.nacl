@@ -1,0 +1,4 @@
+s1.StandardValueSet QuoteStatus {
+  fullName = "QuoteStatus"
+  sorted = false
+}

@@ -1,0 +1,50 @@
+type s1.valueSet {
+  string fullName {
+  }
+  string label {
+  }
+  boolean default {
+  }
+  boolean isActive {
+  }
+  string color {
+  }
+}
+type s1.summaryFilterItems {
+  string field {
+  }
+  s1.rollupSummaryFilterOperation operation {
+  }
+  string value {
+  }
+  string valueField {
+  }
+}
+type s1.ValueSettings {
+  string valueName {
+  }
+  "List<string>" controllingFieldValue {
+  }
+  apiName = "ValueSettings"
+}
+type s1.LookupFilter {
+  boolean active {
+  }
+  string booleanFilter {
+  }
+  string errorMessage {
+  }
+  string infoMessage {
+  }
+  boolean isOptional {
+  }
+  "List<s1.FilterItem>" filterItems {
+  }
+  apiName = "LookupFilter"
+}
+type s1.FieldDependency {
+  string controllingField {
+  }
+  "List<s1.ValueSettings>" valueSettings {
+  }
+}

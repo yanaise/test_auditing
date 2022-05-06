@@ -1,0 +1,6 @@
+s1.SharingRules ProcessException {
+  fullName = "ProcessException"
+  _parent = [
+    s1.ProcessException,
+  ]
+}

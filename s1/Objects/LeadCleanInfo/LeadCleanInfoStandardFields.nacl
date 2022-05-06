@@ -1,0 +1,644 @@
+type s1.LeadCleanInfo {
+  serviceid Id {
+    apiName = "LeadCleanInfo.Id"
+    label = "Lead Clean Info ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  s1.Checkbox IsDeleted {
+    apiName = "LeadCleanInfo.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Text Name {
+    apiName = "LeadCleanInfo.Name"
+    label = "Lead Clean Info Name"
+    _required = true
+    createable = false
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  s1.DateTime CreatedDate {
+    apiName = "LeadCleanInfo.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup CreatedById {
+    apiName = "LeadCleanInfo.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime LastModifiedDate {
+    apiName = "LeadCleanInfo.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup LastModifiedById {
+    apiName = "LeadCleanInfo.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime SystemModstamp {
+    apiName = "LeadCleanInfo.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup LeadId {
+    apiName = "LeadCleanInfo.LeadId"
+    label = "Lead ID"
+    _required = true
+    referenceTo = [
+      s1.Lead,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "Lead"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime LastMatchedDate {
+    apiName = "LeadCleanInfo.LastMatchedDate"
+    label = "Last Matched Date"
+    _required = true
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime LastStatusChangedDate {
+    apiName = "LeadCleanInfo.LastStatusChangedDate"
+    label = "Last Status Changed Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup LastStatusChangedById {
+    apiName = "LeadCleanInfo.LastStatusChangedById"
+    label = "User ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastStatusChangedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsInactive {
+    apiName = "LeadCleanInfo.IsInactive"
+    label = "Contact Status in Salesforce"
+    defaultValue = false
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Text FirstName {
+    apiName = "LeadCleanInfo.FirstName"
+    label = "First Name"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Text LastName {
+    apiName = "LeadCleanInfo.LastName"
+    label = "Last Name"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Email Email {
+    apiName = "LeadCleanInfo.Email"
+    label = "Email"
+    createable = false
+    updateable = false
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Phone Phone {
+    apiName = "LeadCleanInfo.Phone"
+    label = "Phone"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Address Address {
+    apiName = "LeadCleanInfo.Address"
+    label = "Address"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Text Title {
+    apiName = "LeadCleanInfo.Title"
+    label = "Title"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 128
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Currency AnnualRevenue {
+    apiName = "LeadCleanInfo.AnnualRevenue"
+    label = "Annual Revenue"
+    createable = false
+    updateable = false
+    scale = 0
+    precision = 18
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Number NumberOfEmployees {
+    apiName = "LeadCleanInfo.NumberOfEmployees"
+    label = "Number of Employees"
+    precision = 8
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Picklist Industry {
+    apiName = "LeadCleanInfo.Industry"
+    label = "Industry"
+    restricted = false
+    createable = false
+    updateable = false
+    queryable = true
+    valueSetName = s1.StandardValueSet.instance.Industry
+    _hidden_value = true
+  }
+  s1.Text CompanyName {
+    apiName = "LeadCleanInfo.CompanyName"
+    label = "Company Name"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Text CompanyDunsNumber {
+    apiName = "LeadCleanInfo.CompanyDunsNumber"
+    label = "Company D-U-N-S Number"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 9
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Picklist ContactStatusDataDotCom {
+    apiName = "LeadCleanInfo.ContactStatusDataDotCom"
+    label = "Contact Status per Data.com"
+    valueSet = [
+      {
+        fullName = "IsActiveContactDataDotCom"
+        default = false
+        label = "Contact is Active per Data.com"
+        isActive = true
+      },
+      {
+        fullName = "WrongPhoneDataDotCom"
+        default = false
+        label = "Phone is Wrong per Data.com"
+        isActive = true
+      },
+      {
+        fullName = "WrongEmailDataDotCom"
+        default = false
+        label = "Email is Wrong per Data.com"
+        isActive = true
+      },
+      {
+        fullName = "WrongPhoneAndEmailDataDotCom"
+        default = false
+        label = "Phone and Email are Wrong per Data.com"
+        isActive = true
+      },
+      {
+        fullName = "NotAtCompanyContactDataDotCom"
+        default = false
+        label = "Contact Not at Company per Data.com"
+        isActive = true
+      },
+      {
+        fullName = "InactiveDataDotCom"
+        default = false
+        label = "Contact is Inactive per Data.com"
+        isActive = true
+      },
+      {
+        fullName = "CompanyOutOfBusinessDataDotCom"
+        default = false
+        label = "Company this contact belongs to is out of business per Data.com"
+        isActive = true
+      },
+      {
+        fullName = "CompanyNeverExistedDataDotCom"
+        default = false
+        label = "Company this contact belongs to never existed per Data.com"
+        isActive = true
+      },
+      {
+        fullName = "DeadEmailDomainDataDotCom"
+        default = false
+        label = "Email address is invalid per Data.com"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsReviewedName {
+    apiName = "LeadCleanInfo.IsReviewedName"
+    label = "Name is Reviewed"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsReviewedEmail {
+    apiName = "LeadCleanInfo.IsReviewedEmail"
+    label = "Email is Reviewed"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsReviewedPhone {
+    apiName = "LeadCleanInfo.IsReviewedPhone"
+    label = "Phone is Reviewed"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsReviewedAddress {
+    apiName = "LeadCleanInfo.IsReviewedAddress"
+    label = "Address is Reviewed"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsReviewedTitle {
+    apiName = "LeadCleanInfo.IsReviewedTitle"
+    label = "Title is Reviewed"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsReviewedAnnualRevenue {
+    apiName = "LeadCleanInfo.IsReviewedAnnualRevenue"
+    label = "Annual Revenue is Reviewed"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsReviewedNumberOfEmployees {
+    apiName = "LeadCleanInfo.IsReviewedNumberOfEmployees"
+    label = "Number of Employees is Reviewed"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsReviewedIndustry {
+    apiName = "LeadCleanInfo.IsReviewedIndustry"
+    label = "Industry is Reviewed"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsReviewedCompanyName {
+    apiName = "LeadCleanInfo.IsReviewedCompanyName"
+    label = "Company Name is Reviewed"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsReviewedCompanyDunsNumber {
+    apiName = "LeadCleanInfo.IsReviewedCompanyDunsNumber"
+    label = "Company D-U-N-S Number is Reviewed"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsReviewedDandBCompanyDunsNumber {
+    apiName = "LeadCleanInfo.IsReviewedDandBCompanyDunsNumber"
+    label = "D&B Company D-U-N-S Number is Reviewed"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsDifferentFirstName {
+    apiName = "LeadCleanInfo.IsDifferentFirstName"
+    label = "First Name is Different"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsDifferentLastName {
+    apiName = "LeadCleanInfo.IsDifferentLastName"
+    label = "Last Name is Different"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsDifferentEmail {
+    apiName = "LeadCleanInfo.IsDifferentEmail"
+    label = "Email is Different"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsDifferentPhone {
+    apiName = "LeadCleanInfo.IsDifferentPhone"
+    label = "Phone is Different"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsDifferentStreet {
+    apiName = "LeadCleanInfo.IsDifferentStreet"
+    label = "Street is Different"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsDifferentCity {
+    apiName = "LeadCleanInfo.IsDifferentCity"
+    label = "City is Different"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsDifferentState {
+    apiName = "LeadCleanInfo.IsDifferentState"
+    label = "State is Different"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsDifferentPostalCode {
+    apiName = "LeadCleanInfo.IsDifferentPostalCode"
+    label = "ZIP is Different"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsDifferentCountry {
+    apiName = "LeadCleanInfo.IsDifferentCountry"
+    label = "Country is Different"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsDifferentTitle {
+    apiName = "LeadCleanInfo.IsDifferentTitle"
+    label = "Title is Different"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsDifferentAnnualRevenue {
+    apiName = "LeadCleanInfo.IsDifferentAnnualRevenue"
+    label = "Annual Revenue is Different"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsDifferentNumberOfEmployees {
+    apiName = "LeadCleanInfo.IsDifferentNumberOfEmployees"
+    label = "Number of Employees is Different"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsDifferentIndustry {
+    apiName = "LeadCleanInfo.IsDifferentIndustry"
+    label = "Industry is Different"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsDifferentCompanyName {
+    apiName = "LeadCleanInfo.IsDifferentCompanyName"
+    label = "Company Name is Different"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsDifferentCompanyDunsNumber {
+    apiName = "LeadCleanInfo.IsDifferentCompanyDunsNumber"
+    label = "Company D-U-N-S Number is Different"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsDifferentDandBCompanyDunsNumber {
+    apiName = "LeadCleanInfo.IsDifferentDandBCompanyDunsNumber"
+    label = "D&B Company D-U-N-S Number is Different"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsDifferentStateCode {
+    apiName = "LeadCleanInfo.IsDifferentStateCode"
+    label = "State Code is Different"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsDifferentCountryCode {
+    apiName = "LeadCleanInfo.IsDifferentCountryCode"
+    label = "Country Code is Different"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox CleanedByJob {
+    apiName = "LeadCleanInfo.CleanedByJob"
+    label = "Cleaned by Job"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox CleanedByUser {
+    apiName = "LeadCleanInfo.CleanedByUser"
+    label = "Cleaned by User"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Text DandBCompanyDunsNumber {
+    apiName = "LeadCleanInfo.DandBCompanyDunsNumber"
+    label = "D&B Company D-U-N-S Number"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 9
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Text DataDotComCompanyId {
+    apiName = "LeadCleanInfo.DataDotComCompanyId"
+    label = "Data.com Company ID"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 20
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsFlaggedWrongName {
+    apiName = "LeadCleanInfo.IsFlaggedWrongName"
+    label = "Name is Flagged Wrong"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsFlaggedWrongEmail {
+    apiName = "LeadCleanInfo.IsFlaggedWrongEmail"
+    label = "Email is Flagged Wrong"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsFlaggedWrongPhone {
+    apiName = "LeadCleanInfo.IsFlaggedWrongPhone"
+    label = "Phone is Flagged Wrong"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsFlaggedWrongAddress {
+    apiName = "LeadCleanInfo.IsFlaggedWrongAddress"
+    label = "Address is Flagged Wrong"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsFlaggedWrongTitle {
+    apiName = "LeadCleanInfo.IsFlaggedWrongTitle"
+    label = "Title is Flagged Wrong"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsFlaggedWrongAnnualRevenue {
+    apiName = "LeadCleanInfo.IsFlaggedWrongAnnualRevenue"
+    label = "Annual Revenue is Flagged Wrong"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsFlaggedWrongNumberOfEmployees {
+    apiName = "LeadCleanInfo.IsFlaggedWrongNumberOfEmployees"
+    label = "Number of Employees is Flagged Wrong"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsFlaggedWrongIndustry {
+    apiName = "LeadCleanInfo.IsFlaggedWrongIndustry"
+    label = "Industry is Flagged Wrong"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsFlaggedWrongCompanyName {
+    apiName = "LeadCleanInfo.IsFlaggedWrongCompanyName"
+    label = "Company Name is Flagged Wrong"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsFlaggedWrongCompanyDunsNumber {
+    apiName = "LeadCleanInfo.IsFlaggedWrongCompanyDunsNumber"
+    label = "Company D-U-N-S Number is Flagged Wrong"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Text DataDotComId {
+    apiName = "LeadCleanInfo.DataDotComId"
+    label = "Data.com ID"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 20
+    queryable = true
+    _hidden_value = true
+  }
+}

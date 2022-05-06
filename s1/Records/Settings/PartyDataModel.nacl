@@ -1,0 +1,6 @@
+s1.PartyDataModelSettings {
+  fullName = "PartyDataModel"
+  enableAutoSelectIndividualOnMerge = false
+  enableConsentManagement = "true"
+  enableIndividualAutoCreate = false
+}

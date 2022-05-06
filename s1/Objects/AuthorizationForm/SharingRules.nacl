@@ -1,0 +1,6 @@
+s1.SharingRules AuthorizationForm {
+  fullName = "AuthorizationForm"
+  _parent = [
+    s1.AuthorizationForm,
+  ]
+}

@@ -1,0 +1,28 @@
+type s1.IncidentRelatedItem {
+  s1.Lookup AssetId {
+    apiName = "IncidentRelatedItem.AssetId"
+    trackHistory = false
+    _hidden_value = true
+  }
+  string Comment {
+    _hidden_value = true
+  }
+  s1.Picklist ImpactLevel {
+    apiName = "IncidentRelatedItem.ImpactLevel"
+    trackHistory = false
+    _hidden_value = true
+  }
+  s1.Picklist ImpactType {
+    apiName = "IncidentRelatedItem.ImpactType"
+    trackHistory = false
+    _hidden_value = true
+  }
+  s1.MasterDetail IncidentId {
+    apiName = "IncidentRelatedItem.IncidentId"
+    trackHistory = false
+    _hidden_value = true
+  }
+  string Name {
+    _hidden_value = true
+  }
+}

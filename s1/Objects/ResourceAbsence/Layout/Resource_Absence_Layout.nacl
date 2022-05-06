@@ -1,0 +1,110 @@
+s1.Layout ResourceAbsence_Resource_Absence_Layout@bss {
+  fullName = "ResourceAbsence-Resource Absence Layout"
+  excludeButtons = [
+    "Submit",
+  ]
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.ResourceAbsence.field.AbsenceNumber
+            },
+            {
+              behavior = "Required"
+              field = s1.ResourceAbsence.field.ResourceId
+            },
+            {
+              behavior = "Required"
+              field = s1.ResourceAbsence.field.Start
+            },
+            {
+              behavior = "Required"
+              field = s1.ResourceAbsence.field.End
+            },
+            {
+              behavior = "Edit"
+              field = s1.ResourceAbsence.field.Address
+            },
+            {
+              behavior = "Edit"
+              field = s1.ResourceAbsence.field.Description
+            },
+            {
+              behavior = "Required"
+              field = s1.ResourceAbsence.field.Type
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.ResourceAbsence.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.ResourceAbsence.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  miniLayout = {
+    fields = [
+      "Type",
+    ]
+  }
+  relatedLists = [
+    {
+      relatedList = "RelatedFileList"
+    },
+    {
+      relatedList = "RelatedEntityHistoryList"
+    },
+    {
+      fields = [
+        "CreatedDate",
+        "StepStatus",
+        "OriginalActor",
+        "Actor",
+        "Comments",
+      ]
+      relatedList = "RelatedProcessHistoryList"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.ResourceAbsence,
+  ]
+}

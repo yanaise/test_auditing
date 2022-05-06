@@ -1,0 +1,75 @@
+type s1.ChangeRequest {
+  string BusinessJustification {
+    _hidden_value = true
+  }
+  s1.Picklist BusinessReason {
+    apiName = "ChangeRequest.BusinessReason"
+    trackHistory = false
+    _hidden_value = true
+  }
+  s1.Picklist Category {
+    apiName = "ChangeRequest.Category"
+    trackHistory = false
+    _hidden_value = true
+  }
+  string ChangeType {
+    _hidden_value = true
+  }
+  string Description {
+    _hidden_value = true
+  }
+  string EstimatedEndTime {
+    _hidden_value = true
+  }
+  string EstimatedStartTime {
+    _hidden_value = true
+  }
+  string FinalReviewDateTime {
+    _hidden_value = true
+  }
+  string FinalReviewNotes {
+    _hidden_value = true
+  }
+  s1.Picklist Impact {
+    apiName = "ChangeRequest.Impact"
+    trackHistory = false
+    _hidden_value = true
+  }
+  s1.Lookup OwnerId {
+    apiName = "ChangeRequest.OwnerId"
+    trackHistory = false
+    _hidden_value = true
+  }
+  s1.Picklist Priority {
+    apiName = "ChangeRequest.Priority"
+    trackHistory = false
+    _hidden_value = true
+  }
+  string RemediationPlan {
+    _hidden_value = true
+  }
+  s1.Lookup ReviewerId {
+    apiName = "ChangeRequest.ReviewerId"
+    trackHistory = false
+    _hidden_value = true
+  }
+  string RiskImpactAnalysis {
+    _hidden_value = true
+  }
+  s1.Picklist RiskLevel {
+    apiName = "ChangeRequest.RiskLevel"
+    trackHistory = false
+    _hidden_value = true
+  }
+  s1.Picklist Status {
+    apiName = "ChangeRequest.Status"
+    trackHistory = false
+    _hidden_value = true
+  }
+  string StatusCode {
+    _hidden_value = true
+  }
+  string Subject {
+    _hidden_value = true
+  }
+}

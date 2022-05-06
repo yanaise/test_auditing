@@ -1,0 +1,4 @@
+s1.PardotSettings {
+  fullName = "Pardot"
+  enablePardotAppV1Enabled = false
+}

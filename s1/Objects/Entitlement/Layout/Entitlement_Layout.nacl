@@ -1,0 +1,137 @@
+s1.Layout Entitlement_Entitlement_Layout@bs {
+  fullName = "Entitlement-Entitlement Layout"
+  excludeButtons = [
+    "Submit",
+  ]
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Entitlement Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.Entitlement.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = s1.Entitlement.field.Type
+            },
+            {
+              behavior = "Required"
+              field = s1.Entitlement.field.AccountId
+            },
+            {
+              behavior = "Edit"
+              field = s1.Entitlement.field.ServiceContractId
+            },
+            {
+              behavior = "Edit"
+              field = s1.Entitlement.field.AssetId
+            },
+            {
+              behavior = "Edit"
+              field = s1.Entitlement.field.IsPerIncident
+            },
+            {
+              behavior = "Edit"
+              field = s1.Entitlement.field.CasesPerEntitlement
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.Entitlement.field.Status
+            },
+            {
+              behavior = "Readonly"
+              field = s1.Entitlement.field.StatusIndicator
+            },
+            {
+              behavior = "Edit"
+              field = s1.Entitlement.field.StartDate
+            },
+            {
+              behavior = "Edit"
+              field = s1.Entitlement.field.EndDate
+            },
+            {
+              behavior = "Edit"
+              field = s1.Entitlement.field.BusinessHoursId
+            },
+            {
+              behavior = "Edit"
+              field = s1.Entitlement.field.SlaProcessId
+            },
+            {
+              behavior = "Edit"
+              field = s1.Entitlement.field.RemainingCases
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.Entitlement.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.Entitlement.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      fields = [
+        "MT.MILESTONE",
+        "MT.DESCRIPTION",
+        "M.CRITERIA",
+        "M.MINUTES_TO_COMPLETE",
+      ]
+      relatedList = "RelatedMilestoneList"
+    },
+    {
+      fields = [
+        "CONTACT.NAME",
+        "CREATEDBY_USER.NAME",
+      ]
+      relatedList = "RelatedEntitlementContactList"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.Entitlement,
+  ]
+}

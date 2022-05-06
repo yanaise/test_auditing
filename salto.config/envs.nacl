@@ -1,4 +1,11 @@
 envs {
   envs = [
+    {
+      name = "advanced_fetch_test"
+      accountToServiceName = {
+        s1 = "salesforce"
+        salesforce = "salesforce"
+      }
+    },
   ]
 }

@@ -1,0 +1,8 @@
+s1.FieldSet Account_test {
+  fullName = "Account.test"
+  description = "Testing salto integration"
+  label = "test"
+  _parent = [
+    s1.Account,
+  ]
+}

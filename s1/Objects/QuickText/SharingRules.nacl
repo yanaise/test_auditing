@@ -1,0 +1,6 @@
+s1.SharingRules QuickText {
+  fullName = "QuickText"
+  _parent = [
+    s1.QuickText,
+  ]
+}

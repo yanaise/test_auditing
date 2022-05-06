@@ -1,0 +1,73 @@
+s1.DuplicateRule Lead_Standard_Lead_Duplicate_Rule@vuuu {
+  fullName = "Lead.Standard_Lead_Duplicate_Rule"
+  actionOnInsert = "Allow"
+  actionOnUpdate = "Allow"
+  alertText = "Use one of these records?"
+  description = "Identify leads that duplicate other leads and contacts."
+  duplicateRuleMatchRules = [
+    {
+      matchRuleSObjectType = s1.Contact
+      matchingRule = "Standard_Contact_Match_Rule_v1_1"
+      objectMapping = [
+        {
+          inputObject = s1.Lead
+          mappingFields = [
+            {
+              inputField = "City"
+              outputField = "MailingCity"
+            },
+            {
+              inputField = s1.Lead.field.Company
+              outputField = s1.Contact.field.AccountId
+            },
+            {
+              inputField = s1.Lead.field.Email
+              outputField = s1.Contact.field.Email
+            },
+            {
+              inputField = "FirstName"
+              outputField = "FirstName"
+            },
+            {
+              inputField = "LastName"
+              outputField = "LastName"
+            },
+            {
+              inputField = s1.Lead.field.Phone
+              outputField = s1.Contact.field.Phone
+            },
+            {
+              inputField = "PostalCode"
+              outputField = "MailingPostalCode"
+            },
+            {
+              inputField = "Street"
+              outputField = "MailingStreet"
+            },
+            {
+              inputField = s1.Lead.field.Title
+              outputField = s1.Contact.field.Title
+            },
+          ]
+          outputObject = s1.Contact
+        },
+      ]
+    },
+    {
+      matchRuleSObjectType = s1.Lead
+      matchingRule = "Standard_Lead_Match_Rule_v1_0"
+    },
+  ]
+  isActive = true
+  masterLabel = "Standard Lead Duplicate Rule"
+  operationsOnInsert = [
+    "Alert",
+    "Report",
+  ]
+  operationsOnUpdate = "Report"
+  securityOption = "EnforceSharingRules"
+  sortOrder = 1
+  _parent = [
+    s1.Lead,
+  ]
+}

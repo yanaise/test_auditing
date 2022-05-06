@@ -1,0 +1,108 @@
+s1.Layout DigitalWallet_Digital_Wallet_Layout@bss {
+  fullName = "DigitalWallet-Digital Wallet Layout"
+  layoutSections = [
+    {
+      customLabel = true
+      detailHeading = true
+      editHeading = true
+      label = "Digital Wallet"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.DigitalWallet.field.NickName
+            },
+            {
+              behavior = "Edit"
+              field = s1.DigitalWallet.field.Customer
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.DigitalWallet.field.Email
+            },
+            {
+              behavior = "Edit"
+              field = s1.DigitalWallet.field.AccountId
+            },
+            {
+              behavior = "Required"
+              field = s1.DigitalWallet.field.Status
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "GatewayDetails"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.DigitalWallet.field.PaymentGatewayId
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.DigitalWallet.field.GatewayToken
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "AdditionalInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.DigitalWallet.field.CompanyName
+            },
+            {
+              behavior = "Edit"
+              field = s1.DigitalWallet.field.Comments
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.DigitalWallet.field.PaymentMethodAddress
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.DigitalWallet,
+  ]
+}

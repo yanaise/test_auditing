@@ -1,0 +1,6 @@
+s1.SharingRules OrgDeleteRequest {
+  fullName = "OrgDeleteRequest"
+  _parent = [
+    s1.OrgDeleteRequest,
+  ]
+}

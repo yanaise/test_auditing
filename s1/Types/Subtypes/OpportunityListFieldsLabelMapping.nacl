@@ -1,0 +1,21 @@
+type s1.OpportunityListFieldsLabelMapping {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string field {
+  }
+  string label {
+  }
+  metadataType = "OpportunityListFieldsLabelMapping"
+}

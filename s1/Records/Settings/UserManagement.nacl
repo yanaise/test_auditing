@@ -1,0 +1,13 @@
+s1.UserManagementSettings {
+  fullName = "UserManagement"
+  enableCanAnswerContainUsername = "true"
+  enableConcealPersonalInfo = "true"
+  enableContactlessExternalIdentityUsers = false
+  enableEnhancedPermsetMgmt = false
+  enableEnhancedProfileMgmt = true
+  enableNewProfileUI = false
+  enableProfileFiltering = "false"
+  enableScrambleUserData = false
+  enableUserSelfDeactivate = false
+  restrictedProfileCloning = "false"
+}

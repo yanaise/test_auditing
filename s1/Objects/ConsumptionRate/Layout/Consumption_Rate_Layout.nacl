@@ -1,0 +1,87 @@
+s1.Layout ConsumptionRate_Consumption_Rate_Layout@bss {
+  fullName = "ConsumptionRate-Consumption Rate Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.ConsumptionRate.field.ProcessingOrder
+            },
+            {
+              behavior = "Required"
+              field = s1.ConsumptionRate.field.LowerBound
+            },
+            {
+              behavior = "Edit"
+              field = s1.ConsumptionRate.field.UpperBound
+            },
+            {
+              behavior = "Required"
+              field = s1.ConsumptionRate.field.Price
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.ConsumptionRate.field.Description
+            },
+            {
+              behavior = "Required"
+              field = s1.ConsumptionRate.field.PricingMethod
+            },
+            {
+              behavior = "Required"
+              field = s1.ConsumptionRate.field.ConsumptionScheduleId
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.ConsumptionRate.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.ConsumptionRate.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.ConsumptionRate,
+  ]
+}

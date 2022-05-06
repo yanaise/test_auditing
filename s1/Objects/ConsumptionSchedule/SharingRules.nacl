@@ -1,0 +1,6 @@
+s1.SharingRules ConsumptionSchedule {
+  fullName = "ConsumptionSchedule"
+  _parent = [
+    s1.ConsumptionSchedule,
+  ]
+}

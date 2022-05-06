@@ -1,0 +1,6 @@
+s1.SharingRules WorkType {
+  fullName = "WorkType"
+  _parent = [
+    s1.WorkType,
+  ]
+}

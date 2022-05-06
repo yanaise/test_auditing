@@ -1,0 +1,153 @@
+type s1.Recommendation {
+  serviceid Id {
+    apiName = "Recommendation.Id"
+    label = "Recommendation ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  s1.Checkbox IsDeleted {
+    apiName = "Recommendation.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Text Name {
+    apiName = "Recommendation.Name"
+    label = "Name"
+    _required = true
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 80
+    queryable = true
+  }
+  s1.DateTime CreatedDate {
+    apiName = "Recommendation.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup CreatedById {
+    apiName = "Recommendation.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime LastModifiedDate {
+    apiName = "Recommendation.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup LastModifiedById {
+    apiName = "Recommendation.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime SystemModstamp {
+    apiName = "Recommendation.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Text ActionReference {
+    apiName = "Recommendation.ActionReference"
+    label = "Action"
+    _required = true
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  s1.Text Description {
+    apiName = "Recommendation.Description"
+    label = "Description"
+    _required = true
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  s1.Lookup ImageId {
+    apiName = "Recommendation.ImageId"
+    label = "Asset File ID"
+    referenceTo = [
+      "ContentAsset",
+    ]
+    inlineHelpText = "For best results, use a 1000 px x 380 px image at 72 dpi or one with a similar ratio."
+    createable = true
+    updateable = true
+    relationshipName = "Image"
+    queryable = true
+  }
+  s1.Text AcceptanceLabel {
+    apiName = "Recommendation.AcceptanceLabel"
+    label = "Acceptance Label"
+    _required = true
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 80
+    queryable = true
+  }
+  s1.Text RejectionLabel {
+    apiName = "Recommendation.RejectionLabel"
+    label = "Rejection Label"
+    _required = true
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 80
+    queryable = true
+  }
+  s1.Checkbox IsActionActive {
+    apiName = "Recommendation.IsActionActive"
+    label = "Is Action Active"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Text ExternalId {
+    apiName = "Recommendation.ExternalId"
+    label = "External Id"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+}

@@ -1,0 +1,21 @@
+s1.StandardValueSet CasePriority {
+  fullName = "CasePriority"
+  sorted = false
+  standardValue = [
+    {
+      fullName = "High"
+      default = false
+      label = "High"
+    },
+    {
+      fullName = "Medium"
+      default = true
+      label = "Medium"
+    },
+    {
+      fullName = "Low"
+      default = false
+      label = "Low"
+    },
+  ]
+}

@@ -1,0 +1,111 @@
+type s1.WorkPlanTemplateEntry {
+  serviceid Id {
+    apiName = "WorkPlanTemplateEntry.Id"
+    label = "Work Plan Template Entry ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  s1.Checkbox IsDeleted {
+    apiName = "WorkPlanTemplateEntry.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.AutoNumber WorkPlanTemplateEntryNumber {
+    apiName = "WorkPlanTemplateEntry.WorkPlanTemplateEntryNumber"
+    label = "Name"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime CreatedDate {
+    apiName = "WorkPlanTemplateEntry.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup CreatedById {
+    apiName = "WorkPlanTemplateEntry.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime LastModifiedDate {
+    apiName = "WorkPlanTemplateEntry.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup LastModifiedById {
+    apiName = "WorkPlanTemplateEntry.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime SystemModstamp {
+    apiName = "WorkPlanTemplateEntry.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup WorkPlanTemplateId {
+    apiName = "WorkPlanTemplateEntry.WorkPlanTemplateId"
+    label = "Work Plan Template ID"
+    _required = true
+    referenceTo = [
+      s1.WorkPlanTemplate,
+    ]
+    createable = true
+    updateable = false
+    relationshipName = "WorkPlanTemplate"
+    queryable = true
+    trackHistory = false
+  }
+  s1.Lookup WorkStepTemplateId {
+    apiName = "WorkPlanTemplateEntry.WorkStepTemplateId"
+    label = "Work Step Template ID"
+    _required = true
+    referenceTo = [
+      s1.WorkStepTemplate,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "WorkStepTemplate"
+    queryable = true
+    trackHistory = false
+  }
+  s1.Number ExecutionOrder {
+    apiName = "WorkPlanTemplateEntry.ExecutionOrder"
+    label = "Execution Order"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+}

@@ -1,0 +1,6 @@
+s1.SharingRules CommSubscriptionChannelType {
+  fullName = "CommSubscriptionChannelType"
+  _parent = [
+    s1.CommSubscriptionChannelType,
+  ]
+}

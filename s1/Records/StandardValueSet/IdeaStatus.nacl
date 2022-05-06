@@ -1,0 +1,4 @@
+s1.StandardValueSet IdeaStatus {
+  fullName = "IdeaStatus"
+  sorted = false
+}

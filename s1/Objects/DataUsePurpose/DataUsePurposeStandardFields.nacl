@@ -1,0 +1,121 @@
+type s1.DataUsePurpose {
+  serviceid Id {
+    apiName = "DataUsePurpose.Id"
+    label = "Data Use Purpose ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  s1.Lookup OwnerId {
+    apiName = "DataUsePurpose.OwnerId"
+    label = "Owner ID"
+    referenceTo = [
+      s1.Group,
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "Owner"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsDeleted {
+    apiName = "DataUsePurpose.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Text Name {
+    apiName = "DataUsePurpose.Name"
+    label = "Name"
+    _required = true
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  s1.DateTime CreatedDate {
+    apiName = "DataUsePurpose.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup CreatedById {
+    apiName = "DataUsePurpose.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime LastModifiedDate {
+    apiName = "DataUsePurpose.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup LastModifiedById {
+    apiName = "DataUsePurpose.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime SystemModstamp {
+    apiName = "DataUsePurpose.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup LegalBasisId {
+    apiName = "DataUsePurpose.LegalBasisId"
+    label = "Legal Basis ID"
+    referenceTo = [
+      s1.DataUseLegalBasis,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "LegalBasis"
+    queryable = true
+    trackHistory = false
+  }
+  s1.Text Description {
+    apiName = "DataUsePurpose.Description"
+    label = "Description"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  s1.Checkbox CanDataSubjectOptOut {
+    apiName = "DataUsePurpose.CanDataSubjectOptOut"
+    label = "Can Data Subject Opt Out"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+}

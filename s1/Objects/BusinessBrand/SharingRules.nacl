@@ -1,0 +1,6 @@
+s1.SharingRules BusinessBrand {
+  fullName = "BusinessBrand"
+  _parent = [
+    s1.BusinessBrand,
+  ]
+}

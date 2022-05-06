@@ -1,0 +1,6 @@
+s1.SharingRules MacroUsage {
+  fullName = "MacroUsage"
+  _parent = [
+    s1.MacroUsage,
+  ]
+}

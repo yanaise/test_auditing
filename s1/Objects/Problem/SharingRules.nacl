@@ -1,0 +1,6 @@
+s1.SharingRules Problem {
+  fullName = "Problem"
+  _parent = [
+    s1.Problem,
+  ]
+}

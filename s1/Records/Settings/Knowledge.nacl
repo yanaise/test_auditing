@@ -1,0 +1,4 @@
+s1.KnowledgeSettings {
+  fullName = "Knowledge"
+  enableKnowledge = false
+}

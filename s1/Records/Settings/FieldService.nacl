@@ -1,0 +1,5 @@
+s1.FieldServiceSettings {
+  fullName = "FieldService"
+  enableWorkOrders = true
+  fieldServiceOrgPref = false
+}

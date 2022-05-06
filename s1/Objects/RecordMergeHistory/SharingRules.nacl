@@ -1,0 +1,6 @@
+s1.SharingRules RecordMergeHistory {
+  fullName = "RecordMergeHistory"
+  _parent = [
+    s1.RecordMergeHistory,
+  ]
+}

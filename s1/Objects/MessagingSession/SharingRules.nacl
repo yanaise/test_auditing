@@ -1,0 +1,6 @@
+s1.SharingRules MessagingSession {
+  fullName = "MessagingSession"
+  _parent = [
+    s1.MessagingSession,
+  ]
+}

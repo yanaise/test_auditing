@@ -1,0 +1,10 @@
+s1.Role VPInternationalSales {
+  fullName = "VPInternationalSales"
+  caseAccessLevel = "Edit"
+  contactAccessLevel = "Edit"
+  description = "VP, International Sales"
+  mayForecastManagerShare = false
+  name = "VP, International Sales"
+  opportunityAccessLevel = "Edit"
+  parentRole = s1.Role.instance.SVPSalesMarketing
+}

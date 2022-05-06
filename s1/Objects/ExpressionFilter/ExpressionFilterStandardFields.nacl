@@ -1,0 +1,107 @@
+type s1.ExpressionFilter {
+  serviceid Id {
+    apiName = "ExpressionFilter.Id"
+    label = "ExpressionFilter ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  s1.Checkbox IsDeleted {
+    apiName = "ExpressionFilter.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.AutoNumber Name {
+    apiName = "ExpressionFilter.Name"
+    label = "ExpressionFilter Name"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime CreatedDate {
+    apiName = "ExpressionFilter.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup CreatedById {
+    apiName = "ExpressionFilter.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime LastModifiedDate {
+    apiName = "ExpressionFilter.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup LastModifiedById {
+    apiName = "ExpressionFilter.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime SystemModstamp {
+    apiName = "ExpressionFilter.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Text FilterConditionLogic {
+    apiName = "ExpressionFilter.FilterConditionLogic"
+    label = "FilterConditionLogic"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  s1.Lookup ContextId {
+    apiName = "ExpressionFilter.ContextId"
+    label = "Macro Instruction ID"
+    _required = true
+    referenceTo = [
+      s1.MacroInstruction,
+    ]
+    createable = true
+    updateable = false
+    relationshipName = "Context"
+    queryable = true
+  }
+  s1.Text FilterDescription {
+    apiName = "ExpressionFilter.FilterDescription"
+    label = "FilterDescription"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+}

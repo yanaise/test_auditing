@@ -1,0 +1,4 @@
+s1.StandardValueSet SocialPostReviewedStatus {
+  fullName = "SocialPostReviewedStatus"
+  sorted = false
+}

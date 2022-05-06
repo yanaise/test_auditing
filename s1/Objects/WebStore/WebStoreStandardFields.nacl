@@ -1,0 +1,190 @@
+type s1.WebStore {
+  serviceid Id {
+    apiName = "WebStore.Id"
+    label = "Store ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  s1.Lookup OwnerId {
+    apiName = "WebStore.OwnerId"
+    label = "Owner ID"
+    referenceTo = [
+      s1.Group,
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "Owner"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsDeleted {
+    apiName = "WebStore.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Text Name {
+    apiName = "WebStore.Name"
+    label = "Store Name"
+    _required = true
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  s1.DateTime CreatedDate {
+    apiName = "WebStore.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup CreatedById {
+    apiName = "WebStore.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime LastModifiedDate {
+    apiName = "WebStore.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup LastModifiedById {
+    apiName = "WebStore.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime SystemModstamp {
+    apiName = "WebStore.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Picklist Type {
+    apiName = "WebStore.Type"
+    label = "Type"
+    _required = true
+    valueSet = [
+      {
+        fullName = "B2B"
+        default = true
+        label = "B2B"
+        isActive = true
+      },
+      {
+        fullName = "B2C"
+        default = false
+        label = "B2C"
+        isActive = true
+      },
+      {
+        fullName = "B2CE"
+        default = false
+        label = "B2C Enterprise"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  s1.Unknown DefaultLanguage {
+    apiName = "WebStore.DefaultLanguage"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Unknown DefaultTaxLocaleType {
+    apiName = "WebStore.DefaultTaxLocaleType"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Unknown Description {
+    apiName = "WebStore.Description"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Unknown ExternalReference {
+    apiName = "WebStore.ExternalReference"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Unknown MaxValuesPerFacet {
+    apiName = "WebStore.MaxValuesPerFacet"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Unknown PaginationSize {
+    apiName = "WebStore.PaginationSize"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Unknown PricingStrategy {
+    apiName = "WebStore.PricingStrategy"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Unknown ProductGrouping {
+    apiName = "WebStore.ProductGrouping"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Lookup StrikethroughPricebookId {
+    apiName = "WebStore.StrikethroughPricebookId"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Unknown SupportedLanguages {
+    apiName = "WebStore.SupportedLanguages"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+}

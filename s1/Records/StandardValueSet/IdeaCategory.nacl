@@ -1,0 +1,4 @@
+s1.StandardValueSet IdeaCategory {
+  fullName = "IdeaCategory"
+  sorted = false
+}

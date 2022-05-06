@@ -1,0 +1,10 @@
+s1.Role ChannelSalesTeam {
+  fullName = "ChannelSalesTeam"
+  caseAccessLevel = "Edit"
+  contactAccessLevel = "Edit"
+  description = "Channel Sales Team"
+  mayForecastManagerShare = false
+  name = "Channel Sales Team"
+  opportunityAccessLevel = "Edit"
+  parentRole = s1.Role.instance.DirectorChannelSales
+}

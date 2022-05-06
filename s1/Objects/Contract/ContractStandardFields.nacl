@@ -1,0 +1,360 @@
+type s1.Contract {
+  serviceid Id {
+    apiName = "Contract.Id"
+    label = "Contract ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  s1.Lookup AccountId {
+    apiName = "Contract.AccountId"
+    label = "Account ID"
+    _required = true
+    referenceTo = [
+      s1.Account,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Account"
+    queryable = true
+    trackHistory = true
+  }
+  s1.Lookup Pricebook2Id {
+    apiName = "Contract.Pricebook2Id"
+    label = "Price Book ID"
+    referenceTo = [
+      s1.Pricebook2,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Pricebook2"
+    queryable = true
+    trackHistory = true
+  }
+  s1.Picklist OwnerExpirationNotice {
+    apiName = "Contract.OwnerExpirationNotice"
+    label = "Owner Expiration Notice"
+    valueSet = [
+      {
+        fullName = "15"
+        default = false
+        label = "15 Days"
+        isActive = true
+      },
+      {
+        fullName = "30"
+        default = false
+        label = "30 Days"
+        isActive = true
+      },
+      {
+        fullName = "45"
+        default = false
+        label = "45 Days"
+        isActive = true
+      },
+      {
+        fullName = "60"
+        default = false
+        label = "60 Days"
+        isActive = true
+      },
+      {
+        fullName = "90"
+        default = false
+        label = "90 Days"
+        isActive = true
+      },
+      {
+        fullName = "120"
+        default = false
+        label = "120 Days"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Date StartDate {
+    apiName = "Contract.StartDate"
+    label = "Contract Start Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Date EndDate {
+    apiName = "Contract.EndDate"
+    label = "Contract End Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Address BillingAddress {
+    apiName = "Contract.BillingAddress"
+    label = "Billing Address"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Number ContractTerm {
+    apiName = "Contract.ContractTerm"
+    label = "Contract Term"
+    precision = 4
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  s1.Lookup OwnerId {
+    apiName = "Contract.OwnerId"
+    label = "Owner ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "Owner"
+    queryable = true
+    _hidden_value = true
+    trackHistory = true
+  }
+  s1.Picklist Status {
+    apiName = "Contract.Status"
+    label = "Status"
+    _required = true
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+    trackHistory = true
+    valueSetName = s1.StandardValueSet.instance.ServiceContractApprovalStatus
+  }
+  s1.Lookup CompanySignedId {
+    apiName = "Contract.CompanySignedId"
+    label = "Company Signed By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "CompanySigned"
+    queryable = true
+    trackHistory = true
+  }
+  s1.Date CompanySignedDate {
+    apiName = "Contract.CompanySignedDate"
+    label = "Company Signed Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Lookup CustomerSignedId {
+    apiName = "Contract.CustomerSignedId"
+    label = "Customer Signed By ID"
+    referenceTo = [
+      s1.Contact,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "CustomerSigned"
+    queryable = true
+    trackHistory = true
+  }
+  s1.Text CustomerSignedTitle {
+    apiName = "Contract.CustomerSignedTitle"
+    label = "Customer Signed Title"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 40
+    queryable = true
+  }
+  s1.Date CustomerSignedDate {
+    apiName = "Contract.CustomerSignedDate"
+    label = "Customer Signed Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.LongTextArea SpecialTerms {
+    apiName = "Contract.SpecialTerms"
+    label = "Special Terms"
+    createable = true
+    updateable = true
+    length = 4000
+    queryable = true
+  }
+  s1.Lookup ActivatedById {
+    apiName = "Contract.ActivatedById"
+    label = "Activated By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = true
+    relationshipName = "ActivatedBy"
+    queryable = true
+    trackHistory = false
+  }
+  s1.DateTime ActivatedDate {
+    apiName = "Contract.ActivatedDate"
+    label = "Activated Date"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  s1.Picklist StatusCode {
+    apiName = "Contract.StatusCode"
+    label = "Status Category"
+    _required = true
+    valueSet = [
+      {
+        fullName = "Draft"
+        default = false
+        label = "Draft"
+        isActive = true
+      },
+      {
+        fullName = "InApproval"
+        default = false
+        label = "In Approval Process"
+        isActive = true
+      },
+      {
+        fullName = "Activated"
+        default = false
+        label = "Activated"
+        isActive = true
+      },
+      {
+        fullName = "Terminated"
+        default = false
+        label = "Terminated"
+        isActive = true
+      },
+      {
+        fullName = "Expired"
+        default = false
+        label = "Expired"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.LongTextArea Description {
+    apiName = "Contract.Description"
+    label = "Description"
+    createable = true
+    updateable = true
+    length = 32000
+    queryable = true
+  }
+  s1.Checkbox IsDeleted {
+    apiName = "Contract.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.AutoNumber ContractNumber {
+    apiName = "Contract.ContractNumber"
+    label = "Contract Number"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime LastApprovedDate {
+    apiName = "Contract.LastApprovedDate"
+    label = "Last Approved Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime CreatedDate {
+    apiName = "Contract.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup CreatedById {
+    apiName = "Contract.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime LastModifiedDate {
+    apiName = "Contract.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup LastModifiedById {
+    apiName = "Contract.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime SystemModstamp {
+    apiName = "Contract.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Date LastActivityDate {
+    apiName = "Contract.LastActivityDate"
+    label = "Last Activity"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Unknown Name {
+    apiName = "Contract.Name"
+    trackHistory = true
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Unknown ShippingAddress {
+    apiName = "Contract.ShippingAddress"
+    trackHistory = true
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+}

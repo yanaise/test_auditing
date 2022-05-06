@@ -1,0 +1,293 @@
+type s1.WorkType {
+  serviceid Id {
+    apiName = "WorkType.Id"
+    label = "Work Type ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  s1.Lookup OwnerId {
+    apiName = "WorkType.OwnerId"
+    label = "Owner ID"
+    referenceTo = [
+      s1.Group,
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "Owner"
+    queryable = true
+    _hidden_value = true
+    trackHistory = false
+  }
+  s1.Checkbox IsDeleted {
+    apiName = "WorkType.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Text Name {
+    apiName = "WorkType.Name"
+    label = "Work Type Name"
+    _required = true
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  s1.DateTime CreatedDate {
+    apiName = "WorkType.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup CreatedById {
+    apiName = "WorkType.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime LastModifiedDate {
+    apiName = "WorkType.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup LastModifiedById {
+    apiName = "WorkType.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime SystemModstamp {
+    apiName = "WorkType.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.LongTextArea Description {
+    apiName = "WorkType.Description"
+    label = "Description"
+    createable = true
+    updateable = true
+    length = 32000
+    queryable = true
+  }
+  s1.Number EstimatedDuration {
+    apiName = "WorkType.EstimatedDuration"
+    label = "Estimated Duration"
+    _required = true
+    precision = 18
+    scale = 2
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  s1.Picklist DurationType {
+    apiName = "WorkType.DurationType"
+    label = "Duration Type"
+    _required = true
+    valueSet = [
+      {
+        fullName = "Hours"
+        default = true
+        label = "Hours"
+        isActive = true
+      },
+      {
+        fullName = "Minutes"
+        default = false
+        label = "Minutes"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Number DurationInMinutes {
+    apiName = "WorkType.DurationInMinutes"
+    label = "Duration in Minutes"
+    precision = 18
+    scale = 2
+    createable = false
+    updateable = false
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Number TimeframeStart {
+    apiName = "WorkType.TimeframeStart"
+    label = "Timeframe Start"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  s1.Number TimeframeEnd {
+    apiName = "WorkType.TimeframeEnd"
+    label = "Timeframe End"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  s1.Number BlockTimeBeforeAppointment {
+    apiName = "WorkType.BlockTimeBeforeAppointment"
+    label = "Block Time Before Appointment"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  s1.Number BlockTimeAfterAppointment {
+    apiName = "WorkType.BlockTimeAfterAppointment"
+    label = "Block Time After Appointment"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  s1.Picklist DefaultAppointmentType {
+    apiName = "WorkType.DefaultAppointmentType"
+    label = "Default Appointment Type"
+    createable = true
+    updateable = true
+    queryable = true
+    trackHistory = false
+  }
+  s1.Picklist TimeFrameStartUnit {
+    apiName = "WorkType.TimeFrameStartUnit"
+    label = "Time Frame Start Unit"
+    valueSet = [
+      {
+        fullName = "Days"
+        default = true
+        label = "Day(s)"
+        isActive = true
+      },
+      {
+        fullName = "Hours"
+        default = false
+        label = "Hour(s)"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Picklist TimeFrameEndUnit {
+    apiName = "WorkType.TimeFrameEndUnit"
+    label = "Time Frame End Unit"
+    valueSet = [
+      {
+        fullName = "Days"
+        default = true
+        label = "Day(s)"
+        isActive = true
+      },
+      {
+        fullName = "Hours"
+        default = false
+        label = "Hour(s)"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Picklist BlockTimeBeforeUnit {
+    apiName = "WorkType.BlockTimeBeforeUnit"
+    label = "Block Time Before Unit"
+    valueSet = [
+      {
+        fullName = "Minutes"
+        default = true
+        label = "Minute(s)"
+        isActive = true
+      },
+      {
+        fullName = "Hours"
+        default = false
+        label = "Hour(s)"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Picklist BlockTimeAfterUnit {
+    apiName = "WorkType.BlockTimeAfterUnit"
+    label = "Block Time After Unit"
+    valueSet = [
+      {
+        fullName = "Minutes"
+        default = true
+        label = "Minute(s)"
+        isActive = true
+      },
+      {
+        fullName = "Hours"
+        default = false
+        label = "Hour(s)"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Lookup OperatingHoursId {
+    apiName = "WorkType.OperatingHoursId"
+    label = "Operating Hour ID"
+    referenceTo = [
+      s1.OperatingHours,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "OperatingHours"
+    queryable = true
+    trackHistory = false
+  }
+}

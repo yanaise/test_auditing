@@ -1,0 +1,4 @@
+s1.TrialOrgSettings {
+  fullName = "TrialOrg"
+  enableSampleDataDeleted = false
+}

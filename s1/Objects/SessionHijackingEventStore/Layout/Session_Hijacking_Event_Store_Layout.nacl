@@ -1,0 +1,149 @@
+s1.Layout SessionHijackingEventStore_Session_Hijacking_Event_Store_Layout@bssss {
+  fullName = "SessionHijackingEventStore-Session Hijacking Event Store Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = false
+      label = "Event Details"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.SessionHijackingEventStore.field.SessionHijackingEventNumber
+            },
+            {
+              behavior = "Required"
+              field = s1.SessionHijackingEventStore.field.EventIdentifier
+            },
+            {
+              behavior = "Edit"
+              field = s1.SessionHijackingEventStore.field.Summary
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.SessionHijackingEventStore.field.EventDate
+            },
+            {
+              behavior = "Edit"
+              field = s1.SessionHijackingEventStore.field.Score
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = false
+      label = "Event Data"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.SessionHijackingEventStore.field.CurrentIp
+            },
+            {
+              behavior = "Edit"
+              field = s1.SessionHijackingEventStore.field.CurrentPlatform
+            },
+            {
+              behavior = "Edit"
+              field = s1.SessionHijackingEventStore.field.CurrentScreen
+            },
+            {
+              behavior = "Edit"
+              field = s1.SessionHijackingEventStore.field.CurrentWindow
+            },
+            {
+              behavior = "Edit"
+              field = s1.SessionHijackingEventStore.field.CurrentUserAgent
+            },
+            {
+              behavior = "Edit"
+              field = s1.SessionHijackingEventStore.field.SecurityEventData
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.SessionHijackingEventStore.field.PreviousIp
+            },
+            {
+              behavior = "Edit"
+              field = s1.SessionHijackingEventStore.field.PreviousPlatform
+            },
+            {
+              behavior = "Edit"
+              field = s1.SessionHijackingEventStore.field.PreviousScreen
+            },
+            {
+              behavior = "Edit"
+              field = s1.SessionHijackingEventStore.field.PreviousWindow
+            },
+            {
+              behavior = "Edit"
+              field = s1.SessionHijackingEventStore.field.PreviousUserAgent
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = true
+      detailHeading = true
+      editHeading = false
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.SessionHijackingEventStore.field.UserId
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.SessionHijackingEventStore.field.SourceIp
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      fields = [
+        "Name",
+        "Response",
+      ]
+      relatedList = "RelatedFeedback"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.SessionHijackingEventStore,
+  ]
+}

@@ -1,0 +1,189 @@
+s1.Layout PaymentAuthorization_Payment_Authorization_Layout@bss {
+  fullName = "PaymentAuthorization-Payment Authorization Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.PaymentAuthorization.field.PaymentAuthorizationNumber
+            },
+            {
+              behavior = "Edit"
+              field = s1.PaymentAuthorization.field.AccountId
+            },
+            {
+              behavior = "Required"
+              field = s1.PaymentAuthorization.field.Amount
+            },
+            {
+              behavior = "Edit"
+              field = s1.PaymentAuthorization.field.PaymentMethodId
+            },
+            {
+              behavior = "Edit"
+              field = s1.PaymentAuthorization.field.ExpirationDate
+            },
+            {
+              behavior = "Required"
+              field = s1.PaymentAuthorization.field.ProcessingMode
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.PaymentAuthorization.field.Status
+            },
+            {
+              behavior = "Edit"
+              field = s1.PaymentAuthorization.field.Date
+            },
+            {
+              behavior = "Edit"
+              field = s1.PaymentAuthorization.field.PaymentGroupId
+            },
+            {
+              behavior = "Edit"
+              field = s1.PaymentAuthorization.field.EffectiveDate
+            },
+            {
+              behavior = "Edit"
+              field = s1.PaymentAuthorization.field.Comments
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "AdditionalInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.PaymentAuthorization.field.SfResultCode
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "GatewayDetails"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.PaymentAuthorization.field.PaymentGatewayId
+            },
+            {
+              behavior = "Edit"
+              field = s1.PaymentAuthorization.field.GatewayAuthCode
+            },
+            {
+              behavior = "Edit"
+              field = s1.PaymentAuthorization.field.GatewayResultCode
+            },
+            {
+              behavior = "Edit"
+              field = s1.PaymentAuthorization.field.GatewayRefNumber
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.PaymentAuthorization.field.GatewayDate
+            },
+            {
+              behavior = "Edit"
+              field = s1.PaymentAuthorization.field.GatewayResultCodeDescription
+            },
+            {
+              behavior = "Edit"
+              field = s1.PaymentAuthorization.field.GatewayRefDetails
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "SystemInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.PaymentAuthorization.field.CreatedById
+            },
+            {
+              behavior = "Readonly"
+              field = s1.PaymentAuthorization.field.CreatedDate
+            },
+            {
+              behavior = "Edit"
+              field = s1.PaymentAuthorization.field.MacAddress
+            },
+            {
+              behavior = "Edit"
+              field = s1.PaymentAuthorization.field.Phone
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.PaymentAuthorization.field.LastModifiedById
+            },
+            {
+              behavior = "Readonly"
+              field = s1.PaymentAuthorization.field.LastModifiedDate
+            },
+            {
+              behavior = "Edit"
+              field = s1.PaymentAuthorization.field.IpAddress
+            },
+            {
+              behavior = "Edit"
+              field = s1.PaymentAuthorization.field.Email
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.PaymentAuthorization,
+  ]
+}

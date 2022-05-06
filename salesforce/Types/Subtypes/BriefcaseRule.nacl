@@ -1,0 +1,190 @@
+type salesforce.BriefcaseRule {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  salesforce.BriefcaseRuleFilter briefcaseRuleFilters {
+  }
+  string filterLogic {
+  }
+  boolean isAscendingOrder {
+  }
+  string orderBy {
+    foreignKeyDomain = [
+      salesforce.CustomField,
+    ]
+  }
+  string parentRule {
+    foreignKeyDomain = [
+      salesforce.BriefcaseRule,
+    ]
+  }
+  number recordLimit {
+  }
+  string targetEntity {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Account",
+        "AlternativePaymentMethod",
+        "ApiAnomalyEventStore",
+        "AppointmentTopicTimeSlot",
+        "Asset",
+        "AssetAction",
+        "AssetActionSource",
+        "AssetRelationship",
+        "AssetStatePeriod",
+        "AssignedResource",
+        "AssociatedLocation",
+        "AuthorizationForm",
+        "AuthorizationFormConsent",
+        "AuthorizationFormDataUse",
+        "AuthorizationFormText",
+        "BusinessBrand",
+        "Campaign",
+        "CampaignMember",
+        "CardPaymentMethod",
+        "CartDeliveryGroup",
+        "CartItem",
+        "CartTax",
+        "Case",
+        "CaseRelatedIssue",
+        "ChangeRequest",
+        "ChangeRequestRelatedIssue",
+        "ChangeRequestRelatedItem",
+        "CommSubscription",
+        "CommSubscriptionChannelType",
+        "CommSubscriptionConsent",
+        "CommSubscriptionTiming",
+        "ConsumptionRate",
+        "ConsumptionSchedule",
+        "Contact",
+        "ContactPointAddress",
+        "ContactPointConsent",
+        "ContactPointEmail",
+        "ContactPointPhone",
+        "ContactPointTypeConsent",
+        "ContactRequest",
+        "ContentVersion",
+        "Contract",
+        "ContractLineItem",
+        "CredentialStuffingEventStore",
+        "CreditMemo",
+        "CreditMemoInvApplication",
+        "CreditMemoLine",
+        "Customer",
+        "DandBCompany",
+        "DataUseLegalBasis",
+        "DataUsePurpose",
+        "DigitalWallet",
+        "DuplicateRecordItem",
+        "DuplicateRecordSet",
+        "EmailMessage",
+        "EngagementChannelType",
+        "Entitlement",
+        "EntityMilestone",
+        "Event",
+        "FinanceBalanceSnapshot",
+        "FinanceTransaction",
+        "Idea",
+        "Image",
+        "Incident",
+        "IncidentRelatedItem",
+        "Individual",
+        "Invoice",
+        "InvoiceLine",
+        "Lead",
+        "LegalEntity",
+        "LocWaitlistMsgTemplate",
+        "Location",
+        "LocationGroup",
+        "LocationGroupAssignment",
+        "LocationWaitlist",
+        "LocationWaitlistedParty",
+        "Macro",
+        "MessagingEndUser",
+        "MessagingSession",
+        "OperatingHours",
+        "OperatingHoursHoliday",
+        "Opportunity",
+        "OpportunityContactRole",
+        "OpportunityLineItem",
+        "Order",
+        "OrderItem",
+        "PartyConsent",
+        "Payment",
+        "PaymentAuthAdjustment",
+        "PaymentAuthorization",
+        "PaymentGateway",
+        "PaymentGroup",
+        "PaymentLineInvoice",
+        "Pricebook2",
+        "PricebookEntry",
+        "Problem",
+        "ProblemIncident",
+        "ProblemRelatedItem",
+        "ProcessException",
+        "Product2",
+        "ProductConsumptionSchedule",
+        "QuickText",
+        "Recommendation",
+        "Refund",
+        "RefundLinePayment",
+        "ReportAnomalyEventStore",
+        "ResourceAbsence",
+        "ResourcePreference",
+        "ReturnOrder",
+        "ReturnOrderItemAdjustment",
+        "ReturnOrderItemTax",
+        "ReturnOrderLineItem",
+        "Scorecard",
+        "ScorecardAssociation",
+        "ScorecardMetric",
+        "Seller",
+        "ServiceAppointment",
+        "ServiceContract",
+        "ServiceResource",
+        "ServiceResourceSkill",
+        "ServiceTerritory",
+        "ServiceTerritoryMember",
+        "ServiceTerritoryWorkType",
+        "SessionHijackingEventStore",
+        "Shift",
+        "SkillRequirement",
+        "SocialPersona",
+        "Solution",
+        "Task",
+        "TimeSlot",
+        "User",
+        "UserProvisioningRequest",
+        "WebCart",
+        "WebCartAdjustmentBasis",
+        "WebStore",
+        "WorkOrder",
+        "WorkOrderLineItem",
+        "WorkPlan",
+        "WorkPlanTemplate",
+        "WorkPlanTemplateEntry",
+        "WorkStep",
+        "WorkStepTemplate",
+        "WorkType",
+        "WorkTypeGroup",
+        "WorkTypeGroupMember",
+      ]
+    }
+    foreignKeyDomain = [
+      "CustomObject",
+    ]
+  }
+  metadataType = "BriefcaseRule"
+}

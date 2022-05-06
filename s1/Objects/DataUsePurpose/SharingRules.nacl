@@ -1,0 +1,6 @@
+s1.SharingRules DataUsePurpose {
+  fullName = "DataUsePurpose"
+  _parent = [
+    s1.DataUsePurpose,
+  ]
+}

@@ -1,0 +1,321 @@
+s1.Layout FinanceTransaction_Finance_Transaction_Layout@bss {
+  fullName = "FinanceTransaction-Finance Transaction Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Details"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.FinanceTransaction.field.AccountId
+            },
+            {
+              behavior = "Edit"
+              field = s1.FinanceTransaction.field.ReferenceEntityId
+            },
+            {
+              behavior = "Required"
+              field = s1.FinanceTransaction.field.ReferenceEntityType
+            },
+            {
+              behavior = "Edit"
+              field = s1.FinanceTransaction.field.EventAction
+            },
+            {
+              behavior = "Edit"
+              field = s1.FinanceTransaction.field.EventType
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.FinanceTransaction.field.LegalEntityId
+            },
+            {
+              behavior = "Edit"
+              field = s1.FinanceTransaction.field.ParentReferenceEntityId
+            },
+            {
+              behavior = "Readonly"
+              field = s1.FinanceTransaction.field.OriginalReferenceEntityType
+            },
+            {
+              behavior = "Readonly"
+              field = s1.FinanceTransaction.field.OriginalEventAction
+            },
+            {
+              behavior = "Readonly"
+              field = s1.FinanceTransaction.field.OriginalEventType
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "AmountInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.FinanceTransaction.field.TotalAmountWithTax
+            },
+            {
+              behavior = "Edit"
+              field = s1.FinanceTransaction.field.ChargeAmount
+            },
+            {
+              behavior = "Edit"
+              field = s1.FinanceTransaction.field.Subtotal
+            },
+            {
+              behavior = "Edit"
+              field = s1.FinanceTransaction.field.ImpactAmount
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.FinanceTransaction.field.ResultingBalance
+            },
+            {
+              behavior = "Edit"
+              field = s1.FinanceTransaction.field.AdjustmentAmount
+            },
+            {
+              behavior = "Edit"
+              field = s1.FinanceTransaction.field.TaxAmount
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "DateInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.FinanceTransaction.field.TransactionDate
+            },
+            {
+              behavior = "Edit"
+              field = s1.FinanceTransaction.field.DueDate
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.FinanceTransaction.field.EffectiveDate
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Allocations"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.FinanceTransaction.field.SourceEntityId
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.FinanceTransaction.field.DestinationEntityId
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "GlInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.FinanceTransaction.field.OriginalDebitGlAccountName
+            },
+            {
+              behavior = "Readonly"
+              field = s1.FinanceTransaction.field.OriginalCreditGlAccountName
+            },
+            {
+              behavior = "Readonly"
+              field = s1.FinanceTransaction.field.OriginalGlTreatmentName
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.FinanceTransaction.field.OriginalDebitGlAccountNumber
+            },
+            {
+              behavior = "Readonly"
+              field = s1.FinanceTransaction.field.OriginalCreditGlAccountNumber
+            },
+            {
+              behavior = "Readonly"
+              field = s1.FinanceTransaction.field.OriginalGlRuleName
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "FinancePeriodInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.FinanceTransaction.field.OriginalFinancePeriodName
+            },
+            {
+              behavior = "Readonly"
+              field = s1.FinanceTransaction.field.OriginalFinancePeriodStartDate
+            },
+            {
+              behavior = "Readonly"
+              field = s1.FinanceTransaction.field.OriginalFinanceBookName
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.FinanceTransaction.field.OriginalFinancePeriodStatus
+            },
+            {
+              behavior = "Readonly"
+              field = s1.FinanceTransaction.field.OriginalFinancePeriodEndDate
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "FinanceSystemIntegrationInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.FinanceTransaction.field.FinanceSystemName
+            },
+            {
+              behavior = "Edit"
+              field = s1.FinanceTransaction.field.FinanceSystemIntegrationMode
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.FinanceTransaction.field.FinanceSystemTransactionNumber
+            },
+            {
+              behavior = "Edit"
+              field = s1.FinanceTransaction.field.FinanceSystemIntegrationStatus
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "SystemInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.FinanceTransaction.field.CreatedDate
+            },
+            {
+              behavior = "Readonly"
+              field = s1.FinanceTransaction.field.CreatedById
+            },
+            {
+              behavior = "Readonly"
+              field = s1.FinanceTransaction.field.CreationMode
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.FinanceTransaction.field.LastModifiedDate
+            },
+            {
+              behavior = "Readonly"
+              field = s1.FinanceTransaction.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.FinanceTransaction,
+  ]
+}

@@ -1,0 +1,191 @@
+type s1.CommSubscriptionConsent {
+  serviceid Id {
+    apiName = "CommSubscriptionConsent.Id"
+    label = "Communication Subscription Consent ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  s1.Lookup OwnerId {
+    apiName = "CommSubscriptionConsent.OwnerId"
+    label = "Owner ID"
+    referenceTo = [
+      s1.Group,
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "Owner"
+    queryable = true
+    _hidden_value = true
+    trackHistory = false
+  }
+  s1.Checkbox IsDeleted {
+    apiName = "CommSubscriptionConsent.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Text Name {
+    apiName = "CommSubscriptionConsent.Name"
+    label = "Name"
+    _required = true
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  s1.DateTime CreatedDate {
+    apiName = "CommSubscriptionConsent.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup CreatedById {
+    apiName = "CommSubscriptionConsent.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime LastModifiedDate {
+    apiName = "CommSubscriptionConsent.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup LastModifiedById {
+    apiName = "CommSubscriptionConsent.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime SystemModstamp {
+    apiName = "CommSubscriptionConsent.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup ConsentGiverId {
+    apiName = "CommSubscriptionConsent.ConsentGiverId"
+    label = "Consent Giver ID"
+    referenceTo = [
+      s1.Account,
+      s1.Contact,
+      s1.Individual,
+      s1.User,
+    ]
+    inlineHelpText = "The person consenting to the communication subscription."
+    createable = true
+    updateable = true
+    relationshipName = "ConsentGiver"
+    queryable = true
+    trackHistory = false
+  }
+  s1.Lookup ContactPointId {
+    apiName = "CommSubscriptionConsent.ContactPointId"
+    label = "Contact Point ID"
+    _required = true
+    referenceTo = [
+      s1.ContactPointAddress,
+      s1.ContactPointEmail,
+      s1.ContactPointPhone,
+    ]
+    inlineHelpText = "The contact point record associated with the communication subscription consent."
+    createable = true
+    updateable = true
+    relationshipName = "ContactPoint"
+    queryable = true
+    trackHistory = false
+  }
+  s1.Date EffectiveFromDate {
+    apiName = "CommSubscriptionConsent.EffectiveFromDate"
+    label = "Effective From"
+    _required = true
+    inlineHelpText = "Date when consent starts."
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.DateTime ConsentCapturedDateTime {
+    apiName = "CommSubscriptionConsent.ConsentCapturedDateTime"
+    label = "Consent Captured Date Time"
+    inlineHelpText = "Date and time that consent was given."
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Text ConsentCapturedSource {
+    apiName = "CommSubscriptionConsent.ConsentCapturedSource"
+    label = "Consent Captured Source"
+    inlineHelpText = "Source through which consent was captured. For example, user@example.com or www.example.com."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  s1.Lookup CommSubscriptionChannelTypeId {
+    apiName = "CommSubscriptionConsent.CommSubscriptionChannelTypeId"
+    label = "Communication Subscription Channel Type ID"
+    _required = true
+    referenceTo = [
+      s1.CommSubscriptionChannelType,
+    ]
+    inlineHelpText = "The communication subscription channel type record associated with the communication subscription consent."
+    createable = true
+    updateable = true
+    relationshipName = "CommSubscriptionChannelType"
+    queryable = true
+    trackHistory = false
+  }
+  s1.Lookup BusinessBrandId {
+    apiName = "CommSubscriptionConsent.BusinessBrandId"
+    trackHistory = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Unknown EffectiveToDate {
+    apiName = "CommSubscriptionConsent.EffectiveToDate"
+    inlineHelpText = "Date when consent ends."
+    trackHistory = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Lookup PartyRoleId {
+    apiName = "CommSubscriptionConsent.PartyRoleId"
+    trackHistory = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+}

@@ -1,0 +1,6 @@
+s1.SharingRules Incident {
+  fullName = "Incident"
+  _parent = [
+    s1.Incident,
+  ]
+}

@@ -1,0 +1,66 @@
+type salesforce.Problem {
+  salesforce.Picklist Category {
+    apiName = "Problem.Category"
+    trackHistory = false
+    _hidden_value = true
+  }
+  string Description {
+    _hidden_value = true
+  }
+  salesforce.Picklist Impact {
+    apiName = "Problem.Impact"
+    trackHistory = false
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "Problem.OwnerId"
+    trackHistory = false
+    _hidden_value = true
+  }
+  salesforce.Hierarchy ParentProblemId {
+    _hidden_value = true
+  }
+  salesforce.Picklist Priority {
+    apiName = "Problem.Priority"
+    trackHistory = false
+    _hidden_value = true
+  }
+  string PriorityOverrideReason {
+    _hidden_value = true
+  }
+  string ResolutionDateTime {
+    _hidden_value = true
+  }
+  string ResolutionSummary {
+    _hidden_value = true
+  }
+  salesforce.Lookup ResolvedById {
+    apiName = "Problem.ResolvedById"
+    trackHistory = false
+    _hidden_value = true
+  }
+  string RootCauseSummary {
+    _hidden_value = true
+  }
+  salesforce.Picklist Status {
+    apiName = "Problem.Status"
+    trackHistory = false
+    _hidden_value = true
+  }
+  string StatusCode {
+    _hidden_value = true
+  }
+  salesforce.Picklist SubCategory {
+    apiName = "Problem.SubCategory"
+    trackHistory = false
+    _hidden_value = true
+  }
+  string Subject {
+    _hidden_value = true
+  }
+  salesforce.Picklist Urgency {
+    apiName = "Problem.Urgency"
+    trackHistory = false
+    _hidden_value = true
+  }
+}

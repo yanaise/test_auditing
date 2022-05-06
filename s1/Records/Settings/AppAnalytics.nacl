@@ -1,0 +1,4 @@
+s1.AppAnalyticsSettings {
+  fullName = "AppAnalytics"
+  enableSimulationMode = "false"
+}

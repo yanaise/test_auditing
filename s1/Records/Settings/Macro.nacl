@@ -1,0 +1,6 @@
+s1.MacroSettings {
+  fullName = "Macro"
+  contextualMacroFiltering = "true"
+  enableAdvancedSearch = false
+  macrosInFolders = false
+}

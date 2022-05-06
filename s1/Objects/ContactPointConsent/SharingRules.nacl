@@ -1,0 +1,6 @@
+s1.SharingRules ContactPointConsent {
+  fullName = "ContactPointConsent"
+  _parent = [
+    s1.ContactPointConsent,
+  ]
+}

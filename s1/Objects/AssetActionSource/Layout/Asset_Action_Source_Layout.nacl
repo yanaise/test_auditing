@@ -1,0 +1,123 @@
+s1.Layout AssetActionSource_Asset_Action_Source_Layout@bsss {
+  fullName = "AssetActionSource-Asset Action Source Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.AssetActionSource.field.AssetActionSourceNumber
+            },
+            {
+              behavior = "Edit"
+              field = s1.AssetActionSource.field.ReferenceEntityItemId
+            },
+            {
+              behavior = "Edit"
+              field = s1.AssetActionSource.field.ExternalReference
+            },
+            {
+              behavior = "Edit"
+              field = s1.AssetActionSource.field.ProductAmount
+            },
+            {
+              behavior = "Edit"
+              field = s1.AssetActionSource.field.EstimatedTax
+            },
+            {
+              behavior = "Readonly"
+              field = s1.AssetActionSource.field.Subtotal
+            },
+            {
+              behavior = "Edit"
+              field = s1.AssetActionSource.field.StartDate
+            },
+            {
+              behavior = "Edit"
+              field = s1.AssetActionSource.field.Quantity
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.AssetActionSource.field.AssetActionId
+            },
+            {
+              behavior = "Edit"
+              field = s1.AssetActionSource.field.ExternalReferenceDataSource
+            },
+            {
+              behavior = "Edit"
+              field = s1.AssetActionSource.field.AdjustmentAmount
+            },
+            {
+              behavior = "Edit"
+              field = s1.AssetActionSource.field.ActualTax
+            },
+            {
+              behavior = "Edit"
+              field = s1.AssetActionSource.field.EndDate
+            },
+            {
+              behavior = "Edit"
+              field = s1.AssetActionSource.field.TransactionDate
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "SystemInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.AssetActionSource.field.CreatedById
+            },
+            {
+              behavior = "Readonly"
+              field = s1.AssetActionSource.field.CreatedDate
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.AssetActionSource.field.LastModifiedById
+            },
+            {
+              behavior = "Readonly"
+              field = s1.AssetActionSource.field.LastModifiedDate
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.AssetActionSource,
+  ]
+}

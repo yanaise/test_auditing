@@ -1,0 +1,256 @@
+type s1.Location {
+  serviceid Id {
+    apiName = "Location.Id"
+    label = "Location ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  s1.Lookup OwnerId {
+    apiName = "Location.OwnerId"
+    label = "Owner ID"
+    referenceTo = [
+      s1.Group,
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "Owner"
+    queryable = true
+    _hidden_value = true
+    trackHistory = false
+  }
+  s1.Checkbox IsDeleted {
+    apiName = "Location.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Text Name {
+    apiName = "Location.Name"
+    label = "Location Name"
+    _required = true
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  s1.DateTime CreatedDate {
+    apiName = "Location.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup CreatedById {
+    apiName = "Location.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime LastModifiedDate {
+    apiName = "Location.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup LastModifiedById {
+    apiName = "Location.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime SystemModstamp {
+    apiName = "Location.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Picklist LocationType {
+    apiName = "Location.LocationType"
+    label = "Location Type"
+    _required = true
+    createable = true
+    updateable = true
+    queryable = true
+    trackHistory = false
+  }
+  s1.Checkbox IsMobile {
+    apiName = "Location.IsMobile"
+    label = "Mobile Location"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Checkbox IsInventoryLocation {
+    apiName = "Location.IsInventoryLocation"
+    label = "Inventory Location"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Lookup RootLocationId {
+    apiName = "Location.RootLocationId"
+    label = "Root Location ID"
+    referenceTo = [
+      s1.Location,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "RootLocation"
+    queryable = true
+    trackHistory = false
+    _hidden_value = true
+  }
+  s1.Text ExternalReference {
+    apiName = "Location.ExternalReference"
+    label = "External Reference"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  s1.Lookup LogoId {
+    apiName = "Location.LogoId"
+    label = "Asset File ID"
+    referenceTo = [
+      "ContentAsset",
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Logo"
+    queryable = true
+    trackHistory = false
+  }
+  s1.Unknown CloseDate {
+    apiName = "Location.CloseDate"
+    trackHistory = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Unknown ConstructionEndDate {
+    apiName = "Location.ConstructionEndDate"
+    trackHistory = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Unknown ConstructionStartDate {
+    apiName = "Location.ConstructionStartDate"
+    trackHistory = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Unknown Description {
+    apiName = "Location.Description"
+    trackHistory = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Unknown DrivingDirections {
+    apiName = "Location.DrivingDirections"
+    trackHistory = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Unknown Location {
+    apiName = "Location.Location"
+    trackHistory = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Unknown LocationLevel {
+    apiName = "Location.LocationLevel"
+    trackHistory = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Unknown OpenDate {
+    apiName = "Location.OpenDate"
+    trackHistory = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Unknown PossessionDate {
+    apiName = "Location.PossessionDate"
+    trackHistory = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Unknown RemodelEndDate {
+    apiName = "Location.RemodelEndDate"
+    trackHistory = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Unknown RemodelStartDate {
+    apiName = "Location.RemodelStartDate"
+    trackHistory = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Unknown ShouldSyncWithOci {
+    apiName = "Location.ShouldSyncWithOci"
+    trackHistory = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  s1.Unknown TimeZone {
+    apiName = "Location.TimeZone"
+    trackHistory = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+}

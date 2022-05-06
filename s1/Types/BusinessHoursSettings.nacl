@@ -1,0 +1,29 @@
+settings s1.BusinessHoursSettings {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  "Map<s1.BusinessHoursEntry>" businessHours {
+  }
+  "List<s1.Holidays>" holidays {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "settings"
+  dirName = "settings"
+  metadataType = "BusinessHoursSettings"
+}

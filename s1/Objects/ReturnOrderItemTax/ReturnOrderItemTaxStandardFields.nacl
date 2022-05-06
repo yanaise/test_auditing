@@ -1,0 +1,169 @@
+type s1.ReturnOrderItemTax {
+  serviceid Id {
+    apiName = "ReturnOrderItemTax.Id"
+    label = "Return Order Item Tax ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  s1.Checkbox IsDeleted {
+    apiName = "ReturnOrderItemTax.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.AutoNumber ReturnOrderItemTaxNumber {
+    apiName = "ReturnOrderItemTax.ReturnOrderItemTaxNumber"
+    label = "Return Order Item Tax Number"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime CreatedDate {
+    apiName = "ReturnOrderItemTax.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup CreatedById {
+    apiName = "ReturnOrderItemTax.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime LastModifiedDate {
+    apiName = "ReturnOrderItemTax.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup LastModifiedById {
+    apiName = "ReturnOrderItemTax.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime SystemModstamp {
+    apiName = "ReturnOrderItemTax.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup ReturnOrderLineItemId {
+    apiName = "ReturnOrderItemTax.ReturnOrderLineItemId"
+    label = "Return Order Line Item ID"
+    _required = true
+    referenceTo = [
+      s1.ReturnOrderLineItem,
+    ]
+    createable = true
+    updateable = false
+    relationshipName = "ReturnOrderLineItem"
+    queryable = true
+  }
+  s1.Lookup ReturnOrderId {
+    apiName = "ReturnOrderItemTax.ReturnOrderId"
+    label = "Return Order ID"
+    _required = true
+    referenceTo = [
+      s1.ReturnOrder,
+    ]
+    createable = true
+    updateable = false
+    relationshipName = "ReturnOrder"
+    queryable = true
+  }
+  s1.Lookup ReturnOrderItemAdjustmentId {
+    apiName = "ReturnOrderItemTax.ReturnOrderItemAdjustmentId"
+    label = "Return Order Item Adjustment ID"
+    referenceTo = [
+      s1.ReturnOrderItemAdjustment,
+    ]
+    createable = true
+    updateable = false
+    relationshipName = "ReturnOrderItemAdjustment"
+    queryable = true
+  }
+  s1.Picklist Type {
+    apiName = "ReturnOrderItemTax.Type"
+    label = "Type"
+    _required = true
+    valueSet = [
+      {
+        fullName = "Actual"
+        default = false
+        label = "Actual"
+        isActive = true
+      },
+      {
+        fullName = "Estimated"
+        default = false
+        label = "Estimated"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Currency Amount {
+    apiName = "ReturnOrderItemTax.Amount"
+    label = "Amount"
+    _required = true
+    createable = true
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+  }
+  s1.Percent Rate {
+    apiName = "ReturnOrderItemTax.Rate"
+    label = "Rate"
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 5
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Date TaxEffectiveDate {
+    apiName = "ReturnOrderItemTax.TaxEffectiveDate"
+    label = "Tax Effective Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.LongTextArea Description {
+    apiName = "ReturnOrderItemTax.Description"
+    label = "Description"
+    createable = true
+    updateable = true
+    length = 2000
+    queryable = true
+  }
+}

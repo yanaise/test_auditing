@@ -1,0 +1,123 @@
+type s1.AssociatedLocation {
+  serviceid Id {
+    apiName = "AssociatedLocation.Id"
+    label = "Associated Location ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  s1.Checkbox IsDeleted {
+    apiName = "AssociatedLocation.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.AutoNumber AssociatedLocationNumber {
+    apiName = "AssociatedLocation.AssociatedLocationNumber"
+    label = "Associated Location Name"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime CreatedDate {
+    apiName = "AssociatedLocation.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup CreatedById {
+    apiName = "AssociatedLocation.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime LastModifiedDate {
+    apiName = "AssociatedLocation.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup LastModifiedById {
+    apiName = "AssociatedLocation.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime SystemModstamp {
+    apiName = "AssociatedLocation.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup ParentRecordId {
+    apiName = "AssociatedLocation.ParentRecordId"
+    label = "Account Name ID"
+    _required = true
+    referenceTo = [
+      s1.Account,
+    ]
+    createable = true
+    updateable = false
+    relationshipName = "ParentRecord"
+    queryable = true
+    trackHistory = false
+  }
+  s1.Lookup LocationId {
+    apiName = "AssociatedLocation.LocationId"
+    label = "Location ID"
+    _required = true
+    referenceTo = [
+      s1.Location,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Location"
+    queryable = true
+    trackHistory = false
+  }
+  s1.Picklist Type {
+    apiName = "AssociatedLocation.Type"
+    label = "Type"
+    createable = true
+    updateable = true
+    queryable = true
+    trackHistory = false
+  }
+  s1.DateTime ActiveFrom {
+    apiName = "AssociatedLocation.ActiveFrom"
+    label = "Active From"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.DateTime ActiveTo {
+    apiName = "AssociatedLocation.ActiveTo"
+    label = "Active To"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+}

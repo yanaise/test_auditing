@@ -1,0 +1,4 @@
+s1.SourceTrackingSettings {
+  fullName = "SourceTracking"
+  enableSourceTrackingSandboxes = "false"
+}

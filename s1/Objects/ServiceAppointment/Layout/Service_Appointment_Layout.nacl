@@ -1,0 +1,285 @@
+s1.Layout ServiceAppointment_Service_Appointment_Layout@bss {
+  fullName = "ServiceAppointment-Service Appointment Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "General Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.ServiceAppointment.field.AppointmentNumber
+            },
+            {
+              behavior = "Readonly"
+              field = s1.ServiceAppointment.field.AccountId
+            },
+            {
+              behavior = "Edit"
+              field = s1.ServiceAppointment.field.ContactId
+            },
+            {
+              behavior = "Required"
+              field = s1.ServiceAppointment.field.ParentRecordId
+            },
+            {
+              behavior = "Edit"
+              field = s1.ServiceAppointment.field.Duration
+            },
+            {
+              behavior = "Edit"
+              field = s1.ServiceAppointment.field.DurationType
+            },
+            {
+              behavior = "Edit"
+              field = s1.ServiceAppointment.field.Subject
+            },
+            {
+              behavior = "Edit"
+              field = s1.ServiceAppointment.field.WorkTypeId
+            },
+            {
+              behavior = "Edit"
+              field = s1.ServiceAppointment.field.AdditionalInformation
+            },
+            {
+              behavior = "Edit"
+              field = s1.ServiceAppointment.field.Comments
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.ServiceAppointment.field.Description
+            },
+            {
+              behavior = "Required"
+              field = s1.ServiceAppointment.field.EarliestStartTime
+            },
+            {
+              behavior = "Required"
+              field = s1.ServiceAppointment.field.DueDate
+            },
+            {
+              behavior = "Readonly"
+              field = s1.ServiceAppointment.field.ParentRecordType
+            },
+            {
+              behavior = "Edit"
+              field = s1.ServiceAppointment.field.Address
+            },
+            {
+              behavior = "Required"
+              field = s1.ServiceAppointment.field.Status
+            },
+            {
+              behavior = "Readonly"
+              field = s1.ServiceAppointment.field.StatusCategory
+            },
+            {
+              behavior = "Edit"
+              field = s1.ServiceAppointment.field.AppointmentType
+            },
+            {
+              behavior = "Edit"
+              field = s1.ServiceAppointment.field.CancellationReason
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Scheduled Times"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.ServiceAppointment.field.ArrivalWindowStartTime
+            },
+            {
+              behavior = "Edit"
+              field = s1.ServiceAppointment.field.ArrivalWindowEndTime
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.ServiceAppointment.field.SchedStartTime
+            },
+            {
+              behavior = "Edit"
+              field = s1.ServiceAppointment.field.SchedEndTime
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Actual Times"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.ServiceAppointment.field.ActualStartTime
+            },
+            {
+              behavior = "Edit"
+              field = s1.ServiceAppointment.field.ActualEndTime
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.ServiceAppointment.field.ActualDuration
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Contact Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.ServiceAppointment.field.Phone
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.ServiceAppointment.field.Email
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.ServiceAppointment.field.OwnerId
+            },
+            {
+              behavior = "Readonly"
+              field = s1.ServiceAppointment.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.ServiceAppointment.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  quickActionList = {
+    quickActionListItems = [
+      {
+        quickActionName = "Flow._ModifyAppointment"
+      },
+    ]
+  }
+  relatedLists = [
+    {
+      fields = [
+        "TASK.SUBJECT",
+        "TASK.WHO_NAME",
+        "ACTIVITY.TASK",
+        "TASK.DUE_DATE",
+        "TASK.STATUS",
+        "TASK.PRIORITY",
+        "CORE.USERS.FULL_NAME",
+      ]
+      relatedList = "RelatedActivityList"
+    },
+    {
+      fields = [
+        "TASK.SUBJECT",
+        "TASK.WHO_NAME",
+        "ACTIVITY.TASK",
+        "TASK.DUE_DATE",
+        "CORE.USERS.FULL_NAME",
+        "TASK.LAST_UPDATE",
+      ]
+      relatedList = "RelatedHistoryList"
+    },
+    {
+      relatedList = "RelatedNoteList"
+    },
+    {
+      relatedList = "RelatedFileList"
+    },
+    {
+      relatedList = "RelatedEntityHistoryList"
+    },
+    {
+      fields = [
+        "CreatedDate",
+        "StepStatus",
+        "OriginalActor",
+        "Actor",
+        "Comments",
+      ]
+      relatedList = "RelatedProcessHistoryList"
+    },
+    {
+      fields = [
+        "ServiceResource",
+        "Event",
+      ]
+      relatedList = "AssignedResources"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.ServiceAppointment,
+  ]
+}

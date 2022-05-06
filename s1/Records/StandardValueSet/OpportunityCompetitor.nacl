@@ -1,0 +1,4 @@
+s1.StandardValueSet OpportunityCompetitor {
+  fullName = "OpportunityCompetitor"
+  sorted = false
+}

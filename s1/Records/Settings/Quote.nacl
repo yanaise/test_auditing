@@ -1,0 +1,4 @@
+s1.QuoteSettings {
+  fullName = "Quote"
+  enableQuote = false
+}

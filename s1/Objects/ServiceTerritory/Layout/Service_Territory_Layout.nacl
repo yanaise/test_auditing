@@ -1,0 +1,127 @@
+s1.Layout ServiceTerritory_Service_Territory_Layout@bss {
+  fullName = "ServiceTerritory-Service Territory Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.ServiceTerritory.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = s1.ServiceTerritory.field.ParentTerritoryId
+            },
+            {
+              behavior = "Required"
+              field = s1.ServiceTerritory.field.OperatingHoursId
+            },
+            {
+              behavior = "Edit"
+              field = s1.ServiceTerritory.field.IsActive
+            },
+            {
+              behavior = "Edit"
+              field = s1.ServiceTerritory.field.Address
+            },
+            {
+              behavior = "Edit"
+              field = s1.ServiceTerritory.field.Description
+            },
+            {
+              behavior = "Edit"
+              field = s1.ServiceTerritory.field.OwnerId
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.ServiceTerritory.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.ServiceTerritory.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      fields = [
+        "Name",
+        "ServiceResource",
+        "TerritoryType",
+        "EffectiveStartDate",
+        "EffectiveEndDate",
+      ]
+      relatedList = "ServiceTerritoryMembers"
+    },
+    {
+      relatedList = "RelatedFileList"
+    },
+    {
+      relatedList = "RelatedEntityHistoryList"
+    },
+    {
+      fields = [
+        "Name",
+        "ParentTerritory",
+        "OperatingHours",
+        "IsActive",
+      ]
+      relatedList = "ChildServiceTerritories"
+    },
+    {
+      fields = [
+        "Name",
+        "WorkType",
+      ]
+      relatedList = "ServiceTerritoryWorkType"
+    },
+    {
+      fields = [
+        "Label",
+        "StartTime",
+        "EndTime",
+        "Status",
+      ]
+      relatedList = "ServiceTerritoryShifts"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.ServiceTerritory,
+  ]
+}

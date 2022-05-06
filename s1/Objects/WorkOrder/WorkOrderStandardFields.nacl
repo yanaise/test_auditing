@@ -1,0 +1,531 @@
+type s1.WorkOrder {
+  serviceid Id {
+    apiName = "WorkOrder.Id"
+    label = "Work Order ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  s1.Lookup OwnerId {
+    apiName = "WorkOrder.OwnerId"
+    label = "Owner ID"
+    referenceTo = [
+      s1.Group,
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "Owner"
+    queryable = true
+    _hidden_value = true
+    trackHistory = false
+  }
+  s1.Checkbox IsDeleted {
+    apiName = "WorkOrder.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.AutoNumber WorkOrderNumber {
+    apiName = "WorkOrder.WorkOrderNumber"
+    label = "Work Order Number"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime CreatedDate {
+    apiName = "WorkOrder.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup CreatedById {
+    apiName = "WorkOrder.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime LastModifiedDate {
+    apiName = "WorkOrder.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup LastModifiedById {
+    apiName = "WorkOrder.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime SystemModstamp {
+    apiName = "WorkOrder.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup AccountId {
+    apiName = "WorkOrder.AccountId"
+    label = "Account ID"
+    referenceTo = [
+      s1.Account,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Account"
+    queryable = true
+    trackHistory = false
+  }
+  s1.Lookup ContactId {
+    apiName = "WorkOrder.ContactId"
+    label = "Contact ID"
+    referenceTo = [
+      s1.Contact,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Contact"
+    queryable = true
+    trackHistory = false
+  }
+  s1.Lookup CaseId {
+    apiName = "WorkOrder.CaseId"
+    label = "Case ID"
+    referenceTo = [
+      s1.Case,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Case"
+    queryable = true
+    trackHistory = false
+  }
+  s1.Lookup EntitlementId {
+    apiName = "WorkOrder.EntitlementId"
+    label = "Entitlement ID"
+    referenceTo = [
+      s1.Entitlement,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Entitlement"
+    queryable = true
+    trackHistory = false
+  }
+  s1.Lookup ServiceContractId {
+    apiName = "WorkOrder.ServiceContractId"
+    label = "Service Contract ID"
+    referenceTo = [
+      s1.ServiceContract,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "ServiceContract"
+    queryable = true
+    trackHistory = false
+  }
+  s1.Lookup AssetId {
+    apiName = "WorkOrder.AssetId"
+    label = "Asset ID"
+    referenceTo = [
+      s1.Asset,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Asset"
+    queryable = true
+    trackHistory = false
+  }
+  s1.Address Address {
+    apiName = "WorkOrder.Address"
+    label = "Address"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.LongTextArea Description {
+    apiName = "WorkOrder.Description"
+    label = "Description"
+    createable = true
+    updateable = true
+    length = 32000
+    queryable = true
+  }
+  s1.DateTime StartDate {
+    apiName = "WorkOrder.StartDate"
+    label = "Start Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.DateTime EndDate {
+    apiName = "WorkOrder.EndDate"
+    label = "End Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Text Subject {
+    apiName = "WorkOrder.Subject"
+    label = "Subject"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  s1.Lookup RootWorkOrderId {
+    apiName = "WorkOrder.RootWorkOrderId"
+    label = "Root Work Order ID"
+    referenceTo = [
+      s1.WorkOrder,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "RootWorkOrder"
+    queryable = true
+    trackHistory = false
+    _hidden_value = true
+  }
+  s1.Picklist Status {
+    apiName = "WorkOrder.Status"
+    label = "Status"
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+    trackHistory = false
+    valueSetName = s1.StandardValueSet.instance.WorkOrderStatus
+  }
+  s1.Picklist Priority {
+    apiName = "WorkOrder.Priority"
+    label = "Priority"
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+    trackHistory = false
+    valueSetName = s1.StandardValueSet.instance.WorkOrderPriority
+  }
+  s1.Currency Tax {
+    apiName = "WorkOrder.Tax"
+    label = "Tax"
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 18
+    queryable = true
+  }
+  s1.Summary Subtotal {
+    apiName = "WorkOrder.Subtotal"
+    label = "Subtotal"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Summary TotalPrice {
+    apiName = "WorkOrder.TotalPrice"
+    label = "Total Price"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Summary LineItemCount {
+    apiName = "WorkOrder.LineItemCount"
+    label = "Line Items"
+    precision = 9
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup Pricebook2Id {
+    apiName = "WorkOrder.Pricebook2Id"
+    label = "Price Book ID"
+    referenceTo = [
+      s1.Pricebook2,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Pricebook2"
+    queryable = true
+    trackHistory = false
+  }
+  s1.Percent Discount {
+    apiName = "WorkOrder.Discount"
+    label = "Discount"
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 5
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Currency GrandTotal {
+    apiName = "WorkOrder.GrandTotal"
+    label = "Grand Total"
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup ParentWorkOrderId {
+    apiName = "WorkOrder.ParentWorkOrderId"
+    label = "Parent Work Order ID"
+    referenceTo = [
+      s1.WorkOrder,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "ParentWorkOrder"
+    queryable = true
+    trackHistory = false
+  }
+  s1.Checkbox IsClosed {
+    apiName = "WorkOrder.IsClosed"
+    label = "Is Closed"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsStopped {
+    apiName = "WorkOrder.IsStopped"
+    label = "Stopped"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.DateTime StopStartDate {
+    apiName = "WorkOrder.StopStartDate"
+    label = "Stopped Since"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime SlaStartDate {
+    apiName = "WorkOrder.SlaStartDate"
+    label = "Entitlement Process Start Time"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.DateTime SlaExitDate {
+    apiName = "WorkOrder.SlaExitDate"
+    label = "Entitlement Process End Time"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup BusinessHoursId {
+    apiName = "WorkOrder.BusinessHoursId"
+    label = "Business Hours ID"
+    referenceTo = [
+      "BusinessHours",
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "BusinessHours"
+    queryable = true
+    trackHistory = false
+  }
+  s1.Text MilestoneStatus {
+    apiName = "WorkOrder.MilestoneStatus"
+    label = "Milestone Status"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 30
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Number Duration {
+    apiName = "WorkOrder.Duration"
+    label = "Duration"
+    precision = 18
+    scale = 2
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  s1.Picklist DurationType {
+    apiName = "WorkOrder.DurationType"
+    label = "Duration Type"
+    valueSet = [
+      {
+        fullName = "Hours"
+        default = true
+        label = "Hours"
+        isActive = true
+      },
+      {
+        fullName = "Minutes"
+        default = false
+        label = "Minutes"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Number DurationInMinutes {
+    apiName = "WorkOrder.DurationInMinutes"
+    label = "Duration in Minutes"
+    precision = 18
+    scale = 2
+    createable = false
+    updateable = false
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Number ServiceAppointmentCount {
+    apiName = "WorkOrder.ServiceAppointmentCount"
+    label = "Service Appointment Count"
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup WorkTypeId {
+    apiName = "WorkOrder.WorkTypeId"
+    label = "Work Type ID"
+    referenceTo = [
+      s1.WorkType,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "WorkType"
+    queryable = true
+    trackHistory = false
+  }
+  s1.Lookup ServiceTerritoryId {
+    apiName = "WorkOrder.ServiceTerritoryId"
+    label = "Territory ID"
+    referenceTo = [
+      s1.ServiceTerritory,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "ServiceTerritory"
+    queryable = true
+    trackHistory = false
+  }
+  s1.Picklist StatusCategory {
+    apiName = "WorkOrder.StatusCategory"
+    label = "Status Category"
+    valueSet = [
+      {
+        fullName = "New"
+        default = false
+        label = "New"
+        isActive = true
+      },
+      {
+        fullName = "InProgress"
+        default = false
+        label = "In Progress"
+        isActive = true
+      },
+      {
+        fullName = "OnHold"
+        default = false
+        label = "On Hold"
+        isActive = true
+      },
+      {
+        fullName = "Completed"
+        default = false
+        label = "Completed"
+        isActive = true
+      },
+      {
+        fullName = "Closed"
+        default = false
+        label = "Closed"
+        isActive = true
+      },
+      {
+        fullName = "None"
+        default = true
+        label = "None"
+        isActive = true
+      },
+      {
+        fullName = "CannotComplete"
+        default = false
+        label = "Cannot Complete"
+        isActive = true
+      },
+      {
+        fullName = "Canceled"
+        default = false
+        label = "Canceled"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup LocationId {
+    apiName = "WorkOrder.LocationId"
+    label = "Location ID"
+    referenceTo = [
+      s1.Location,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Location"
+    queryable = true
+    trackHistory = false
+  }
+  s1.Unknown MilestoneStatusIcon {
+    apiName = "WorkOrder.MilestoneStatusIcon"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+}

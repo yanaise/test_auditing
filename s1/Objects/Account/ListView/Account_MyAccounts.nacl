@@ -1,0 +1,8 @@
+s1.ListView Account_MyAccounts {
+  fullName = "Account.MyAccounts"
+  filterScope = "Mine"
+  label = "My Accounts"
+  _parent = [
+    s1.Account,
+  ]
+}

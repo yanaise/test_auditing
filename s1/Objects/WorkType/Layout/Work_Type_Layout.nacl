@@ -1,0 +1,138 @@
+s1.Layout WorkType_Work_Type_Layout@bss {
+  fullName = "WorkType-Work Type Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Description"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.WorkType.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = s1.WorkType.field.Description
+            },
+            {
+              behavior = "Edit"
+              field = s1.WorkType.field.OperatingHoursId
+            },
+            {
+              behavior = "Required"
+              field = s1.WorkType.field.EstimatedDuration
+            },
+            {
+              behavior = "Required"
+              field = s1.WorkType.field.DurationType
+            },
+            {
+              behavior = "Edit"
+              field = s1.WorkType.field.BlockTimeBeforeAppointment
+            },
+            {
+              behavior = "Edit"
+              field = s1.WorkType.field.BlockTimeBeforeUnit
+            },
+            {
+              behavior = "Edit"
+              field = s1.WorkType.field.BlockTimeAfterAppointment
+            },
+            {
+              behavior = "Edit"
+              field = s1.WorkType.field.BlockTimeAfterUnit
+            },
+            {
+              behavior = "Edit"
+              field = s1.WorkType.field.TimeframeStart
+            },
+            {
+              behavior = "Edit"
+              field = s1.WorkType.field.TimeFrameStartUnit
+            },
+            {
+              behavior = "Edit"
+              field = s1.WorkType.field.TimeframeEnd
+            },
+            {
+              behavior = "Edit"
+              field = s1.WorkType.field.TimeFrameEndUnit
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.WorkType.field.CreatedById
+            },
+            {
+              behavior = "Edit"
+              field = s1.WorkType.field.OwnerId
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.WorkType.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      relatedList = "RelatedEntityHistoryList"
+    },
+    {
+      fields = [
+        "Skill",
+        "SkillLevel",
+      ]
+      relatedList = "SkillRequirements"
+    },
+    {
+      fields = [
+        "Name",
+        "ServiceTerritory",
+      ]
+      relatedList = "ServiceTerritoryWorkType"
+    },
+    {
+      fields = [
+        "Name",
+        "WorkTypeGroup",
+      ]
+      relatedList = "WorkTypeGroupMember"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.WorkType,
+  ]
+}

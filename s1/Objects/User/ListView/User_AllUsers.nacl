@@ -1,0 +1,8 @@
+s1.ListView User_AllUsers {
+  fullName = "User.AllUsers"
+  filterScope = "Everything"
+  label = "All Users"
+  _parent = [
+    s1.User,
+  ]
+}

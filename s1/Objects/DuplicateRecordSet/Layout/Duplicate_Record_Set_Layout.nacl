@@ -1,0 +1,72 @@
+s1.Layout DuplicateRecordSet_Duplicate_Record_Set_Layout@bsss {
+  fullName = "DuplicateRecordSet-Duplicate Record Set Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "DuplicateRecordSet Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.DuplicateRecordSet.field.Name
+            },
+            {
+              behavior = "Required"
+              field = s1.DuplicateRecordSet.field.DuplicateRuleId
+            },
+            {
+              behavior = "Readonly"
+              field = s1.DuplicateRecordSet.field.RecordCount
+            },
+            {
+              behavior = "Readonly"
+              field = s1.DuplicateRecordSet.field.CreatedById
+            },
+            {
+              behavior = "Readonly"
+              field = s1.DuplicateRecordSet.field.CreatedDate
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.DuplicateRecordSet.field.LastModifiedById
+            },
+            {
+              behavior = "Readonly"
+              field = s1.DuplicateRecordSet.field.LastModifiedDate
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      fields = [
+        "Name",
+        "Record",
+        "CreatedDate",
+      ]
+      relatedList = "DuplicateRecordItem"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.DuplicateRecordSet,
+  ]
+}

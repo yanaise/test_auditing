@@ -1,0 +1,238 @@
+type s1.Idea {
+  serviceid Id {
+    apiName = "Idea.Id"
+    label = "Idea ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  s1.Checkbox IsDeleted {
+    apiName = "Idea.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Text Title {
+    apiName = "Idea.Title"
+    label = "Title"
+    _required = true
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  s1.Lookup RecordTypeId {
+    apiName = "Idea.RecordTypeId"
+    label = "Record Type ID"
+    referenceTo = [
+      s1.RecordType,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "RecordType"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime CreatedDate {
+    apiName = "Idea.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup CreatedById {
+    apiName = "Idea.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime LastModifiedDate {
+    apiName = "Idea.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup LastModifiedById {
+    apiName = "Idea.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime SystemModstamp {
+    apiName = "Idea.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup CommunityId {
+    apiName = "Idea.CommunityId"
+    label = "Zone ID"
+    _required = true
+    referenceTo = [
+      s1.Community,
+    ]
+    createable = true
+    updateable = false
+    relationshipName = "Community"
+    queryable = true
+  }
+  s1.Html Body {
+    apiName = "Idea.Body"
+    label = "Idea Body"
+    createable = true
+    updateable = true
+    length = 32000
+    queryable = true
+  }
+  s1.Summary NumComments {
+    apiName = "Idea.NumComments"
+    label = "Number of Comments"
+    precision = 9
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Number VoteScore {
+    apiName = "Idea.VoteScore"
+    label = "Vote Score"
+    precision = 18
+    scale = 4
+    createable = false
+    updateable = false
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Number VoteTotal {
+    apiName = "Idea.VoteTotal"
+    label = "Vote Total"
+    precision = 18
+    scale = 0
+    createable = false
+    updateable = false
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.MultiselectPicklist Categories {
+    apiName = "Idea.Categories"
+    label = "Categories"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Picklist Status {
+    apiName = "Idea.Status"
+    label = "Status"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Summary LastCommentDate {
+    apiName = "Idea.LastCommentDate"
+    label = "Last Idea Comment Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup LastCommentId {
+    apiName = "Idea.LastCommentId"
+    label = "Idea Comment ID"
+    referenceTo = [
+      "IdeaComment",
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastComment"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup ParentIdeaId {
+    apiName = "Idea.ParentIdeaId"
+    label = "Idea ID"
+    referenceTo = [
+      s1.Idea,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "ParentIdea"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsHtml {
+    apiName = "Idea.IsHtml"
+    label = "IsHtml"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsMerged {
+    apiName = "Idea.IsMerged"
+    label = "Is Merged"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Text CreatorFullPhotoUrl {
+    apiName = "Idea.CreatorFullPhotoUrl"
+    label = "Url of Creator's Profile Photo"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Text CreatorSmallPhotoUrl {
+    apiName = "Idea.CreatorSmallPhotoUrl"
+    label = "Url of Creator's Thumbnail Photo"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Text CreatorName {
+    apiName = "Idea.CreatorName"
+    label = "Name of Creator"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 121
+    queryable = true
+    _hidden_value = true
+  }
+}

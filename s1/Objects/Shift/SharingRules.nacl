@@ -1,0 +1,6 @@
+s1.SharingRules Shift {
+  fullName = "Shift"
+  _parent = [
+    s1.Shift,
+  ]
+}

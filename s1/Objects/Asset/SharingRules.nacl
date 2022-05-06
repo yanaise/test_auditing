@@ -1,0 +1,6 @@
+s1.SharingRules Asset {
+  fullName = "Asset"
+  _parent = [
+    s1.Asset,
+  ]
+}

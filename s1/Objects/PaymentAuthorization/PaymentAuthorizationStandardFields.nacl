@@ -1,0 +1,392 @@
+type s1.PaymentAuthorization {
+  serviceid Id {
+    apiName = "PaymentAuthorization.Id"
+    label = "Payment Authorization ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  s1.Checkbox IsDeleted {
+    apiName = "PaymentAuthorization.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.AutoNumber PaymentAuthorizationNumber {
+    apiName = "PaymentAuthorization.PaymentAuthorizationNumber"
+    label = "Payment Authorization Number"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime CreatedDate {
+    apiName = "PaymentAuthorization.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup CreatedById {
+    apiName = "PaymentAuthorization.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime LastModifiedDate {
+    apiName = "PaymentAuthorization.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup LastModifiedById {
+    apiName = "PaymentAuthorization.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime SystemModstamp {
+    apiName = "PaymentAuthorization.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup PaymentGroupId {
+    apiName = "PaymentAuthorization.PaymentGroupId"
+    label = "Payment Group ID"
+    referenceTo = [
+      s1.PaymentGroup,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "PaymentGroup"
+    queryable = true
+  }
+  s1.Lookup AccountId {
+    apiName = "PaymentAuthorization.AccountId"
+    label = "Account ID"
+    referenceTo = [
+      s1.Account,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Account"
+    queryable = true
+  }
+  s1.DateTime Date {
+    apiName = "PaymentAuthorization.Date"
+    label = "Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.DateTime GatewayDate {
+    apiName = "PaymentAuthorization.GatewayDate"
+    label = "Gateway Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.DateTime ExpirationDate {
+    apiName = "PaymentAuthorization.ExpirationDate"
+    label = "Expiration Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.DateTime EffectiveDate {
+    apiName = "PaymentAuthorization.EffectiveDate"
+    label = "Effective Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Currency Amount {
+    apiName = "PaymentAuthorization.Amount"
+    label = "Amount"
+    _required = true
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 18
+    queryable = true
+  }
+  s1.Picklist Status {
+    apiName = "PaymentAuthorization.Status"
+    label = "Status"
+    _required = true
+    valueSet = [
+      {
+        fullName = "Draft"
+        default = false
+        label = "Draft"
+        isActive = true
+      },
+      {
+        fullName = "Processed"
+        default = false
+        label = "Processed"
+        isActive = true
+      },
+      {
+        fullName = "Canceled"
+        default = false
+        label = "Canceled"
+        isActive = true
+      },
+      {
+        fullName = "Pending"
+        default = false
+        label = "Pending"
+        isActive = true
+      },
+      {
+        fullName = "Failed"
+        default = false
+        label = "Failed"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Picklist ProcessingMode {
+    apiName = "PaymentAuthorization.ProcessingMode"
+    label = "Processing Mode"
+    _required = true
+    valueSet = [
+      {
+        fullName = "Salesforce"
+        default = false
+        label = "Salesforce"
+        isActive = true
+      },
+      {
+        fullName = "External"
+        default = false
+        label = "External"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  s1.Lookup PaymentMethodId {
+    apiName = "PaymentAuthorization.PaymentMethodId"
+    label = "Payment Method ID"
+    referenceTo = [
+      s1.PaymentMethod,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "PaymentMethod"
+    queryable = true
+  }
+  s1.LongTextArea Comments {
+    apiName = "PaymentAuthorization.Comments"
+    label = "Comments"
+    createable = true
+    updateable = true
+    length = 1000
+    queryable = true
+  }
+  s1.LongTextArea GatewayRefDetails {
+    apiName = "PaymentAuthorization.GatewayRefDetails"
+    label = "Gateway Reference Details"
+    createable = true
+    updateable = true
+    length = 1000
+    queryable = true
+  }
+  s1.Text GatewayRefNumber {
+    apiName = "PaymentAuthorization.GatewayRefNumber"
+    label = "Gateway Reference Number"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  s1.Text GatewayResultCode {
+    apiName = "PaymentAuthorization.GatewayResultCode"
+    label = "Gateway Result Code"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 64
+    queryable = true
+  }
+  s1.Picklist SfResultCode {
+    apiName = "PaymentAuthorization.SfResultCode"
+    label = "Salesforce Result Code"
+    valueSet = [
+      {
+        fullName = "Success"
+        default = false
+        label = "Success"
+        isActive = true
+      },
+      {
+        fullName = "PermanentFail"
+        default = false
+        label = "PermanentFail"
+        isActive = true
+      },
+      {
+        fullName = "Decline"
+        default = false
+        label = "Decline"
+        isActive = true
+      },
+      {
+        fullName = "RequiresReview"
+        default = false
+        label = "RequiresReview"
+        isActive = true
+      },
+      {
+        fullName = "Indeterminate"
+        default = false
+        label = "Indeterminate"
+        isActive = true
+      },
+      {
+        fullName = "SystemError"
+        default = false
+        label = "SystemError"
+        isActive = true
+      },
+      {
+        fullName = "ValidationError"
+        default = false
+        label = "ValidationError"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Text GatewayAuthCode {
+    apiName = "PaymentAuthorization.GatewayAuthCode"
+    label = "Gateway Auth Code"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 64
+    queryable = true
+  }
+  s1.Summary TotalAuthReversalAmount {
+    apiName = "PaymentAuthorization.TotalAuthReversalAmount"
+    label = "Total Payment Auth Reversal Amount"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Text GatewayResultCodeDescription {
+    apiName = "PaymentAuthorization.GatewayResultCodeDescription"
+    label = "Gateway Result Code Description"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  s1.Currency Balance {
+    apiName = "PaymentAuthorization.Balance"
+    label = "Balance"
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Currency TotalPaymentCaptureAmount {
+    apiName = "PaymentAuthorization.TotalPaymentCaptureAmount"
+    label = "Total Payment Capture Amount"
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Text IpAddress {
+    apiName = "PaymentAuthorization.IpAddress"
+    label = "IP Address"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 39
+    queryable = true
+  }
+  s1.Text MacAddress {
+    apiName = "PaymentAuthorization.MacAddress"
+    label = "MAC Address"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 32
+    queryable = true
+  }
+  s1.Phone Phone {
+    apiName = "PaymentAuthorization.Phone"
+    label = "Phone"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Email Email {
+    apiName = "PaymentAuthorization.Email"
+    label = "Audit Email"
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  s1.Lookup PaymentGatewayId {
+    apiName = "PaymentAuthorization.PaymentGatewayId"
+    label = "Payment Gateway ID"
+    referenceTo = [
+      s1.PaymentGateway,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "PaymentGateway"
+    queryable = true
+  }
+}

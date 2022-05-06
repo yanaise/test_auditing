@@ -1,0 +1,9 @@
+s1.CustomApplication standard__Insights {
+  fullName = "standard__Insights"
+  defaultLandingTab = "standard-home"
+  formFactors = [
+    "Large",
+  ]
+  isNavAutoTempTabsDisabled = false
+  isNavPersonalizationDisabled = false
+}

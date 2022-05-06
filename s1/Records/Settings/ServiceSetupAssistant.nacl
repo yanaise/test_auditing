@@ -1,0 +1,4 @@
+s1.ServiceSetupAssistantSettings {
+  fullName = "ServiceSetupAssistant"
+  enableServiceSetupAssistant = "false"
+}

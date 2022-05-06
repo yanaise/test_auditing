@@ -1,0 +1,8 @@
+s1.EACSettings {
+  fullName = "EAC"
+  enableEACForEveryonePref = false
+  enableInboxActivitySharing = false
+  enableInsightsInTimeline = true
+  enableInsightsInTimelineEacStd = false
+  provisionProductivityFeatures = false
+}

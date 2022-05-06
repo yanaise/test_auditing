@@ -1,0 +1,77 @@
+s1.Layout PricebookEntry_Price_Book_Entry_Layout@bsss {
+  fullName = "PricebookEntry-Price Book Entry Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.PricebookEntry.field.Product2Id
+            },
+            {
+              behavior = "Required"
+              field = s1.PricebookEntry.field.Pricebook2Id
+            },
+            {
+              behavior = "Required"
+              field = s1.PricebookEntry.field.UnitPrice
+            },
+            {
+              behavior = "Edit"
+              field = s1.PricebookEntry.field.UseStandardPrice
+            },
+            {
+              behavior = "Readonly"
+              field = s1.PricebookEntry.field.LastModifiedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.PricebookEntry.field.IsActive
+            },
+            {
+              behavior = "Readonly"
+              field = s1.PricebookEntry.field.ProductCode
+            },
+            {
+              behavior = "Edit"
+              field = s1.PricebookEntry.field.StandardPrice
+            },
+            {
+              behavior = "Readonly"
+              field = s1.PricebookEntry.field.CreatedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  multilineLayoutFields = [
+    "Product2Id",
+    "Pricebook2Id",
+    "IsActive",
+    "UnitPrice",
+    "ProductCode",
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.PricebookEntry,
+  ]
+}

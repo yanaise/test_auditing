@@ -1,0 +1,16 @@
+s1.CustomApplication standard__Chatter {
+  fullName = "standard__Chatter"
+  defaultLandingTab = "standard-home"
+  formFactors = [
+    "Large",
+  ]
+  isNavAutoTempTabsDisabled = false
+  isNavPersonalizationDisabled = false
+  tabs = [
+    "standard-Chatter",
+    "standard-UserProfile",
+    "standard-OtherUserProfile",
+    "standard-CollaborationGroup",
+    "standard-File",
+  ]
+}

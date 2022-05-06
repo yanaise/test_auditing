@@ -1,0 +1,337 @@
+type s1.ProcessException {
+  serviceid Id {
+    apiName = "ProcessException.Id"
+    label = "Process Exception ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  s1.Lookup OwnerId {
+    apiName = "ProcessException.OwnerId"
+    label = "Owner ID"
+    referenceTo = [
+      s1.Group,
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "Owner"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsDeleted {
+    apiName = "ProcessException.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.AutoNumber ProcessExceptionNumber {
+    apiName = "ProcessException.ProcessExceptionNumber"
+    label = "Process Exception Number"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime CreatedDate {
+    apiName = "ProcessException.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup CreatedById {
+    apiName = "ProcessException.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime LastModifiedDate {
+    apiName = "ProcessException.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup LastModifiedById {
+    apiName = "ProcessException.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime SystemModstamp {
+    apiName = "ProcessException.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup AttachedToId {
+    apiName = "ProcessException.AttachedToId"
+    label = "Attached To ID"
+    _required = true
+    referenceTo = [
+      s1.CreditMemo,
+      s1.Invoice,
+      s1.Order,
+      s1.OrderItem,
+      s1.Payment,
+      s1.PaymentAuthorization,
+      s1.Refund,
+      s1.ReturnOrder,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "AttachedTo"
+    queryable = true
+  }
+  s1.Text Message {
+    apiName = "ProcessException.Message"
+    label = "Message"
+    _required = true
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  s1.Picklist StatusCategory {
+    apiName = "ProcessException.StatusCategory"
+    label = "Status Category"
+    _required = true
+    valueSet = [
+      {
+        fullName = "ACTIVE"
+        default = false
+        label = "Active"
+        isActive = true
+      },
+      {
+        fullName = "INACTIVE"
+        default = false
+        label = "Inactive"
+        isActive = true
+      },
+      {
+        fullName = "RESOLVED"
+        default = false
+        label = "Resolved"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Picklist Status {
+    apiName = "ProcessException.Status"
+    label = "Status"
+    _required = true
+    valueSet = [
+      {
+        fullName = "New"
+        default = true
+        label = "New"
+        isActive = true
+      },
+      {
+        fullName = "Triaged"
+        default = false
+        label = "Triaged"
+        isActive = true
+      },
+      {
+        fullName = "Paused"
+        default = false
+        label = "Paused"
+        isActive = true
+      },
+      {
+        fullName = "Ignored"
+        default = false
+        label = "Ignored"
+        isActive = true
+      },
+      {
+        fullName = "Resolved"
+        default = false
+        label = "Resolved"
+        isActive = true
+      },
+      {
+        fullName = "Voided"
+        default = false
+        label = "Voided"
+        isActive = true
+      },
+    ]
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Picklist Category {
+    apiName = "ProcessException.Category"
+    label = "Category"
+    valueSet = [
+      {
+        fullName = "Order Activation"
+        default = true
+        label = "Order Activation"
+        isActive = true
+      },
+      {
+        fullName = "Order Approval"
+        default = false
+        label = "Order Approval"
+        isActive = true
+      },
+      {
+        fullName = "Fulfillment"
+        default = false
+        label = "Fulfillment"
+        isActive = true
+      },
+      {
+        fullName = "Payment"
+        default = false
+        label = "Payment"
+        isActive = true
+      },
+      {
+        fullName = "Invoicing"
+        default = false
+        label = "Invoicing"
+        isActive = true
+      },
+    ]
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Picklist Severity {
+    apiName = "ProcessException.Severity"
+    label = "Severity"
+    valueSet = [
+      {
+        fullName = "High"
+        default = true
+        label = "High"
+        isActive = true
+      },
+      {
+        fullName = "Low"
+        default = false
+        label = "Low"
+        isActive = true
+      },
+    ]
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Picklist Priority {
+    apiName = "ProcessException.Priority"
+    label = "Priority"
+    valueSet = [
+      {
+        fullName = "High"
+        default = false
+        label = "High"
+        isActive = true
+      },
+      {
+        fullName = "Low"
+        default = true
+        label = "Low"
+        isActive = true
+      },
+    ]
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  s1.Lookup CaseId {
+    apiName = "ProcessException.CaseId"
+    label = "Case ID"
+    referenceTo = [
+      s1.Case,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Case"
+    queryable = true
+  }
+  s1.Text ExternalReference {
+    apiName = "ProcessException.ExternalReference"
+    label = "External Reference"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  s1.Picklist SeverityCategory {
+    apiName = "ProcessException.SeverityCategory"
+    label = "Severity Category"
+    valueSet = [
+      {
+        fullName = "HIGH"
+        default = false
+        label = "High"
+        isActive = true
+      },
+      {
+        fullName = "MEDIUM"
+        default = false
+        label = "Medium"
+        isActive = true
+      },
+      {
+        fullName = "LOW"
+        default = false
+        label = "Low"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.LongTextArea Description {
+    apiName = "ProcessException.Description"
+    label = "Description"
+    createable = true
+    updateable = true
+    length = 2000
+    queryable = true
+  }
+}

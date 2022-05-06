@@ -1,0 +1,71 @@
+s1.Layout AuthorizationFormConsent_Authorization_Form_Consent_Layout@bsss {
+  fullName = "AuthorizationFormConsent-Authorization Form Consent Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.AuthorizationFormConsent.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = s1.AuthorizationFormConsent.field.AuthorizationFormTextId
+            },
+            {
+              behavior = "Edit"
+              field = s1.AuthorizationFormConsent.field.ConsentCapturedSourceType
+            },
+            {
+              behavior = "Edit"
+              field = s1.AuthorizationFormConsent.field.ConsentCapturedDateTime
+            },
+            {
+              behavior = "Edit"
+              field = s1.AuthorizationFormConsent.field.DocumentVersionId
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.AuthorizationFormConsent.field.ConsentGiverId
+            },
+            {
+              behavior = "Edit"
+              field = s1.AuthorizationFormConsent.field.ConsentCapturedSource
+            },
+            {
+              behavior = "Edit"
+              field = s1.AuthorizationFormConsent.field.Status
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      relatedList = "RelatedEntityHistoryList"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.AuthorizationFormConsent,
+  ]
+}

@@ -1,0 +1,15 @@
+s1.ListView Contact_NewThisWeek {
+  fullName = "Contact.NewThisWeek"
+  filterScope = "Everything"
+  filters = [
+    {
+      field = "CONTACT.CREATED_DATE"
+      operation = "equals"
+      value = "THIS_WEEK"
+    },
+  ]
+  label = "New This Week"
+  _parent = [
+    s1.Contact,
+  ]
+}

@@ -1,0 +1,28 @@
+type salesforce.ChangeRequestRelatedItem {
+  salesforce.Lookup AssetId {
+    apiName = "ChangeRequestRelatedItem.AssetId"
+    trackHistory = false
+    _hidden_value = true
+  }
+  salesforce.MasterDetail ChangeRequestId {
+    apiName = "ChangeRequestRelatedItem.ChangeRequestId"
+    trackHistory = false
+    _hidden_value = true
+  }
+  string Comment {
+    _hidden_value = true
+  }
+  salesforce.Picklist ImpactLevel {
+    apiName = "ChangeRequestRelatedItem.ImpactLevel"
+    trackHistory = false
+    _hidden_value = true
+  }
+  string Name {
+    _hidden_value = true
+  }
+  salesforce.Picklist RelationshipType {
+    apiName = "ChangeRequestRelatedItem.RelationshipType"
+    trackHistory = false
+    _hidden_value = true
+  }
+}

@@ -1,0 +1,155 @@
+s1.Layout Individual_Individual_Layout@bs {
+  fullName = "Individual-Individual Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.Individual.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = s1.Individual.field.BirthDate
+            },
+            {
+              behavior = "Edit"
+              field = s1.Individual.field.HasOptedOutProcessing
+            },
+            {
+              behavior = "Edit"
+              field = s1.Individual.field.HasOptedOutSolicit
+            },
+            {
+              behavior = "Edit"
+              field = s1.Individual.field.SendIndividualData
+            },
+            {
+              behavior = "Edit"
+              field = s1.Individual.field.CanStorePiiElsewhere
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.Individual.field.OwnerId
+            },
+            {
+              behavior = "Edit"
+              field = s1.Individual.field.HasOptedOutGeoTracking
+            },
+            {
+              behavior = "Edit"
+              field = s1.Individual.field.HasOptedOutProfiling
+            },
+            {
+              behavior = "Edit"
+              field = s1.Individual.field.HasOptedOutTracking
+            },
+            {
+              behavior = "Edit"
+              field = s1.Individual.field.ShouldForget
+            },
+            {
+              behavior = "Edit"
+              field = s1.Individual.field.IndividualsAge
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.Individual.field.CreatedById
+            },
+            {
+              behavior = "Readonly"
+              field = s1.Individual.field.CreatedDate
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.Individual.field.LastModifiedById
+            },
+            {
+              behavior = "Readonly"
+              field = s1.Individual.field.LastModifiedDate
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      relatedList = "RelatedEntityHistoryList"
+    },
+    {
+      fields = [
+        "FULL_NAME",
+        "CONTACT.TITLE",
+        "CONTACT.EMAIL",
+        "CONTACT.PHONE1",
+      ]
+      relatedList = "RelatedContactListIndividual"
+    },
+    {
+      fields = [
+        "FULL_NAME",
+        "LEAD.TITLE",
+        "LEAD.EMAIL",
+        "LEAD.PHONE",
+      ]
+      relatedList = "RelatedLeadListIndividual"
+    },
+    {
+      fields = [
+        "EmailAddress",
+        "EmailMailBox",
+        "EmailDomain",
+      ]
+      relatedList = "ContactPointEmails"
+    },
+    {
+      fields = [
+        "TelephoneNumber",
+        "PhoneType",
+        "FormattedNationalPhoneNumber",
+        "IsPersonalPhone",
+      ]
+      relatedList = "ContactPointPhones"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.Individual,
+  ]
+}

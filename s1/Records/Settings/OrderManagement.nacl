@@ -1,0 +1,4 @@
+s1.OrderManagementSettings {
+  fullName = "OrderManagement"
+  enableOrderManagement = false
+}

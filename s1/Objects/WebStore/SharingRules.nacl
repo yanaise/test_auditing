@@ -1,0 +1,6 @@
+s1.SharingRules WebStore {
+  fullName = "WebStore"
+  _parent = [
+    s1.WebStore,
+  ]
+}

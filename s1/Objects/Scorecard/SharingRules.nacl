@@ -1,0 +1,6 @@
+s1.SharingRules Scorecard {
+  fullName = "Scorecard"
+  _parent = [
+    s1.Scorecard,
+  ]
+}

@@ -1,4 +1,8 @@
 envs {
   envsCloud = [
+    {
+      uuid = "4c2de322-80c3-41ca-a698-1910e9a83b98"
+      folderName = "advanced_fetch_test"
+    },
   ]
 }

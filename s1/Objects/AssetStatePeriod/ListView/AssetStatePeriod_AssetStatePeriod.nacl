@@ -1,0 +1,8 @@
+s1.ListView AssetStatePeriod_AssetStatePeriod {
+  fullName = "AssetStatePeriod.AssetStatePeriod"
+  filterScope = "Everything"
+  label = "All"
+  _parent = [
+    s1.AssetStatePeriod,
+  ]
+}

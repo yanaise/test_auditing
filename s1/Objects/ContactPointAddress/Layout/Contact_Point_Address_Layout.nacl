@@ -1,0 +1,54 @@
+s1.Layout ContactPointAddress_Contact_Point_Address_Layout@bsss {
+  fullName = "ContactPointAddress-Contact Point Address Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.ContactPointAddress.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = s1.ContactPointAddress.field.ParentId
+            },
+            {
+              behavior = "Edit"
+              field = s1.ContactPointAddress.field.Address
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.ContactPointAddress.field.AddressType
+            },
+            {
+              behavior = "Edit"
+              field = s1.ContactPointAddress.field.IsDefault
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.ContactPointAddress,
+  ]
+}

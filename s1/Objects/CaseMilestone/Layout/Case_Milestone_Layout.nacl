@@ -1,0 +1,83 @@
+s1.Layout CaseMilestone_Case_Milestone_Layout@bss {
+  fullName = "CaseMilestone-Case Milestone Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.CaseMilestone.field.BusinessHoursId
+            },
+            {
+              behavior = "Required"
+              field = s1.CaseMilestone.field.CaseId
+            },
+            {
+              behavior = "Readonly"
+              field = s1.CaseMilestone.field.MilestoneId
+            },
+            {
+              behavior = "Edit"
+              field = s1.CaseMilestone.field.CompletionDate
+            },
+            {
+              behavior = "Readonly"
+              field = s1.CaseMilestone.field.IsViolated
+            },
+            {
+              behavior = "Readonly"
+              field = s1.CaseMilestone.field.IsCompleted
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.CaseMilestone.field.StartDate
+            },
+            {
+              behavior = "Readonly"
+              field = s1.CaseMilestone.field.TargetDate
+            },
+            {
+              behavior = "Readonly"
+              field = s1.CaseMilestone.field.TargetResponseInMins
+            },
+            {
+              behavior = "Readonly"
+              field = s1.CaseMilestone.field.TimeRemainingInMins
+            },
+            {
+              behavior = "Readonly"
+              field = s1.CaseMilestone.field.ElapsedTimeInMins
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  miniLayout = {
+    fields = [
+      "BusinessHoursId",
+    ]
+  }
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.CaseMilestone,
+  ]
+}

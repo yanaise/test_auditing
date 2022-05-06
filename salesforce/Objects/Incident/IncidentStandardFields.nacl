@@ -1,0 +1,113 @@
+type salesforce.Incident {
+  salesforce.Lookup BusinessHoursId {
+    apiName = "Incident.BusinessHoursId"
+    trackHistory = false
+    _hidden_value = true
+  }
+  salesforce.Picklist Category {
+    apiName = "Incident.Category"
+    trackHistory = false
+    _hidden_value = true
+  }
+  string Description {
+    _hidden_value = true
+  }
+  string DetectedDateTime {
+    _hidden_value = true
+  }
+  string EndDateTime {
+    _hidden_value = true
+  }
+  salesforce.Lookup EntitlementId {
+    apiName = "Incident.EntitlementId"
+    trackHistory = false
+    _hidden_value = true
+  }
+  salesforce.Picklist Impact {
+    apiName = "Incident.Impact"
+    trackHistory = false
+    _hidden_value = true
+  }
+  string IsClosed {
+    _hidden_value = true
+  }
+  string IsMajorIncident {
+    _hidden_value = true
+  }
+  string IsStopped {
+    _hidden_value = true
+  }
+  string MilestoneStatus {
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "Incident.OwnerId"
+    trackHistory = false
+    _hidden_value = true
+  }
+  salesforce.Hierarchy ParentIncidentId {
+    _hidden_value = true
+  }
+  salesforce.Picklist Priority {
+    apiName = "Incident.Priority"
+    trackHistory = false
+    _hidden_value = true
+  }
+  string PriorityOverrideReason {
+    _hidden_value = true
+  }
+  salesforce.Picklist ReportedMethod {
+    apiName = "Incident.ReportedMethod"
+    trackHistory = false
+    _hidden_value = true
+  }
+  string ResolutionDateTime {
+    _hidden_value = true
+  }
+  string ResolutionSummary {
+    _hidden_value = true
+  }
+  salesforce.Lookup ResolvedById {
+    apiName = "Incident.ResolvedById"
+    trackHistory = false
+    _hidden_value = true
+  }
+  string SlaExitDate {
+    _hidden_value = true
+  }
+  string SlaStartDate {
+    _hidden_value = true
+  }
+  string StartDateTime {
+    _hidden_value = true
+  }
+  salesforce.Picklist Status {
+    apiName = "Incident.Status"
+    trackHistory = false
+    _hidden_value = true
+  }
+  string StatusCode {
+    _hidden_value = true
+  }
+  string StopStartDate {
+    _hidden_value = true
+  }
+  salesforce.Picklist SubCategory {
+    apiName = "Incident.SubCategory"
+    trackHistory = false
+    _hidden_value = true
+  }
+  string Subject {
+    _hidden_value = true
+  }
+  salesforce.Picklist Type {
+    apiName = "Incident.Type"
+    trackHistory = false
+    _hidden_value = true
+  }
+  salesforce.Picklist Urgency {
+    apiName = "Incident.Urgency"
+    trackHistory = false
+    _hidden_value = true
+  }
+}

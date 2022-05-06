@@ -1,0 +1,6 @@
+s1.SharingRules ServiceAppointment {
+  fullName = "ServiceAppointment"
+  _parent = [
+    s1.ServiceAppointment,
+  ]
+}

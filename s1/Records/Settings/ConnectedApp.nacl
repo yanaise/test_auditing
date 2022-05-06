@@ -1,0 +1,4 @@
+s1.ConnectedAppSettings {
+  fullName = "ConnectedApp"
+  enableSkipUserProvisioningWizardWelcomePage = false
+}

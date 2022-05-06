@@ -1,0 +1,194 @@
+s1.Layout Task_Task_Layout@bs {
+  fullName = "Task-Task Layout"
+  emailDefault = false
+  headers = [
+    "PersonalTagging",
+    "PublicTagging",
+  ]
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Task Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.Task.field.OwnerId
+            },
+            {
+              behavior = "Required"
+              field = s1.Task.field.Subject
+            },
+            {
+              behavior = "Edit"
+              field = s1.Task.field.ActivityDate
+            },
+            {
+              behavior = "Readonly"
+              field = s1.Task.field.Phone
+            },
+            {
+              behavior = "Required"
+              field = s1.Task.field.Priority
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.Task.field.Status
+            },
+            {
+              behavior = "Edit"
+              field = s1.Task.field.WhoId
+            },
+            {
+              behavior = "Edit"
+              field = s1.Task.field.WhatId
+            },
+            {
+              behavior = "Readonly"
+              field = s1.Task.field.Email
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Other Information"
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Additional Information"
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.Task.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = s1.Task.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Description Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.Task.field.Description
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  quickActionList = {
+    quickActionListItems = [
+      {
+        quickActionName = "FeedItem.ContentPost"
+      },
+      {
+        quickActionName = "FeedItem.LinkPost"
+      },
+      {
+        quickActionName = "FeedItem.PollPost"
+      },
+      {
+        quickActionName = "FeedItem.TextPost"
+      },
+      {
+        quickActionName = s1.QuickAction.instance.LogACall
+      },
+      {
+        quickActionName = s1.QuickAction.instance.NewEvent
+      },
+      {
+        quickActionName = s1.QuickAction.instance.NewTask
+      },
+      {
+        quickActionName = s1.QuickAction.instance.Task_Defer@v
+      },
+      {
+        quickActionName = s1.QuickAction.instance.Task_EditDescription@v
+      },
+      {
+        quickActionName = s1.QuickAction.instance.Task_UpdatePriority@v
+      },
+      {
+        quickActionName = s1.QuickAction.instance.Task_UpdateStatus@v
+      },
+    ]
+  }
+  relatedContent = {
+    relatedContentItems = [
+      {
+        layoutItem = {
+          behavior = "Readonly"
+          field = s1.Task.field.WhoId
+        }
+      },
+      {
+        layoutItem = {
+          behavior = "Readonly"
+          field = s1.Task.field.WhatId
+        }
+      },
+    ]
+  }
+  relatedLists = [
+    {
+      relatedList = "RelatedActivityAttachmentList"
+    },
+  ]
+  relatedObjects = [
+    "WhoId",
+    "WhatId",
+  ]
+  runAssignmentRulesDefault = false
+  showEmailCheckbox = true
+  showRunAssignmentRulesCheckbox = true
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.Task,
+  ]
+}

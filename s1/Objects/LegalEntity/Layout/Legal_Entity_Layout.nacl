@@ -1,0 +1,54 @@
+s1.Layout LegalEntity_Legal_Entity_Layout@bss {
+  fullName = "LegalEntity-Legal Entity Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = s1.LegalEntity.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = s1.LegalEntity.field.LegalEntityAddress
+            },
+            {
+              behavior = "Edit"
+              field = s1.LegalEntity.field.Status
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = s1.LegalEntity.field.CompanyName
+            },
+            {
+              behavior = "Edit"
+              field = s1.LegalEntity.field.Description
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    s1.LegalEntity,
+  ]
+}

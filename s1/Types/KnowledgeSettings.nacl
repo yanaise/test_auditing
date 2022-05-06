@@ -1,0 +1,63 @@
+settings s1.KnowledgeSettings {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  s1.KnowledgeAnswerSettings answers {
+  }
+  s1.KnowledgeCaseSettings cases {
+  }
+  string defaultLanguage {
+  }
+  boolean enableChatterQuestionKBDeflection {
+  }
+  boolean enableCreateEditOnArticlesTab {
+  }
+  boolean enableExternalMediaContent {
+  }
+  boolean enableKnowledge {
+  }
+  boolean enableKnowledgeArticleTextHighlights {
+  }
+  boolean enableKnowledgeKeywordAutoComplete {
+  }
+  boolean enableKnowledgeTitleAutoComplete {
+  }
+  boolean enableLightningKbAutoLoadRichTextField {
+  }
+  boolean enableLightningKnowledge {
+  }
+  serviceid fullName {
+  }
+  s1.KnowledgeLanguageSettings languages {
+  }
+  boolean showArticleSummariesCustomerPortal {
+  }
+  boolean showArticleSummariesInternalApp {
+  }
+  boolean showArticleSummariesPartnerPortal {
+  }
+  boolean showValidationStatusField {
+  }
+  s1.KnowledgeSuggestedArticlesSettings suggestedArticles {
+  }
+  boolean votingEnabled {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "settings"
+  dirName = "settings"
+  metadataType = "KnowledgeSettings"
+}

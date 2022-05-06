@@ -1,0 +1,148 @@
+type s1.Flow {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  s1.FlowActionCall actionCalls {
+  }
+  s1.FlowApexPluginCall apexPluginCalls {
+  }
+  number apiVersion {
+  }
+  "List<s1.FlowAssignment>" assignments {
+  }
+  s1.FlowChoice choices {
+  }
+  s1.FlowCollectionProcessor collectionProcessors {
+  }
+  "List<s1.FlowConstant>" constants {
+  }
+  "List<s1.FlowDecision>" decisions {
+  }
+  string description {
+  }
+  s1.FlowDynamicChoiceSet dynamicChoiceSets {
+  }
+  "List<s1.FlowFormula>" formulas {
+  }
+  string interviewLabel {
+  }
+  boolean isAdditionalPermissionRequiredToRun {
+  }
+  boolean isTemplate {
+  }
+  string label {
+  }
+  "List<s1.FlowLoop>" loops {
+  }
+  s1.FlowOrchestratedStage orchestratedStages {
+  }
+  "List<s1.FlowMetadataValue>" processMetadataValues {
+  }
+  string processType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "ActionCadenceFlow",
+        "ActionPlan",
+        "Appointments",
+        "AutoLaunchedFlow",
+        "CMSOrchestrator",
+        "CartAsyncFlow",
+        "CheckoutFlow",
+        "ContactRequestFlow",
+        "CustomEvent",
+        "CustomerLifecycle",
+        "DigitalForm",
+        "EvaluationFlow",
+        "FSCLending",
+        "FieldServiceMobile",
+        "FieldServiceWeb",
+        "Flow",
+        "InvocableProcess",
+        "Journey",
+        "JourneyBuilderIntegration",
+        "LoginFlow",
+        "LoyaltyManagementFlow",
+        "ManagedContentFlow",
+        "OfflineFlow",
+        "OrchestrationFlow",
+        "Orchestrator",
+        "RecommendationStrategy",
+        "RoutingFlow",
+        "ServiceCatalogItemFlow",
+        "Survey",
+        "SurveyEnrich",
+        "TransactionSecurityFlow",
+        "UserProvisioningFlow",
+        "Workflow",
+      ]
+    }
+  }
+  "List<s1.FlowRecordCreate>" recordCreates {
+  }
+  s1.FlowRecordDelete recordDeletes {
+  }
+  "List<s1.FlowRecordLookup>" recordLookups {
+  }
+  "List<s1.FlowRecordUpdate>" recordUpdates {
+  }
+  string runInMode {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "DefaultMode",
+        "SystemModeWithSharing",
+        "SystemModeWithoutSharing",
+      ]
+    }
+  }
+  s1.FlowScreen screens {
+  }
+  s1.FlowStage stages {
+  }
+  s1.FlowStart start {
+  }
+  string startElementReference {
+  }
+  string status {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Active",
+        "Draft",
+        "InvalidDraft",
+        "Obsolete",
+      ]
+    }
+  }
+  s1.FlowStep steps {
+  }
+  s1.FlowSubflow subflows {
+  }
+  s1.FlowTextTemplate textTemplates {
+  }
+  "List<s1.FlowVariable>" variables {
+  }
+  s1.FlowWait waits {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "flow"
+  dirName = "flows"
+  metadataType = "Flow"
+}

@@ -1,0 +1,282 @@
+type s1.MacroUsage {
+  serviceid Id {
+    apiName = "MacroUsage.Id"
+    label = "Macro Usage ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  s1.Lookup OwnerId {
+    apiName = "MacroUsage.OwnerId"
+    label = "Owner ID"
+    referenceTo = [
+      s1.Group,
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "Owner"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsDeleted {
+    apiName = "MacroUsage.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Text Name {
+    apiName = "MacroUsage.Name"
+    label = "Macro Usage Name"
+    _required = true
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime CreatedDate {
+    apiName = "MacroUsage.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup CreatedById {
+    apiName = "MacroUsage.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime LastModifiedDate {
+    apiName = "MacroUsage.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup LastModifiedById {
+    apiName = "MacroUsage.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime SystemModstamp {
+    apiName = "MacroUsage.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup MacroId {
+    apiName = "MacroUsage.MacroId"
+    label = "Macro ID"
+    _required = true
+    referenceTo = [
+      s1.Macro,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "Macro"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Text ContextRecord {
+    apiName = "MacroUsage.ContextRecord"
+    label = "Context Record"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 18
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Number ExecutedInstructionCount {
+    apiName = "MacroUsage.ExecutedInstructionCount"
+    label = "Executed Instruction Count"
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Number InstructionCount {
+    apiName = "MacroUsage.InstructionCount"
+    label = "Instruction Count"
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.DateTime ExecutionEndTime {
+    apiName = "MacroUsage.ExecutionEndTime"
+    label = "Execution End Time"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Lookup UserId {
+    apiName = "MacroUsage.UserId"
+    label = "User ID"
+    referenceTo = [
+      s1.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "User"
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Checkbox IsFromBulk {
+    apiName = "MacroUsage.IsFromBulk"
+    label = "From Bulk Execution"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Picklist AppContext {
+    apiName = "MacroUsage.AppContext"
+    label = "App Context"
+    valueSet = [
+      {
+        fullName = "Aloha"
+        default = false
+        label = "Aloha"
+        isActive = true
+      },
+      {
+        fullName = "Lightning"
+        default = false
+        label = "Lightning"
+        isActive = true
+      },
+      {
+        fullName = "Unknown"
+        default = false
+        label = "Unknown"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Number ConditionCount {
+    apiName = "MacroUsage.ConditionCount"
+    label = "Condition Count"
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Picklist ExecutionState {
+    apiName = "MacroUsage.ExecutionState"
+    label = "Execution State"
+    valueSet = [
+      {
+        fullName = "SUCCESS"
+        default = false
+        label = "SUCCESS"
+        isActive = true
+      },
+      {
+        fullName = "CANCELED"
+        default = false
+        label = "CANCELED"
+        isActive = true
+      },
+      {
+        fullName = "FAILURE"
+        default = false
+        label = "FAILURE"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Number DurationInMs {
+    apiName = "MacroUsage.DurationInMs"
+    label = "Duration In Milliseconds"
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  s1.Picklist FailureReason {
+    apiName = "MacroUsage.FailureReason"
+    label = "Failure Reason"
+    valueSet = [
+      {
+        fullName = "GENERIC"
+        default = false
+        label = "GENERIC"
+        isActive = true
+      },
+      {
+        fullName = "UNSUPPORTED"
+        default = false
+        label = "UNSUPPORTED"
+        isActive = true
+      },
+      {
+        fullName = "ACCESS"
+        default = false
+        label = "ACCESS"
+        isActive = true
+      },
+      {
+        fullName = "TIMEOUT"
+        default = false
+        label = "TIMEOUT"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

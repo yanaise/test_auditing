@@ -1,0 +1,8 @@
+s1.SocialProfileSettings {
+  fullName = "SocialProfile"
+  enableSocialProfiles = true
+  isFacebookSocialProfilesDisabled = false
+  isLinkedInSocialProfilesDisabled = false
+  isTwitterSocialProfilesDisabled = false
+  isYouTubeSocialProfilesDisabled = false
+}

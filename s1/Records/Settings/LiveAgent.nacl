@@ -1,0 +1,4 @@
+s1.LiveAgentSettings {
+  fullName = "LiveAgent"
+  enableLiveAgent = false
+}

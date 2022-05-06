@@ -1,0 +1,27 @@
+type s1.AppointmentTopicTimeSlot {
+  string AppointmentTopicTimeSlotKey {
+    _hidden_value = true
+  }
+  string Name {
+    _hidden_value = true
+  }
+  s1.Lookup OperatingHoursId {
+    apiName = "AppointmentTopicTimeSlot.OperatingHoursId"
+    _hidden_value = true
+  }
+  s1.Lookup TimeSlotId {
+    apiName = "AppointmentTopicTimeSlot.TimeSlotId"
+    trackHistory = false
+    _hidden_value = true
+  }
+  s1.Lookup WorkTypeGroupId {
+    apiName = "AppointmentTopicTimeSlot.WorkTypeGroupId"
+    trackHistory = false
+    _hidden_value = true
+  }
+  s1.Lookup WorkTypeId {
+    apiName = "AppointmentTopicTimeSlot.WorkTypeId"
+    trackHistory = false
+    _hidden_value = true
+  }
+}
